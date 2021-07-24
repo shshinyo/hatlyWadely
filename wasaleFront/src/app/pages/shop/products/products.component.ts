@@ -1,9 +1,17 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
 import { Router, ActivatedRoute } from "@angular/router";
-import { fromEvent } from "rxjs";
+import { fromEvent, Subscription } from "rxjs";
 import { debounceTime, map, filter } from "rxjs/Operators";
 import { ProductsService } from "src/app/shared/services/products.service";
-import { SouqService } from "src/app/shared/services/souq.service";
+import { SouqService } from "src/app/shared/services/shop-service.service";
 import { QueryParams } from "src/app/shared/utilities/query-params";
 
 @Component({
@@ -11,9 +19,10 @@ import { QueryParams } from "src/app/shared/utilities/query-params";
   templateUrl: "./products.component.html",
   styleUrls: ["./products.component.scss"],
 })
-export class ProductsComponent implements OnInit, AfterViewInit {
+export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild("sidNav") sidNav: ElementRef;
   @ViewChild("filterBanner") filterBanner: ElementRef;
+  mediaSub: Subscription;
   //  hide and show on hover (filter & carouser)
   search: string | null = null;
   //  hide and show on hover (filter & carouser)
@@ -41,18 +50,12 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   // end cards
   constructor(
-    private _router: Router,
+    private _mediaObserver: MediaObserver,
     private _route: ActivatedRoute,
+    private _router: Router,
     private productsService: ProductsService,
-    private souqSer: SouqService,
-    private route: ActivatedRoute
+    private souqSer: SouqService
   ) {}
-  ngAfterViewInit(): void {
-    // fromEvent(this.filterBanner.nativeElement, "mouseout").subscribe((_) => {
-    //   // this.displayCarousel = true;
-    //   console.log("sandjskahdjksahd");
-    // });
-  }
 
   ngOnInit(): void {
     this.productsService.getAllCategories$.subscribe((res) => {
@@ -63,6 +66,21 @@ export class ProductsComponent implements OnInit, AfterViewInit {
       this.secondCards = res.secondCards;
       this.footerArray = res.myFooter;
     });
+
+    this.mediaSub = this._mediaObserver.media$.subscribe((change: MediaChange) => {
+      console.log(change.mqAlias);
+    });
+  }
+
+  ngAfterViewInit(): void {
+    // fromEvent(this.filterBanner.nativeElement, "mouseout").subscribe((_) => {
+    //   // this.displayCarousel = true;
+    //   console.log("sandjskahdjksahd");
+    // });
+  }
+
+  ngOnDestroy() {
+    this.mediaSub.unsubscribe();
   }
 
   onSearch(value: string): void {
@@ -83,7 +101,6 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
     console.log(this.filteredProducts);
   }
-
 
   // test for search
   private _fetchItem(): void {

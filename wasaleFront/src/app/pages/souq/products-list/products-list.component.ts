@@ -2,7 +2,7 @@ import { Component, HostBinding, OnInit, ViewChild } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { QueryParams } from "src/app/shared/utilities/query-params";
 
-import { SouqService } from "../../../shared/services/souq.service";
+import { SouqService } from "../../../shared/services/shop-service.service";
 
 @Component({
   selector: "app-products-list",

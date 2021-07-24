@@ -8,7 +8,7 @@ export class ItemName implements PipeTransform {
     const words = input.split(" ");
     // just change size value to change your word
     const size = 4;
-    const pipedWord = words.splice(0, size).toString().replace(/,/g, " ");
+    const pipedWord = words.splice(0, size).join(" ");
 
     return pipedWord + "...";
   }

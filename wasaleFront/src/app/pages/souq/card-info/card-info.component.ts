@@ -1,6 +1,6 @@
 import { find } from 'rxjs/Operators';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SouqService } from '../../../shared/services/souq.service';
+import { SouqService } from '../../../shared/services/shop-service.service';
 import { Component,  OnInit } from '@angular/core';
 
 @Component({

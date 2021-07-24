@@ -22,7 +22,7 @@ import {
 } from "rxjs/Operators";
 import { newUser } from "src/app/shared/utilities/authUser";
 import { AuthService } from "src/app/shared/services/auth.service";
-import { SouqService } from "src/app/shared/services/souq.service";
+import { SouqService } from "src/app/shared/services/shop-service.service";
 
 enum VisibilityState {
   Visible = "visible",

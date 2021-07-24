@@ -108,6 +108,5 @@ export class SocialMediaFloatingComponent implements OnInit {
     url.includes("contacts")
       ? (this.toggleFloating = true)
       : (this.toggleFloating = false);
-      console.log(url)
   }
 }
