@@ -6,7 +6,6 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { ProductsComponent } from "./products/products.component";
 
 const routes: Routes = [
-<<<<<<< Updated upstream
   {
     path: "",
     component: ProductsComponent,
@@ -23,15 +22,6 @@ const routes: Routes = [
   //   path:":categoryId/:categoryTypeId/:productId",
   //   component:CategoryComponent
   // }
-=======
-  // {
-  //   path: "",
-  //   component: ProductsComponent
-  // },
-  // need to change and edit
-  { path: ':item/:id', component: CardDataComponent },
-
->>>>>>> Stashed changes
 ];
 
 @NgModule({
