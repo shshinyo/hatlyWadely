@@ -49,192 +49,193 @@
   </div>
 </div>
 <div class="body-container" fxLayout="row wrap" fxLayoutAlign="center center" dir="rtl">
-  <div
-    class="banner"
-    fxFlex="80"
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    dir="rtl"
-    fxLayoutGap="20px"
-  >
+  <div fxFlex="80" fxLayout="column" fxLayoutAlign="center stretch">
     <div
-      #sidNav
-      class="sideNav mat-elevation-z1"
-      fxFlex="20"
+      class="banner"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      dir="rtl"
+      fxLayoutGap="20px"
+    >
+      <div
+        #sidNav
+        class="sideNav mat-elevation-z1"
+        fxFlex="20"
+        fxLayout="row wrap"
+        fxLayoutAlign="center start"
+      >
+        <div
+          class="tap"
+          fxFlex="100"
+          fxLayoutAlign="start center"
+          *ngFor="let product of products"
+          [routerLink]="[product.id]"
+          (mouseover)="onHoverOnTap(product)"
+        >
+          <!-- Enter icon -->
+          <img class="svg-icon" src="{{ product.icon }}" />
+          {{ product.name }}
+        </div>
+      </div>
+      <!-- handel links here -->
+
+      <div
+        class="carousel mat-elevation-z1"
+        fxFlex="60"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+      >
+        <p-galleria
+          fxFill
+          [value]="carouselOffers$ | async"
+          [responsiveOptions]="responsiveOptions"
+          [containerStyle]="{ width: '100%' }"
+          [numVisible]="5"
+          [autoPlay]="true"
+          [circular]="true"
+          [showItemNavigators]="true"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [showItemNavigatorsOnHover]="true"
+          [showIndicatorsOnItem]="true"
+        >
+          <ng-template pTemplate="item" let-item>
+            <img
+              [src]="item.imgUrl"
+              style="width: 100%; display: block; height: calc(60vh)"
+            />
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="p-grid p-nogutter p-justify-center">
+              <img [src]="item.imgUrl" style="display: block; height: calc(60vh)" />
+            </div>
+          </ng-template>
+        </p-galleria>
+      </div>
+
+      <div
+        class="ads"
+        fxFlex="20"
+        fxLayout="row wrap"
+        fxLayoutAlign="center space-between"
+      >
+        <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
+          <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
+        </div>
+        <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
+          <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="best-seller b-r-3 mat-elevation-z1"
+      fxLayout="row wrap"
+      fxLayoutAlign="center start"
+      style="margin-top: 15px"
+    >
+      <div class="title" fxFlex="100" fxLayoutAlign="start center">
+        المنتجات الاكثر مبيعا
+      </div>
+
+      <p-carousel
+        fxFlex="100"
+        [value]="cards"
+        [numVisible]="5"
+        [numScroll]="5"
+        [circular]="true"
+        [autoplayInterval]="6000"
+        [responsiveOptions]="cards"
+        dir="ltr"
+      >
+        <ng-template let-product pTemplate="item">
+          <div
+            class="image-pic-carousel"
+            fxLayout="row wrap"
+            fxLayoutAlign="center start"
+          >
+            <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+    <!--  -->
+    <div
+      class="offer-con mat-elevation-z1"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+    >
+      <img fxFlex="100" class="subOffer" src="assets/images/3699591.jpg" alt="" />
+    </div>
+    <div
+      class="offer-con mat-elevation-z1"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="15px"
+    >
+      <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
+        <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
+      </div>
+      <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
+        <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
+      </div>
+    </div>
+    <!--  -->
+    <div
+      class="offer-con mat-elevation-z1"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="15px"
+    >
+      <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
+        offer1
+      </div>
+      <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
+        offer2
+      </div>
+    </div>
+
+    <!--  -->
+    <div
+      class="best-seller b-r-3 mat-elevation-z1"
       fxLayout="row wrap"
       fxLayoutAlign="center start"
     >
       <div
-        class="tap"
+        class="title"
         fxFlex="100"
-        fxLayoutAlign="start center"
-        *ngFor="let product of products"
-        [routerLink]="[product.id]"
-        (mouseover)="onHoverOnTap(product)"
+        fxLayoutAlign="space-between center"
+        style="background-color: red; color: #ffff"
       >
-        <!-- Enter icon -->
-        <img class="svg-icon" src="{{ product.icon }}" />
-        {{ product.name }}
+        <div fxLayoutAlign="center enter">عروض كل يوم | استمتع بعروض جديدة كل يوم</div>
+        <a class="show-all" fxLayoutAlign="center center" style="color: #ffff"
+          >عرض الكل
+          <mat-icon>chevron_left</mat-icon>
+        </a>
       </div>
-    </div>
-    <!-- handel links here -->
 
-    <div
-      class="carousel mat-elevation-z1"
-      fxFlex="60"
-      fxLayout="row wrap"
-      fxLayoutAlign="center center"
-    >
-      <p-galleria
-        fxFill
-        [value]="carouselOffers$ | async"
-        [responsiveOptions]="responsiveOptions"
-        [containerStyle]="{ width: '100%' }"
+      <p-carousel
+        fxFlex="100"
+        [value]="cards"
         [numVisible]="5"
-        [autoPlay]="true"
+        [numScroll]="5"
         [circular]="true"
-        [showItemNavigators]="true"
-        [showThumbnails]="false"
-        [showIndicators]="true"
-        [showItemNavigatorsOnHover]="true"
-        [showIndicatorsOnItem]="true"
+        [autoplayInterval]="6000"
+        [responsiveOptions]="cards"
+        dir="ltr"
       >
-        <ng-template pTemplate="item" let-item>
-          <img
-            [src]="item.imgUrl"
-            style="width: 100%; display: block; height: calc(60vh)"
-          />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-          <div class="p-grid p-nogutter p-justify-center">
-            <img [src]="item.imgUrl" style="display: block; height: calc(60vh)" />
+        <ng-template let-product pTemplate="item">
+          <div
+            class="image-pic-carousel"
+            fxLayout="row wrap"
+            fxLayoutAlign="center start"
+          >
+            <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
           </div>
         </ng-template>
-      </p-galleria>
+      </p-carousel>
     </div>
 
-    <div class="ads" fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center space-between">
-      <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
-        <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
-      </div>
-      <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
-        <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
-      </div>
-    </div>
-  </div>
 
-  <div
-    class="best-seller b-r-3 mat-elevation-z1"
-    fxFlex="80"
-    fxLayout="row wrap"
-    fxLayoutAlign="center start"
-    style="margin-top: 15px"
-  >
-    <div class="title" fxFlex="100" fxLayoutAlign="start center">
-      المنتجات الاكثر مبيعا
-    </div>
-
-    <p-carousel
-      fxFlex="100"
-      [value]="cards"
-      [numVisible]="5"
-      [numScroll]="5"
-      [circular]="true"
-      [autoplayInterval]="6000"
-      [responsiveOptions]="cards"
-      dir="ltr"
-    >
-      <ng-template
-        let-product
-        pTemplate="item"
-
-      >
-        <div class="image-pic-carousel" fxLayout="row wrap" fxLayoutAlign="center start">
-          <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
-        </div>
-      </ng-template>
-    </p-carousel>
-  </div>
-  <!--  -->
-  <div
-    class="offer-con mat-elevation-z1"
-    fxFlex="80"
-    fxLayout="row wrap"
-    fxLayoutAlign="center center"
-  >
-    <img fxFlex="100" class="subOffer" src="assets/images/3699591.jpg" alt="" />
-  </div>
-  <div
-    class="offer-con mat-elevation-z1"
-    fxFlex="80"
-    fxLayout="row"
-    fxLayoutAlign="center center"
-    fxLayoutGap="15px"
-  >
-    <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
-      <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
-    </div>
-    <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
-      <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
-    </div>
-  </div>
-  <!--  -->
-  <div
-    class="offer-con mat-elevation-z1"
-    fxFlex="80"
-    fxLayout="row"
-    fxLayoutAlign="center center"
-    fxLayoutGap="15px"
-  >
-    <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
-      offer1
-    </div>
-    <div fxFlex="50" class="subOffer" fxLayout="row wrap" fxLayoutAlign="center center">
-      offer2
-    </div>
-  </div>
-
-  <!--  -->
-  <div
-    class="best-seller b-r-3 mat-elevation-z1"
-    fxFlex="80"
-    fxLayout="row wrap"
-    fxLayoutAlign="center start"
-  >
-    <div
-      class="title"
-      fxFlex="100"
-      fxLayoutAlign="space-between center"
-      style="background-color: red; color: #ffff"
-    >
-      <div fxLayoutAlign="center enter">عروض كل يوم | استمتع بعروض جديدة كل يوم</div>
-      <a class="show-all" fxLayoutAlign="center center" style="color: #ffff"
-        >عرض الكل
-        <mat-icon>chevron_left</mat-icon>
-      </a>
-    </div>
-
-    <p-carousel
-      fxFlex="100"
-      [value]="cards"
-      [numVisible]="5"
-      [numScroll]="5"
-      [circular]="true"
-      [autoplayInterval]="6000"
-      [responsiveOptions]="cards"
-      dir="ltr"
-    >
-      <ng-template
-        let-product
-        pTemplate="item"
-     
-      >
-        <div class="image-pic-carousel" fxLayout="row wrap" fxLayoutAlign="center start">
-          <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
-        </div>
-      </ng-template>
-    </p-carousel>
-  </div>
-  <!--  -->
-
+  <shop-info></shop-info>
 </div>

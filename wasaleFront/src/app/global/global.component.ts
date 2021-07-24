@@ -53,7 +53,6 @@ export class GlobalComponent implements OnInit {
         this.loading = false;
       }
     });
-
   }
 
   @HostListener("window:resize", ["$event"])

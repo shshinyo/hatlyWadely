@@ -1,4 +1,3 @@
-import { ShopInfoComponent } from './shop-info/shop-info.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,7 +20,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CardInfoComponent,
     StarComponent,
     CardDataComponent,
-    ShopInfoComponent
 
   ],
   imports: [
