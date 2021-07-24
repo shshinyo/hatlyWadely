@@ -16,7 +16,6 @@ import { GlobalModule } from "./global/global.module";
 import { Dashboard404 } from "./Error404/dashboard.component";
 import { SouqModule } from "./pages/souq/souq.module";
 import { CartModule } from "./pages/souq/cart/cart.module";
-import { ShopModule } from "./pages/shop/shop.module";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");

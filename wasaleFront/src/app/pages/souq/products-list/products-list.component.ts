@@ -11,14 +11,8 @@ import { SouqService } from "../../../shared/services/souq.service";
 })
 export class ProductsListComponent implements OnInit {
   //  hide and show on hover (filter & carouser)
-  displayCarousel = true;
   search: string | null = null;
-  carouselOffers = [
-    { imgUrl: "../../assets/images/images/dd1.jpg" },
-    { imgUrl: "../../assets/images/images/dd2.jpg" },
-    { imgUrl: "../../assets/images/images/dd3.jpg" },
-    { imgUrl: "../../assets/images/images/dd4.jpg" },
-  ];
+  carouselOffers$ = this._souqSer.Offers$;
   responsiveOptions: any[] = [
     {
       breakpoint: "1024px",
@@ -41,7 +35,7 @@ export class ProductsListComponent implements OnInit {
   selectedcategory;
   constructor(
     private _router: Router,
-    private souqSer: SouqService,
+    private _souqSer: SouqService,
     private route: ActivatedRoute
   ) {}
   // start cards
@@ -52,23 +46,13 @@ export class ProductsListComponent implements OnInit {
   // end cards
 
   ngOnInit(): void {
-    this.souqSer.getAllCategories().subscribe((res: any) => {
+    this._souqSer.getAllCategories().subscribe((res: any) => {
       this.products = res.categories;
-      console.log("yey", this.products);
       this.filteredProducts = res.categories;
-    });
-    this.souqSer.getAllCategories().subscribe((res: any) => {
       this.cards = res.cards;
-      console.log(">>", this.cards);
-    });
-    this.souqSer.getAllCategories().subscribe((res: any) => {
       this.secondCards = res.secondCards;
-      console.log(this.cards);
-    });
-    this.souqSer.getAllCategories().subscribe((res: any) => {
       this.footerArray = res.myFooter;
-      console.log("ha", this.cards);
-    });
+    })
   }
 
   onSearch(value: string): void {
@@ -85,17 +69,20 @@ export class ProductsListComponent implements OnInit {
     this.filteredProducts = this.products.find(
       (elem) => elem.name == product.name
     ).myProducts;
-    this.displayCarousel = false;
-
     this.displayDiv = true;
     this.diplayImg = false;
     this.selectedcategory = product.id;
     console.log(this.selectedcategory);
-    this.souqSer.selectedCategoryBehaviour.next(this.selectedcategory);
+    this._souqSer.selectedCategoryBehaviour.next(this.selectedcategory);
   }
-  showPic() {
-    this.displayCarousel = !this.displayCarousel;
-    this.diplayImg = true;
-    this.displayDiv = false;
-  }
+  // showDiv() {
+  //   this.diplayImg = false;
+  //   this.displayDiv = true;
+  // }
+   hideDiv() {
+     this.diplayImg = true;
+      this.displayDiv = false;
+   }
+
+
 }
