@@ -1,5 +1,42 @@
-.cat-container
-{
-  width: 100%;
-  background-color: whitesmoke;
+mat-card {
+  padding: 0;
+  background-color: #ffff;
+}
+.banner {
+  min-height: 350px;
+  max-height: 350px;
+  img {
+    min-height: inherit;
+    max-height: inherit;
+    border-radius: 5px;
+  }
+}
+
+.section {
+  min-height: 280px;
+  .header {
+    height: 43px;
+    font-weight: 500;
+  }
+  .item {
+    position: relative;
+    height: 220px;
+    width: 195px;
+    transition: 0.15s;
+    img {
+      height: 180px;
+    }
+  }
+  .title {
+    height: 40px;
+  }
+
+  .item:hover,
+  .item:active {
+    top: -2px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+  }
 }

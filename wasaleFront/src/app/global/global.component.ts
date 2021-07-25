@@ -37,9 +37,9 @@ export class GlobalComponent implements OnInit {
   ngOnInit(): void {
     this.getSreenSize();
     // Scroll to Top when router finished
-    this.subscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => this.content.scrollTo({ top: 0 }));
+    // this.subscription = this.router.events
+    //   .pipe(filter((event) => event instanceof NavigationEnd))
+    //   .subscribe(() => this.content.scrollTo({ top: 0 }));
 
     // lazyLoading Router
     this.router.events.subscribe((e) => {

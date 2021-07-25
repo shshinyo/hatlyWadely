@@ -49,7 +49,7 @@
   </div>
 </div>
 <div class="body-container" fxLayout="row wrap" fxLayoutAlign="center center" dir="rtl">
-  <div fxFlex="80" fxLayout="column" fxLayoutAlign="center stretch">
+  <div fxFlex="80" fxFlex.md="90" fxFlex.xs="95" fxLayout="column" fxLayoutAlign="center stretch">
     <div
       class="banner"
       fxLayout="row"
@@ -70,7 +70,6 @@
           fxLayoutAlign="start center"
           *ngFor="let product of products"
           [routerLink]="[product.id]"
-          (mouseover)="onHoverOnTap(product)"
         >
           <!-- Enter icon -->
           <img class="svg-icon" src="{{ product.icon }}" />
@@ -235,7 +234,7 @@
         </ng-template>
       </p-carousel>
     </div>
-
-
-  <shop-info></shop-info>
+    <shop-info></shop-info>
+    <br />
+  </div>
 </div>

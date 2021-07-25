@@ -16,12 +16,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this._router.events.subscribe((event)=>{
-      if (!(event instanceof NavigationEnd )){
-        return;
-      }
-      window.scroll(0 ,0);
-    })
+    // this._router.events.subscribe((event)=>{
+    //   if (!(event instanceof NavigationEnd )){
+    //     return;
+    //   }
+    //   window.scroll(0 ,0);
+    // })
   }
 
   ngOnDestroy(): void {}

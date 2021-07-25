@@ -92,15 +92,15 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  onHoverOnTap(product?) {
-    if (product) {
-      this.filteredProducts = this.products.find(
-        (elem) => elem.name == product.name
-      ).myProducts;
-    }
+  // onHoverOnTap(product?) {
+  //   if (product) {
+  //     this.filteredProducts = this.products.find(
+  //       (elem) => elem.name == product.name
+  //     ).myProducts;
+  //   }
 
-    console.log(this.filteredProducts);
-  }
+  //   console.log(this.filteredProducts);
+  // }
 
   // test for search
   private _fetchItem(): void {

@@ -2,7 +2,8 @@
   "categories": [
     {
       "name": "بقالة",
-      "icon" : "assets/images/images/watermelon.svg",
+      "icon": "assets/images/images/watermelon.svg",
+      "bannerImage": "assets/images/images/s4.jpg",
       "id": "groceries",
       "myProducts": [
         {
@@ -17,7 +18,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/dd1.jpg",
                   "detail": "Alsuhagy ارز - 5 كجم",
-                  "price":  14 ,
+                  "price": 14,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.2",
                   "values": [
@@ -39,7 +40,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/dd2.jpg",
                   "detail": "مشاركة هذا المنتجAldoha أرز مصري 5 ك",
-                  "price":  10 ,
+                  "price": 10,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -61,7 +62,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/dd3.jpg",
                   "detail": "Elmatbakh أرز -5كجم",
-                  "price": 41 ,
+                  "price": 41,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -105,7 +106,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/dd5.jpg",
                   "detail": "Alsuhagy ارز بسمتى ذهبى- 1ك",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -127,7 +128,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/dd6.jpg",
                   "detail": "Mr. Food عرض فول تدميس ( 2 عبوة × 500 جرام)",
-                  "price": 21 ,
+                  "price": 21,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.2",
                   "values": [
@@ -149,7 +150,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/dd7jpg.jpg",
                   "detail": "Mr. Food Golden Basmati Rice - 1 kg",
-                  "price": 31 ,
+                  "price": 31,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -171,7 +172,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/dd8.jpg",
                   "detail": "Elmatbakh أرز -1كجم",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -425,7 +426,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/15.jpg",
                   "detail": "Afia Corn Oil - 1.6L",
-                  "price": 21 ,
+                  "price": 21,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.7",
                   "values": [
@@ -447,7 +448,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/16.jpg",
                   "detail": "Nabtah زيت زيتون بكر ممتاز - 500 جم",
-                  "price": 31 ,
+                  "price": 31,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -469,7 +470,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/17.jpg",
                   "detail": "Abu Auf زيت جوز الهند - 150 جرام",
-                  "price": 31 ,
+                  "price": 31,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -513,7 +514,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/19.jpg",
                   "detail": "Afia Plus Corn Oil - 800ml",
-                  "price":  12 ,
+                  "price": 12,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -535,7 +536,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/20.jpg",
                   "detail": "Afia Plus Corn Oil – 1600ml",
-                  "price": 21 ,
+                  "price": 21,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -557,7 +558,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/21.jpg",
                   "detail": "Nabtah زيت بذور الكتان - 250 جم",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -635,7 +636,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/33.jpg",
                   "detail": "Aldoha دقيق",
-                  "price":  121 ,
+                  "price": 121,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -723,7 +724,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/37.jpg",
                   "detail": "Nabtah دقيق لوز - 300جم",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -745,7 +746,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/38.jpg",
                   "detail": "مشاركة هذا المنتجAldoha شوفان",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -811,7 +812,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/41.jpg",
                   "detail": "Alsuhagy ذرة فيشار - 500جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.6",
                   "values": [
@@ -905,7 +906,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/46.jpg",
                   "detail": "Abu Auf زعتر سوري - 75 جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.4",
                   "values": [
@@ -949,7 +950,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/48.jpg",
                   "detail": "Abu Auf كمون ناعم - 85 جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -971,7 +972,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/49.jpg",
                   "detail": "Alsuhagy بصل مسحوق - 65جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -1015,7 +1016,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/51.jpg",
                   "detail": "Abu Auf بهارات فراخ - 85 جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -1049,7 +1050,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/52.jpg",
                   "detail": "Rauch White Grapes Juice – 900ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -1071,7 +1072,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/53.jpg",
                   "detail": "Choice عصير ليمون - 250 مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.7",
                   "values": [
@@ -1093,7 +1094,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/54.jpg",
                   "detail": "Juhayna Mix 200ml x 27 pack - Chocolate",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.6",
                   "values": [
@@ -1115,7 +1116,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/55.jpg",
                   "detail": "Juhayna Juice 235 ml - Pineapple - Pack of 27",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -1137,7 +1138,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/56.jpg",
                   "detail": "Osterberg 1 لتر مهروس فاكهة الباشون فروت -",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -1159,7 +1160,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/57.jpg",
                   "detail": "Juhayna Juice 235ml x 27 pack - Apple",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.5",
                   "values": [
@@ -1181,7 +1182,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/58.jpg",
                   "detail": "Juhayna Mix 200ml x 27 pack - Strawberry",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -1225,7 +1226,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/60.jpg",
                   "detail": "Osterberg مهروس فاكهة التوت الازرق - 1 لتر",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.7",
                   "values": [
@@ -1253,7 +1254,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/61.jpg",
                   "detail": "Coca-cola Free Coca-cola 2.45LBottle with Ramadan Box",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.6",
                   "values": [
@@ -1363,7 +1364,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/66.jpg",
                   "detail": "7 Up Soda Can – 330 ml – 24 Pcs",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -1385,7 +1386,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/67.jpg",
                   "detail": "Sprite زجاجة بلاستيكية - 2 لتر - 6 قطعة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.7",
                   "values": [
@@ -1407,7 +1408,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/68.jpg",
                   "detail": "Fanta كانز بالتفاح الأخضر - 250 مل - 24 قطعة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -1429,7 +1430,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/69.jpg",
                   "detail": "Pepsi Diet Can – 330 ml – 24 Pcs",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -1479,7 +1480,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/71.jpg",
                   "detail": "Farouk Pasha فاروق باشا اسبريسو اورو حبوب 250جم",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.4",
                   "values": [
@@ -1523,7 +1524,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/73.jpg",
                   "detail": "Lipton Yellow Label Black Tea - 50 Tea Bags - 2 Packs + Free Extra Strong Black Tea - 25 Tea Bags",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.4",
                   "values": [
@@ -1589,7 +1590,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/76.jpg",
                   "detail": "Roots Herbal Set - 10 Packs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -1667,7 +1668,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/79.jpg",
                   "detail": "Reef Food زيتون مخلل كلاماتا - 1.6 كيلوجرام",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -1689,7 +1690,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/80.jpg",
                   "detail": "Reef Food زيتون مخلل كلاماتا - 1.6 كيلوجرام",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -1711,7 +1712,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/81.jpg",
                   "detail": "California Gardens Yellow Fin Solid Tuna – 185 gm",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.7",
                   "values": [
@@ -1733,7 +1734,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/82.jpg",
                   "detail": "Reef Food زيتون مخلل اسود - 1.6 كيلوجرام",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -1777,7 +1778,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/84.jpg",
                   "detail": "Reef Food زيتون مخلل اخضر - 1.6 كيلوجرام",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.5",
                   "values": [
@@ -1799,7 +1800,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/85.jpg",
                   "detail": "Reef Food زيتون مخلل اخضر - 1.6 كيلوجرام",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -1843,7 +1844,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/87.jpg",
                   "detail": "Choice زيتون مفدغ بالخلطة 2500كجم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1",
                   "values": [
@@ -1871,7 +1872,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/88.jpg",
                   "detail": "Harvest Plain Fava Beans – 400g – 2 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.9",
                   "values": [
@@ -1893,7 +1894,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/89.jpg",
                   "detail": "Harvest Plain Fava Beans – 700g",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -1915,7 +1916,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/90.jpg",
                   "detail": "Aldoha ذرة فيشار",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -1959,7 +1960,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/92.jpg",
                   "detail": "California Gardens Peeled Chili Fava Beans – 400gm – 2 PCs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -1981,7 +1982,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/93.jpg",
                   "detail": "Rehana عدس بجبة - 500 جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -2073,7 +2074,7 @@
     },
     {
       "name": "ازياء ",
-      "icon" : "assets/images/images/tshirt.svg",
+      "icon": "assets/images/images/tshirt.svg",
       "id": "fashion",
       "myProducts": [
         {
@@ -2088,7 +2089,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/q1.jpg",
                   "detail": " 89 -  120",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -2110,7 +2111,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/101.jpg",
                   "detail": "بنطلون حريمي قطن واسع من الرجل",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -2132,7 +2133,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/102.jpg",
                   "detail": "Lama بنطلون رمادي رجل واسعه",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -2154,7 +2155,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/103.jpg",
                   "detail": "بنطلون كاجوال حريمي",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -2176,7 +2177,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/104.jpg",
                   "detail": "بنطلون واسع اسود رجل الفيل",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -2198,7 +2199,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/105.jpg",
                   "detail": "Andora Elastic Waist & Down Hem Heather Olive Sweatpants",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.6",
                   "values": [
@@ -2220,7 +2221,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/106.jpg",
                   "detail": "بنطلون جينز نسائى انيق باللون الازرق",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -2242,7 +2243,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/107.jpg",
                   "detail": "بنطلون طويل اسود قطن",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -2264,7 +2265,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/108.jpg",
                   "detail": "بنطلون بليسيه اسود",
-                  "price": 21 ,
+                  "price": 21,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -2336,7 +2337,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/111.jpg",
                   "detail": "Fashion Mens Square Polarized Sunglasses Fashion UV400 Sun Glasses-3501-Black Grey",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -2380,7 +2381,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/113.jpg",
                   "detail": "Fashion المرأة الساحة السوداء نظارات شمسية كبيرة الحجم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -2424,7 +2425,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/115.jpg",
                   "detail": "Fashion Mens Rectangle Metal Frame Sunglasses Polarized Sun Glasses-8712-Black Grey",
-                  "price": 111 ,
+                  "price": 111,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.6",
                   "values": [
@@ -2468,7 +2469,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/117.jpg",
                   "detail": "Fashion Cat Eye Vintage Gradient Glasses UV400 Sunglasses for Ladies(Brown)",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -2518,7 +2519,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/119.jpg",
                   "detail": "Women's Slim High Waist Jeans Over Size / Black",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.4",
                   "values": [
@@ -2540,7 +2541,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/120.jpg",
                   "detail": "American Eagle Relaxed Mom Jean - Campus Brights",
-                  "price": 610 ,
+                  "price": 610,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -2562,7 +2563,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/121.jpg",
                   "detail": "American Eagle بنطلون جينز The Dream Jean عالي الخصر - أسود",
-                  "price": 610 ,
+                  "price": 610,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.4",
                   "values": [
@@ -2584,7 +2585,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/122.jpg",
                   "detail": "Defacto Woman White Culotte Denim Trousers",
-                  "price": 319 ,
+                  "price": 319,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -2606,7 +2607,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/123.jpg",
                   "detail": "Defacto بنطلون حريمي بقصة ضيقة لون أزرق",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -2628,7 +2629,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/124.jpg",
                   "detail": "Defacto بنطلون سكيني حريمي لون أزرق",
-                  "price": 214 ,
+                  "price": 214,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.5",
                   "values": [
@@ -2650,7 +2651,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/125.jpg",
                   "detail": "Defacto بنطلون حريمي موم فيت لون أزرق",
-                  "price": 219 ,
+                  "price": 219,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -2672,7 +2673,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/126.jpg",
                   "detail": "Defacto Woman Blue Mom Fit Jeans",
-                  "price": 219 ,
+                  "price": 219,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.7",
                   "values": [
@@ -2706,7 +2707,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/127.jpg",
                   "detail": "Defacto بنطلون رجالي بقصة ضيقة لون رمادي",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.3",
                   "values": [
@@ -2728,7 +2729,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/128.jpg",
                   "detail": "Caesar Solid Gabardine Cargo Pants With Hem - Dark Grey",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -2750,7 +2751,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/129.jpg",
                   "detail": "TOUT Slip On Elastic Waist With Drawstring Pants - Black",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -2794,7 +2795,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/131.jpg",
                   "detail": "Izor Elasticated Sweatpants - Charcol",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -2816,7 +2817,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/132.jpg",
                   "detail": "Caesar Solid Gabardine Cargo Pants With Hem - Navy Blue",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -2860,7 +2861,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/134.jpg",
                   "detail": "Andora Bundle Of 3 Soft Comfy Cargo Sweatpants - Navy Blue, Dark Grey & Black (Elastic Waist With Drawstring Color May Vary)",
-                  "price": 319 ,
+                  "price": 319,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.6",
                   "values": [
@@ -2882,7 +2883,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/135.jpg",
                   "detail": "مشاركة هذا المنتجCaesar Solid Gabardine Cargo Pants With Hem - Black",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -2932,7 +2933,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/137.jpg",
                   "detail": "Skmei SKMEI Sport Watch Quartz Waterproof Wristwatches Dark Blue",
-                  "price": 510 ,
+                  "price": 510,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -3020,7 +3021,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/141.jpg",
                   "detail": "Yazole Brand Watch Sports Men Watches Male Wristwatch YZL509",
-                  "price": 112 ,
+                  "price": 112,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -3086,7 +3087,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/144.jpg",
                   "detail": "Skmei Top Luxury Brand Watch Men's Sports Watch Fashion Digital Watches Gift For Male SKM1270",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -3120,7 +3121,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/145.jpg",
                   "detail": "Funny Bunny فاني باني - (3) قطع - سالوبيت نص كم مطبوع بكباسين للاولاد - حديثي الولادة",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -3142,7 +3143,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/146.jpg",
                   "detail": "Caramelo افرول بيبي اولادي قطعتين - 3220",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -3164,7 +3165,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/147.jpg",
                   "detail": "Funny Bunny فاني باني - (6) قطع - سالوبيت سادة كت بكباسين - حديثي الولادة",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.6",
                   "values": [
@@ -3186,7 +3187,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/148.jpg",
                   "detail": "Defacto بيجاما ولادي بقصة عادية لون أوف وايت",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.6",
                   "values": [
@@ -3208,7 +3209,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/149.jpg",
                   "detail": "بدى كات 6 قطع اللوان مشكل",
-                  "price": 112 ,
+                  "price": 112,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -3274,7 +3275,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/152.jpg",
                   "detail": "Funny Bunny فاني باني - (3) قطع - سالوبيت مطبوع كت بكباسين - حديثي الولادة",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -3296,7 +3297,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/153.jpg",
                   "detail": "Funny Bunny 3 بنطلون اولادي حديثي الولاده",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.7",
                   "values": [
@@ -3346,7 +3347,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/155.jpg",
                   "detail": "Caramelo فستان بيبي بناتي قطن",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.6",
                   "values": [
@@ -3368,7 +3369,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/156.jpg",
                   "detail": "بدى كات 6 قطع اللوان مشكل",
-                  "price": 112 ,
+                  "price": 112,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -3390,7 +3391,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/157.jpg",
                   "detail": "Lumex طقم النجوم بناتى 4 قطع",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -3434,7 +3435,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/159.jpg",
                   "detail": "Caramelo طقم بيجامة بيبي بناتي - 3316",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -3456,7 +3457,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/160.jpg",
                   "detail": "Caramelo طقم بيجامة بيبي بناتي - 3",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -3478,7 +3479,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/161.jpg",
                   "detail": "Lumex فستان مطبوع الورد بالطاقية",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.7",
                   "values": [
@@ -3500,7 +3501,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/162.jpg",
                   "detail": "Lumex سالوبيت مطبوع بالحمالة و البلوزة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -3534,7 +3535,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/163.jpg",
                   "detail": "بيجامة صيفى اولادى سفارى",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.4",
                   "values": [
@@ -3556,7 +3557,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/164.jpg",
                   "detail": "Fabyo شورت جينز اولادي - ازرق غامق",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -3578,7 +3579,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/165.jpg",
                   "detail": "Defacto بنطلون أولادي بقصة ضيقة لون أسود",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -3600,7 +3601,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/166.jpg",
                   "detail": "Defacto بنطلون أولادي بقصة ضيقة لون أسود",
-                  "price":  1,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -3622,7 +3623,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/167.jpg",
                   "detail": "Defacto تي شيرت بولو أولادي نص كم بقصة عادية لون أبيض",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -3710,7 +3711,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/171.jpg",
                   "detail": "أحدث ترنج رجالي شبابي و أولادي أطفالي صيفي قطن 2021",
-                  "price": 219 ,
+                  "price": 219,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -3738,7 +3739,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/172.jpg",
                   "detail": "فستان اطفال اسود فى دهبى",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -3760,7 +3761,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/173.jpg",
                   "detail": "Defacto فستان بناتي لون أزرق بقصة عادية",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -3782,7 +3783,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/174.jpg",
                   "detail": "Quadro ازياء اطفال ترينج خروج صيفي قماش متنوع",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -3826,7 +3827,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/176.jpg",
                   "detail": "Izor Girls Patterned Off-Shoulder Romper - Red & Pink",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -3848,7 +3849,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/177.jpg",
                   "detail": "فستان بناتي جينز زرافه تطريز_ازرق",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -3870,7 +3871,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/178jpg.jpg",
                   "detail": "General عدد 5 ازواج شرابات كرتون اطفال",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -3892,7 +3893,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/179.jpg",
                   "detail": "Andora Printed I Love Coffee Comfy Girls Pajama Set - White & Aquamarine",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -3914,7 +3915,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/180.jpg",
                   "detail": "Defacto فستان بناتي لون وردى بقصة عادية",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -3940,7 +3941,7 @@
     },
     {
       "name": "الصحه والجمال",
-      "icon" : "assets/images/images/cosmetics.svg",
+      "icon": "assets/images/images/cosmetics.svg",
       "id": "beauty",
       "myProducts": [
         {
@@ -3955,7 +3956,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/200.jpg",
                   "detail": "Clean & Clear Deep Cleansing Foam Wash - 150ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -3977,7 +3978,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/201.jpg",
                   "detail": "Cleo سيروم مركز لتفتيح البشرة مساء- 50مل",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.7",
                   "values": [
@@ -3999,7 +4000,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/202.jpg",
                   "detail": "L'Oreal Paris Hyaluronic Acid Serum Hyaluron Expert - 30 ml + 24H Replumping Moisturizing Tissue Mask",
-                  "price": 219 ,
+                  "price": 219,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4021,7 +4022,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/203.jpg",
                   "detail": "Garnier ماء ميسلار مزيل المكياج ومنظف البشرة - 400 مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -4043,7 +4044,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/204.jpg",
                   "detail": "St Ives كريم مرطب محفز للكولاجين - 283 جم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4065,7 +4066,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/209.jpg",
                   "detail": "Etude House ماسكرا الرموش لتقويه و تطويل الرموش",
-                  "price": 113 ,
+                  "price": 113,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -4109,7 +4110,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/207.jpg",
                   "detail": "Johnson's Body Wash - Vita-Rich, Nourishing Cocoa Butter - 250ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4131,7 +4132,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/208.jpg",
                   "detail": "L'Oreal Paris Hyaluron expert 1.5% Hyaluronic Acid Face Serum - 30ml",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -4159,7 +4160,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/209.jpg",
                   "detail": "Gillette فيوجن بروجليد ستايلر - أسود",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -4181,7 +4182,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/210.jpg",
                   "detail": "Braun Silk-épil Lady Shaver Electric Shaver With Trimmer Cap - LS5103 & Braun Silk Epil Bikini Styler 3 In 1 Trimmer - FG1103",
-                  "price": 819 ,
+                  "price": 819,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4203,7 +4204,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/211.jpg",
                   "detail": "Gillette Venus Breeze Razor",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4225,7 +4226,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/212.jpg",
                   "detail": "FEATHER Razor For Face & Body Shaving - 3 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -4247,7 +4248,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/213.jpg",
                   "detail": "Braun MGK5245 ماكينة حلاقة الكل في واحد 7 في 1 قابلة لإعادة الشحن مع شفرة حلاقة جيليت برو جلايد",
-                  "price": 719 ,
+                  "price": 719,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -4269,7 +4270,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/214.jpg",
                   "detail": "Gillette Blue 2 Plus Razors - 20 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4291,7 +4292,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/215.jpg",
                   "detail": "Braun ماكينة إزالة الشعر 5-541 Silk epil 5 جافة أو مع الماء - مع 4 ملحقات",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -4313,7 +4314,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/216.jpg",
                   "detail": "Gillette ماكينة Blue II Plus للسيدات - 5 قطع",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4335,7 +4336,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/217.jpg",
                   "detail": "Braun MGK3220 ماكينة تشذيب الشعر 6 في 1 - 5 ملحقات",
-                  "price": 515 ,
+                  "price": 515,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -4369,7 +4370,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/218.jpg",
                   "detail": "Tornado Professional 2 In 1 Ceramic Straightening & Curler",
-                  "price": 810 ,
+                  "price": 810,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -4413,7 +4414,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/220.jpg",
                   "detail": "Bombo wear Wooden Medical Hair Brush - Beige",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.1",
                   "values": [
@@ -4435,7 +4436,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/221.jpg",
                   "detail": "Sokany استشوار لتجفيف وفرد الشعر سوكاني - 2300 وات",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -4457,7 +4458,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/222.jpg",
                   "detail": "Bombo wear فرشاه الشعر + 2 مشط + مقص + شنطه",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -4479,7 +4480,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/223.jpg",
                   "detail": "Babyliss 3D Liss Ionic Ceramic Hair Straightener Brush, Black - HSB101E",
-                  "price": 31 ,
+                  "price": 31,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -4545,7 +4546,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/226.jpg",
                   "detail": "Fascino Italiano Hair Comb - Wooden",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4573,7 +4574,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/227.jpg",
                   "detail": "Himalaya كريم شعر بالبروتين تغذية إضافية 210مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.7",
                   "values": [
@@ -4595,7 +4596,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/227.jpg",
                   "detail": "L'Oreal Paris بديل الزيت الفيف مغذي بالزيت الإستثنائي للشعر الجاف - 300 مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.4",
                   "values": [
@@ -4617,7 +4618,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/228.jpg",
                   "detail": "L'Oreal Paris بديل الزيت الفيف مغذي بالزيت الإستثنائي للشعر الجاف – 125 مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.6",
                   "values": [
@@ -4639,7 +4640,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/229.jpg",
                   "detail": "Bless Hair Leave In Cream & Conditioner - 450 G",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4661,7 +4662,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/230.jpg",
                   "detail": "L'Oreal Paris زيت الفيف مغذي بالزيت الإستثنائي للشعر العادي - 200 مل",
-                  "price": 112 ,
+                  "price": 112,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.6",
                   "values": [
@@ -4683,7 +4684,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/231.jpg",
                   "detail": "Faster فاستر زيت انبات شعر الذقن - للرجال - 60 مل - 1 قطعه",
-                  "price": 214 ,
+                  "price": 214,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -4705,7 +4706,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/232.jpg",
                   "detail": "Krafter كرافتر سيرم للشعر 2 علبه * 120 مل",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -4727,7 +4728,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/233.jpg",
                   "detail": "My Way Tender - EDP - For Women - 55ml + Hair Spray - 35ml + Deodorant Cream - 40gm",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -4749,7 +4750,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/234.jpg",
                   "detail": "Dr. Miracle'S Intensive Spot Serum - 118 Ml",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -4783,7 +4784,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k1.jpg",
                   "detail": "My Way Z Perfume + Selection + Explosion - EDP - For Men - 3 Pcs",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -4805,7 +4806,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k2.jpg",
                   "detail": "Creation Lamis Solo Only - EDT - For Men - 100ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4827,7 +4828,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/k3.jpg",
                   "detail": "Adidas Ice Dive - EDT - For Men - 100ml",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.1",
                   "values": [
@@ -4849,7 +4850,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k4.jpg",
                   "detail": "Adidas Dynamic Pulse - For Men - EDT - 100ml",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.2",
                   "values": [
@@ -4871,7 +4872,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k5.jpg",
                   "detail": "Fabiola مجموعة عطور الاماراتية 6 عطور والسابع هدية",
-                  "price": 116 ,
+                  "price": 116,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -4893,7 +4894,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k6.jpg",
                   "detail": "Dorall Collection Oud Wood - EDT - Unisex - 100ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -4915,7 +4916,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k7.jpg",
                   "detail": "Dior Sauvage - EDP - For Men - 100ml",
-                  "price": 41 ,
+                  "price": 41,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -4937,7 +4938,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/k8.jpg",
                   "detail": "Adidas Champions League Champions Edition - EDT - For Men - 100ml",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -4959,7 +4960,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k9.jpg",
                   "detail": "Carrera - EDT - For Men - 100ml - 2 Pcs",
-                  "price": 217 ,
+                  "price": 217,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -4987,7 +4988,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k10.jpg",
                   "detail": "Avon Rare Gold - EDP - For Women - 50Ml",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5009,7 +5010,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k11.jpg",
                   "detail": "Guess Gold - EDP - For Women - 75ml",
-                  "price": 418 ,
+                  "price": 418,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -5031,7 +5032,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/k12.jpg",
                   "detail": "Fabiola مجموعة عطور الاماراتية 6 عطور والسابع هدية",
-                  "price": 116 ,
+                  "price": 116,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -5053,7 +5054,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k13.jpg",
                   "detail": "My Way Tender - EDP - For Women - 55ml + Hair Spray - 35ml + Deodorant Cream - 40gm",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5075,7 +5076,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k14.jpg",
                   "detail": "Jacques Saint Pres Indra - EDP - For Women - 100ml",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -5097,7 +5098,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k.15jpg",
                   "detail": "Dorall Collection Oud Wood - EDT - Unisex - 100ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5119,7 +5120,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k16.jpg",
                   "detail": "Burberry Body Women – EDP – For Women – 85ml",
-                  "price": 719 ,
+                  "price": 719,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -5141,7 +5142,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/k17.jpg",
                   "detail": "Dorall Collection Black Light - EDT - Women - 100ml",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5163,7 +5164,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k18.jpg",
                   "detail": "Guess Seductive Noir - Fragrance Mist - Women - 250ml",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -5197,7 +5198,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k19.jpg",
                   "detail": "Maybelline New York كريم أساس فيت مي مط وخافي للمسام - 110 بورسيلين",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.7",
                   "values": [
@@ -5219,7 +5220,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k20.jpg",
                   "detail": "Flormar Perfect Coverage - Foundation - 12H - 101Pastelle - 30ml",
-                  "price": 215 ,
+                  "price": 215,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5241,7 +5242,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/k21.jpg",
                   "detail": "Maybelline New York كريم أساس فيت مي مط وخافي للمسام - 115 العاج",
-                  "price": 116 ,
+                  "price": 116,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -5263,7 +5264,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k22.jpg",
                   "detail": "Maybelline New York كريم أساس فيت مي مط وخافي للمسام - 128 البشرة الدافئ",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5285,7 +5286,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k23.jpg",
                   "detail": "Bourjois Healthy Mix - Foundation - 52 Vanilla",
-                  "price": 116 ,
+                  "price": 116,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5307,7 +5308,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k24.jpg",
                   "detail": "Maybelline New York كريم أساس فيت مي مط وخافي للمسام - 105 العاج الطبيعي",
-                  "price":  1,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -5329,7 +5330,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k25.jpg",
                   "detail": "Flormar Smooth Touch Foundation - 05 Soft Beige - 30ml",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5373,7 +5374,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k27.jpg",
                   "detail": "Bourjois Air Mat Undetectable Matte Finish Foundation - 03 Beige Clair",
-                  "price": 112 ,
+                  "price": 112,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5401,7 +5402,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k28.jpg",
                   "detail": "L'Oreal Paris ماسكارا لاش بارادايس المكثفة للرموش بخلاصة زيت الخروع - أسود",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5423,7 +5424,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k29.jpg",
                   "detail": "Essence I Love Extreme Crazy Volume Mascara - Black",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -5467,7 +5468,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k31.jpg",
                   "detail": "L'Oreal Paris Air Mega Volume Mascara - 01 Black",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5489,7 +5490,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k32.jpg",
                   "detail": "Essence Lash Princess Sculpted Volume Mascara - Black",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5511,7 +5512,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k33.jpg",
                   "detail": "Maybelline New York ماسكرا سينسيشنال مكثفة قابلة للغسل - أسود",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -5533,7 +5534,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k34.jpg",
                   "detail": "Essence I Love Extreme Crazy Volume Mascara - Black",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -5555,7 +5556,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/k35.jpg",
                   "detail": "Bourjois Twist Up The Volume Mascara - 52 Ultra Black",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -5577,7 +5578,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k36.jpg",
                   "detail": "Essence لاش اند برو - مسكرا جل - للرموش والحواجب - شفافه",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5611,7 +5612,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k37.jpg",
                   "detail": "مساج فروة الرأس اليدوية",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -5633,7 +5634,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k38.jpg",
                   "detail": "جهاز تدليك للعنق والظهر وتدليك كامل للجسم",
-                  "price":  13,
+                  "price": 13,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.6",
                   "values": [
@@ -5655,7 +5656,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/k39.jpg",
                   "detail": "Forever Silicone Ultrasonic Facial Cleanser Brush + 5 in 1 Care Massager",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5677,7 +5678,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k40.jpg",
                   "detail": "مسدس مساج لتدليك العضلات - 7 قطع فضي",
-                  "price": 310 ,
+                  "price": 310,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -5699,7 +5700,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k41.jpg",
                   "detail": "مسدس مساج لتدليك العضلات - احمر",
-                  "price": 310 ,
+                  "price": 310,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5721,7 +5722,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k42.jpg",
                   "detail": "جهاز المساج المضلع لإسترخاء كامل الجسم",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5743,7 +5744,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k43.jpg",
                   "detail": "قلم مساج - فضي",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5765,7 +5766,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/k44.jpg",
                   "detail": "Relax & Tone جهاز مساج ريلاكس اند تون",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -5787,7 +5788,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k45.jpg",
                   "detail": "مساج فروة الرأس اليدوية",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -5815,7 +5816,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/k46.jpg",
                   "detail": "Digital Bathroom Scale - 180 KG",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -5837,7 +5838,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/k47.jpg",
                   "detail": "مشد الظهر- أسود",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5859,7 +5860,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/k48.jpg",
                   "detail": "Rossmax جهاز قياس الضغط روزماكس بالسماعة",
-                  "price": 217 ,
+                  "price": 217,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5881,7 +5882,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/k49.jpg",
                   "detail": "جهاز قياس تشبع الاكسجين بالدم",
-                  "price": 114 ,
+                  "price": 114,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -5903,7 +5904,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/k50.jpg",
                   "detail": "Granzia Blood Pressure Monitor - Astro",
-                  "price": 318 ,
+                  "price": 318,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -5925,7 +5926,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/k51.jpg",
                   "detail": "مشد الظهر- أسود",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -5947,7 +5948,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/k52.jpg",
                   "detail": "ترمومتر بالأشعة تحت الحمراء عن بعد لقياس درجه حرارة الجسم",
-                  "price": 519 ,
+                  "price": 519,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -5969,7 +5970,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/k53.jpg",
                   "detail": "مشاركة هذا المنتجRossmax جهاز قياس الضغط روزماكس بالسماعة",
-                  "price": 217 ,
+                  "price": 217,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -5991,7 +5992,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/k54.jpg",
                   "detail": "Trust Smart Digital Bathroom Scale - 180Kg",
-                  "price": 215 ,
+                  "price": 215,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -6017,7 +6018,7 @@
     },
     {
       "name": "منتجات العنايه بالاطفال",
-      "icon" : "assets/images/images/smiling-baby.svg",
+      "icon": "assets/images/images/smiling-baby.svg",
       "id": "chlidrenCare",
       "myProducts": [
         {
@@ -6032,7 +6033,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/n1.jpg",
                   "detail": "Pampers Premium Care Diapers - Size 1 - 60 Pcs",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.5",
                   "values": [
@@ -6054,7 +6055,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/n2.jpg",
                   "detail": "Molfix 3D New Born Diapers - Size 1 - 60 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -6076,7 +6077,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/n3.jpg",
                   "detail": "Pampers Premium Care Baby Diapers - Size 4 - 128 Pcs",
-                  "price": 314 ,
+                  "price": 314,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.7",
                   "values": [
@@ -6098,7 +6099,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/n4.jpg",
                   "detail": "Molfix 3D Junior Diapers - Size 5 - 58 Pcs",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.7",
                   "values": [
@@ -6120,7 +6121,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/n5.jpg",
                   "detail": "Pampers حفاضات عناية مميزة - مقاس 3 - 94 قطعة",
-                  "price": 218 ,
+                  "price": 218,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -6142,7 +6143,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/n6.jpg",
                   "detail": "Pampers حفاظات بامبرز بيبي بانتس - مقاس 5 - 52 قطعة",
-                  "price": 113 ,
+                  "price": 113,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -6164,7 +6165,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/n7.jpg",
                   "detail": "Bebem بى بم طبيعى حفاضات أطفال صغير مقاس 2 - 64 ق",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -6186,7 +6187,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/n8.jpg",
                   "detail": "Pampers حفاضات عناية مميزة - مقاس 2 - 94 قطعة",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -6280,7 +6281,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/n12.jpg",
                   "detail": "Bestrilliant منديل معقم للأطفال - عبوة 100 منديل - 3 عبوات",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -6324,7 +6325,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/n14.jpg",
                   "detail": "Pampers Sensitive Protect Wipes - 336 Wipes",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5.9",
                   "values": [
@@ -6368,7 +6369,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/n16.jpg",
                   "detail": "Bestrilliant Antiseptic Wipes Box - 12 Pcs - 5 Boxes",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -6390,7 +6391,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/n17.jpg",
                   "detail": "Pampers Sensitive Baby Wipes – 168 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -6412,7 +6413,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/n18.jpg",
                   "detail": "Pampers مناديل مبللة فريش كلين للتنظيف - 256 قطعة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -6446,7 +6447,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/n19.jpg",
                   "detail": "Summer حواجز للاطفال مبطنة",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -6468,7 +6469,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/n20.jpg",
                   "detail": "Durable Drawer Door Cupboard Safety Locks Baby Kids Safety Care Locks White",
-                  "price": 14 ,
+                  "price": 14,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -6490,7 +6491,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/n21.jpg",
                   "detail": "CB Baby Child Safety Protect Locks Fridge Guard Cupboard Refrigerator Door Drawer",
-                  "price": 318 ,
+                  "price": 318,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4,7",
                   "values": [
@@ -6512,7 +6513,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/n22.jpg",
                   "detail": "حواجز أمان للأطفال - شريط مانع للانزلاق لأحواض الاستحمام والأرضيات المنزلقة - 8 قطع",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -6534,7 +6535,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/n23.jpg",
                   "detail": "Baby Crib Bumper Knotted Braided Bumper Handmade Soft Knot",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -6556,7 +6557,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/n24.jpg",
                   "detail": "SET Infant Safety Table Transparent Anti",
-                  "price": 113 ,
+                  "price": 113,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -6578,7 +6579,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/n25.jpg",
                   "detail": "CB Anti Open Drawer Lock -function Baby Anti Clip Cabinet Lock Function",
-                  "price": 318 ,
+                  "price": 318,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.6",
                   "values": [
@@ -6600,7 +6601,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/n26.jpg",
                   "detail": "حامل زجاجة باباستي للأطفال الصغار وزجاجات الأطفال آمن باللون الأزرق",
-                  "price": 213 ,
+                  "price": 213,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "5",
                   "values": [
@@ -6622,7 +6623,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/n27.jpg",
                   "detail": "Drawer Door Cabinet Cupboard Safety Locks Baby Kid Safety Care Baby Protection White",
-                  "price": 310 ,
+                  "price": 310,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -6650,7 +6651,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/n28.jpg",
                   "detail": "Alcatel Baby Link 510 Kids Sleeping Monitor",
-                  "price": 715 ,
+                  "price": 715,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -6672,7 +6673,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/n29.jpg",
                   "detail": "Philips Baby Monitor - White/Blue",
-                  "price": 919 ,
+                  "price": 919,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -6694,7 +6695,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/n30.jpg",
                   "detail": "Door Lock Latches - 5Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -6716,7 +6717,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/n31.jpg",
                   "detail": "TOT Care Portable Ultrasonic Mosquito Repellent - Blue",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -6760,7 +6761,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/n33.jpg",
                   "detail": "Anti-Lost Child Safety Bracelet - Orange",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -6782,7 +6783,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/n34.jpg",
                   "detail": "Baby Monitor With Lighting",
-                  "price": 511 ,
+                  "price": 511,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -6804,7 +6805,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/n35.jpg",
                   "detail": "Baby Head Protection Pillow Pad With Straps - Yellow",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -6826,7 +6827,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/n36.jpg",
                   "detail": "Fisher Price Sou1ds'n Lights Monitor With Energy Saving Power Cord",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.8",
                   "values": [
@@ -6860,7 +6861,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/f1.jpg",
                   "detail": "مجموعة دمى إلسا وآنا",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -6882,7 +6883,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/f2.jpg",
                   "detail": "عروسة توينز مع سرير دورين",
-                  "price": 210 ,
+                  "price": 210,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -6948,7 +6949,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/f5.jpg",
                   "detail": "LOL Surprise! OMG Doll - 4 PCS",
-                  "price": 110 ,
+                  "price": 110,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -6970,7 +6971,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/f6.jpg",
                   "detail": "دمية مع عربة اطفال، تشرب الماء ويتبول",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -6992,7 +6993,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/f7.jpg",
                   "detail": "New Kids Toys Birthday Gifts Popular Masha Plush Dolls Cute",
-                  "price": 117 ,
+                  "price": 117,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -7014,7 +7015,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/f8.jpg",
                   "detail": "Doll For Girls With Accessories",
-                  "price": 119 ,
+                  "price": 119,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -7036,7 +7037,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/f9.jpg",
                   "detail": "LOL Surprise! Doll",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.6",
                   "values": [
@@ -7064,7 +7065,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/f10.jpg",
                   "detail": "Ben 10 Monster Watch - With 10 Shapes",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7086,7 +7087,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/f11.jpg",
                   "detail": "Talking-Walking-Lightening-Buzz Action Figure",
-                  "price": 315 ,
+                  "price": 315,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7130,7 +7131,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/f13.jpg",
                   "detail": "Electronic Dancing Singing & Lighting Robot",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.9",
                   "values": [
@@ -7152,7 +7153,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/f14.jpg",
                   "detail": "PJ Masks Mini Action Figures Toy Play Set - 6 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
                   "values": [
@@ -7174,7 +7175,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/f15.jpg",
                   "detail": "مشاركة هذا المنتجTeenage Mutant Ninja Turtles Action Figure - 12 Cm - 5 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -7196,7 +7197,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/f16.jpg",
                   "detail": "Talking-Walking-Lightening-Buzz Action Figure",
-                  "price": 315 ,
+                  "price": 315,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7218,7 +7219,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/f17.jpg",
                   "detail": "Pj Masks Characters Action Figures - 11 Pcs",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1",
                   "values": [
@@ -7240,7 +7241,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/f18.jpg",
                   "detail": "Set Toys Ninja Turtles - 6 PCS",
-                  "price": 318 ,
+                  "price": 318,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7268,7 +7269,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/f20.jpg",
                   "detail": "سيارة متحولة بريموت كنترول",
-                  "price": 115 ,
+                  "price": 115,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7290,7 +7291,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/f21.jpg",
                   "detail": "Remote Control Boat For Pools And Lakes",
-                  "price": 311 ,
+                  "price": 311,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.4",
                   "values": [
@@ -7312,7 +7313,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/f22.jpg",
                   "detail": "Remote Control Aerobatic Turbo Twister Car With Light - Green",
-                  "price": 116 ,
+                  "price": 116,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.3",
                   "values": [
@@ -7334,7 +7335,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/f23.jpg",
                   "detail": "سيارة سبايدر مان الخارقة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.3",
                   "values": [
@@ -7356,7 +7357,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/f24.jpg",
                   "detail": "عربية بوليس متحولة",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -7378,7 +7379,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/f25.jpg",
                   "detail": "Beautiful Transformer RC Robot Car - Red/Black",
-                  "price": 113 ,
+                  "price": 113,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.4",
                   "values": [
@@ -7400,7 +7401,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/f26.jpg",
                   "detail": "سيارة هامر بريموت كنترول للاطفال",
-                  "price": 118 ,
+                  "price": 118,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4.9",
                   "values": [
@@ -7422,7 +7423,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/f27.jpg",
                   "detail": "Air Bus Remote Controlled Plane For Kids",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7444,7 +7445,7 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/f28.jpg",
                   "detail": "STUNT CAR عربية اطفال مزوده ريموت كنترول شكل مميز",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.8",
                   "values": [
@@ -7478,7 +7479,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/e1.jpg",
                   "detail": "شنطة تنظيم مستلزمات الاطفال ( شامبوهات ـ كريمات ـ حفاضات ـ رابطة شعرـ مناديل ـ وغيرها .....) - رمادى",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.5",
                   "values": [
@@ -7500,7 +7501,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/e3.jpg",
                   "detail": "Baby Stroller Support Warm Cotton Cushion - Giraffe",
-                  "price":  1 ,
+                  "price": 1,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.8",
                   "values": [
@@ -7544,7 +7545,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/e4.jpg",
                   "detail": "شياله - حماله اطفال - أزرق داكن",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7566,7 +7567,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/e5.jpg",
                   "detail": "شيالة أطفال بلون أزرق",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7588,7 +7589,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/e6.jpg",
                   "detail": "Baby Carrier - Blue",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.3",
                   "values": [
@@ -7610,7 +7611,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/e7.jpg",
                   "detail": "Baby Stroller Support Warm Cotton Cushion - Giraffe",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7632,7 +7633,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/e8.jpg",
                   "detail": "P&G Baby Carrier - Large - Red",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -7682,7 +7683,7 @@
                   "id": 1,
                   "imgUrl": "assets/images/images/e10.jpg",
                   "detail": "Crutch Stroller - Red",
-                  "price": 61 ,
+                  "price": 61,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7704,7 +7705,7 @@
                   "id": 2,
                   "imgUrl": "assets/images/images/e11.jpg",
                   "detail": "Argo عربة اطفال - ازرق",
-                  "price": 51 ,
+                  "price": 51,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.9",
                   "values": [
@@ -7726,7 +7727,7 @@
                   "id": 3,
                   "imgUrl": "assets/images/images/e12.jpg",
                   "detail": "Crutch Stroller - Blue",
-                  "price": 61 ,
+                  "price": 61,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2",
                   "values": [
@@ -7748,7 +7749,7 @@
                   "id": 4,
                   "imgUrl": "assets/images/images/e13.jpg",
                   "detail": "Anershi Baby Stroller - Dark blue",
-                  "price": 41 ,
+                  "price": 41,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -7770,7 +7771,7 @@
                   "id": 5,
                   "imgUrl": "assets/images/images/e14.jpg",
                   "detail": "Crutch Stroller - Pink",
-                  "price": 61 ,
+                  "price": 61,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "2.8",
                   "values": [
@@ -7792,7 +7793,7 @@
                   "id": 6,
                   "imgUrl": "assets/images/images/e15.jpg",
                   "detail": "Belecoo Classic 3-in-1 Baby Stroller - Baby Blue",
-                  "price": 11 ,
+                  "price": 11,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "1.9",
                   "values": [
@@ -7814,7 +7815,7 @@
                   "id": 7,
                   "imgUrl": "assets/images/images/e16.jpg",
                   "detail": "Crutch Stroller plus - red",
-                  "price": 81 ,
+                  "price": 81,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3",
                   "values": [
@@ -7836,7 +7837,7 @@
                   "id": 8,
                   "imgUrl": "assets/images/images/e17.jpg",
                   "detail": "Crutch Stroller - Purple",
-                  "price": 61 ,
+                  "price": 61,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "3.9",
                   "values": [
@@ -7858,10 +7859,23 @@
                   "id": 9,
                   "imgUrl": "assets/images/images/e18.jpg",
                   "detail": "Argo عربة اطفال - ازرق غامق",
-                  "price": 51 ,
+                  "price": 51,
                   "button": "اضافه لسلة التســــــــوق",
                   "rating": "4",
-                  "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}]
+                  "values": [
+                    {
+                      "value": "1-0",
+                      "viewValue": "1"
+                    },
+                    {
+                      "value": "2-1",
+                      "viewValue": "2"
+                    },
+                    {
+                      "value": "3-2",
+                      "viewValue": "3"
+                    }
+                  ]
                 }
               ]
             }
@@ -7874,7 +7888,20 @@
     {
       "id": 1,
       "imgUrl": "assets/images/images/p1.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Axe Black Deodorant and Body Spray for Men - 150 ml",
       "price": 31,
       "button": "اضغط هنا",
@@ -7883,7 +7910,20 @@
     {
       "id": 2,
       "imgUrl": "assets/images/images/p2.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Le Petit Marseillais Shower Cream - Vanilla Milk 250ml - Promo",
       "price": 15,
       "button": "اضغط هنا",
@@ -7892,7 +7932,20 @@
     {
       "id": 3,
       "imgUrl": "assets/images/images/p3.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Knorr Chicken Stock – 12 Cubes – 108gm",
       "price": 41,
       "button": "اضغط هنا",
@@ -7901,7 +7954,20 @@
     {
       "id": 4,
       "imgUrl": "assets/images/images/p5.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Axe Gold Temptation Deodorant Spray for Men - 150 ml",
       "price": 31,
       "button": "اضغط هنا",
@@ -7910,16 +7976,42 @@
     {
       "id": 5,
       "imgUrl": "assets/images/images/p6.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Dice مجموعة 6 بوكسرات مريحة سهلة الارتداء",
-      "price": 11 ,
+      "price": 11,
       "button": "اضغط هنا",
       "rating": "4"
     },
     {
       "id": 6,
       "imgUrl": "assets/images/images/p7.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Dahcha Tomato Paste – 35Gm",
       "price": 21,
       "button": "اضغط هنا",
@@ -7928,7 +8020,20 @@
     {
       "id": 7,
       "imgUrl": "assets/images/images/p8.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Coca-cola Free Coca-cola 2.45LBottle with Ramadan Box",
       "price": 11,
       "button": "اضغط هنا",
@@ -7937,7 +8042,20 @@
     {
       "id": 8,
       "imgUrl": "assets/images/images/p9.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Listerine Cool Mint Mouthwash - 250ml - 2 Pcs",
       "price": 15,
       "button": "اضغط هنا",
@@ -7946,7 +8064,20 @@
     {
       "id": 9,
       "imgUrl": "assets/images/images/p10.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Mesery مجموعة من ستة بريف اندروير قطن ناعم",
       "price": 91,
       "button": "اضغط هنا",
@@ -7955,7 +8086,20 @@
     {
       "id": 10,
       "imgUrl": "assets/images/images/p11.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Khair Al Dar Vegetable Ghee – 300Gm",
       "price": 51,
       "button": "اضغط هنا",
@@ -7964,7 +8108,20 @@
     {
       "id": 11,
       "imgUrl": "assets/images/images/p12.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Baellerry بلاري بوك و محفظة جلد عالي الجودة",
       "price": 71,
       "button": "اضغط هنا",
@@ -7973,7 +8130,20 @@
     {
       "id": 12,
       "imgUrl": "assets/images/images/p4.jpg",
-      "values": [{"value": "1-0","viewValue": "1"},{"value": "2-1","viewValue": "2"},{"value":"3-2","viewValue": "3"}],
+      "values": [
+        {
+          "value": "1-0",
+          "viewValue": "1"
+        },
+        {
+          "value": "2-1",
+          "viewValue": "2"
+        },
+        {
+          "value": "3-2",
+          "viewValue": "3"
+        }
+      ],
       "detail": "Head & Shoulders شامبو ضد القشرة بزيت اللوز - 400 مل",
       "price": 51,
       "button": "اضغط هنا",
@@ -7988,34 +8158,30 @@
         {
           "id": 13,
           "imgUrl": "assets/images/images/d1.jpg",
-
           "detail": "L'Oreal Paris Hyaluronic Acid Serum Hyaluron Expert - 30 ml + 24H Replumping Moisturizing Tissue Mask",
-          "price": 21 ,
+          "price": 21,
           "button": "اضغط هنا",
           "rating": "2.6"
         },
         {
           "id": 14,
           "imgUrl": "assets/images/images/d2.jpg",
-
           "detail": "Oppo A15 - 6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone - Mystery Blue",
-          "price": 41 ,
+          "price": 41,
           "button": "اضغط هنا",
           "rating": "4.7"
         },
         {
           "id": 15,
           "imgUrl": "assets/images/images/d3.jpg",
-
           "detail": "American Eagle Graphic T-Shirt - Burgundy",
-          "price": 31 ,
+          "price": 31,
           "button": "اضغط هنا",
           "rating": "4.2"
         },
         {
           "id": 16,
           "imgUrl": "assets/images/images/d4.jpg",
-
           "detail": "Kingston فلاش ميموري اكسوديا لنقل البيانات، سعة 32 جيجا",
           "price": 61,
           "button": "اضغط هنا",
@@ -8030,25 +8196,22 @@
         {
           "id": 17,
           "imgUrl": "assets/images/images/d6.jpg",
-
           "detail": "Garnier سيرم غارنييه فاست برايت فيتامين سي٣٠ مل - عناية بالبشرة + مساج رول للوجه",
-          "price": 11 ,
+          "price": 11,
           "button": "اضغط هنا",
           "rating": "4"
         },
         {
           "id": 18,
           "imgUrl": "assets/images/images/d7.jpg",
-
           "detail": "L'Oreal Paris Hyaluronic Acid Serum Hyaluron Expert - 30 ml ",
-          "price": 21 ,
+          "price": 21,
           "button": "اضغط هنا",
           "rating": "3.6"
         },
         {
           "id": 19,
           "imgUrl": "assets/images/images/d8.jpg",
-
           "detail": "Maybelline New York آيلاينر كولوسال بزيت الأرجان - أسود كثيف",
           "price": 41,
           "button": "اضغط هنا",
@@ -8057,9 +8220,8 @@
         {
           "id": 20,
           "imgUrl": "assets/images/images/d9.jpg",
-
           "detail": "Garnier عرض العناية بالبشرة 3*قناع + ميسلار 100م + هدية جل",
-          "price": 11 ,
+          "price": 11,
           "button": "اضغط هنا",
           "rating": "3.9"
         }
@@ -8159,28 +8321,24 @@
         {
           "id": "5",
           "imgUrl": "assets/images/images/x1.jpg",
-
           "detail": "Finish مسحوق تنظيف الأطباق - 1 كيلو - 2+1 عبوة",
           "price": 21
         },
         {
           "id": "6",
           "imgUrl": "assets/images/images/x2.jpg",
-
           "detail": "Lipton Pure Non-Bitter Green Tea - 25 Bags",
           "price": 11
         },
         {
           "id": "7",
           "imgUrl": "assets/images/images/x3.jpg",
-
           "detail": "Clorox Clothes Stain Remover – 1.8L",
           "price": 51
         },
         {
           "id": "8",
           "imgUrl": "assets/images/images/x4.jpg",
-
           "detail": "Slite Sunflower Oil - 750ml",
           "price": 21
         }
@@ -8193,28 +8351,24 @@
         {
           "id": "9",
           "imgUrl": "assets/images/images/y1.jpg",
-
           "detail": "Dettol Antiseptic Liquid Cleaner - 235 ML",
           "price": 31
         },
         {
           "id": "10",
           "imgUrl": "assets/images/images/y2.jpg",
-
           "detail": "Veroll ملمع ومعطر للزجاج برائحة جوز الهند- 450 مل - 2 قطع + فوطة تنظيف",
           "price": 21
         },
         {
           "id": "11",
           "imgUrl": "assets/images/images/y3.jpg",
-
           "detail": "Harpic Waves Marine Splash Toilet Cleaner – 35gm",
           "price": 51
         },
         {
           "id": "12",
           "imgUrl": "assets/images/images/y4.jpg",
-
           "detail": "Veroll منظف وملمع زجاج برائحة الخوخ - 500 مل - 3 قطع - 2 فوطة هدية",
           "price": 31
         }
@@ -8254,28 +8408,24 @@
         {
           "id": "5",
           "imgUrl": "assets/images/images/az5.jpg",
-
           "detail": "Shoozy Lace up Leather Sneaker - White",
           "price": 11
         },
         {
           "id": "6",
           "imgUrl": "assets/images/images/az6.jpg",
-
           "detail": "zoom1 Sneakers female -white",
           "price": 11
         },
         {
           "id": "7",
           "imgUrl": "assets/images/images/az7.jpg",
-
           "detail": "مشاركة هذا المنتجRUN EG Sneakers - White Pink",
           "price": 11
         },
         {
           "id": "8",
           "imgUrl": "assets/images/images/az8.jpg",
-
           "detail": "RUN EG Sneakers - Black Pink",
           "price": 11
         }
@@ -8288,28 +8438,24 @@
         {
           "id": "9",
           "imgUrl": "assets/images/images/az9.jpg",
-
           "detail": "Hammer Hammer Lace Up Round Toe Sneakers for Women",
           "price": 91
         },
         {
           "id": "10",
           "imgUrl": "assets/images/images/az10jpg.jpg",
-
           "detail": "Hammer Hammer Lace Up Round Toe Sneakers for Women",
           "price": 91
         },
         {
           "id": "11",
           "imgUrl": "assets/images/images/az11.jpg",
-
           "detail": "Hammer Hammer Lace Up Round Toe Sneakers for Women",
           "price": 91
         },
         {
           "id": "12",
           "imgUrl": "assets/images/images/az12.jpg",
-
           "detail": "مشاركة هذا المنتجRoadwalker سنيكرز بدون رباط - رمادي",
           "price": 91
         }
@@ -8349,28 +8495,27 @@
         {
           "id": "5",
           "imgUrl": "assets/images/images/h8.jpg",
-
           "detail": "L'Oreal Paris Hyaluronic Acid Serum Hyaluron Expert - 30 ml + 24H Replumping Moisturizing Tissue Mask",
           "price": 21
         },
         {
           "id": "6",
           "imgUrl": "assets/images/images/h9.jpg",
-
           "detail": "Maybelline New York آيلاينر كولوسال بزيت الأرجان - أسود كثيف",
-          "price": 41        },
+          "price": 41
+        },
         {
           "id": "7",
           "imgUrl": "assets/images/images/h10.jpg",
-
           "detail": "L'Oreal Paris بديل الزيت الفيف مغذي بالزيت الإستثنائي للشعر الجاف - 300 مل",
-          "price": 41        },
+          "price": 41
+        },
         {
           "id": "8",
           "imgUrl": "assets/images/images/h11.jpg",
-
           "detail": "Garnier قناع ورقي للوجه للترطيب الفائق وموازن للبشرة بخلاصة الشاي الاخضر",
-          "price": 21        }
+          "price": 21
+        }
       ]
     },
     {
@@ -8380,28 +8525,24 @@
         {
           "id": "9",
           "imgUrl": "assets/images/images/h12.jpg",
-
           "detail": "Gillette شفرات Mach3 تربو - 4 قطع",
           "price": 11
         },
         {
           "id": "10",
           "imgUrl": "assets/images/images/h13.jpg",
-
           "detail": "Braun MGK5245 ماكينة حلاقة الكل في واحد 7 في 1 قابلة لإعادة الشحن مع شفرة حلاقة جيليت برو جلايد",
           "price": 71
         },
         {
           "id": "11",
           "imgUrl": "assets/images/images/h14.jpg",
-
           "detail": "Braun BT3222 ماكينة حلاقة اللحية و الشعر - اسود",
           "price": 51
         },
         {
           "id": "12",
           "imgUrl": "assets/images/images/h15.jpg",
-
           "detail": "Braun SK3000 4-in-1 Styling Kit Hair And Beard Trimmer With Gillette Fusion 5 Proglide Razor -Black",
           "price": 51
         }
@@ -8441,30 +8582,27 @@
         {
           "id": "5",
           "imgUrl": "assets/images/images/c6.jpg",
-
           "detail": "Pampers حفاظات بامبرز بيبي بانتس - مقاس 5 - 52 قطعة",
           "price": 11
         },
         {
           "id": "6",
           "imgUrl": "assets/images/images/c7.jpg",
-
           "detail": "Molfix 3D Diapers – Size 3 – 58 Pcs + 2 Pcs Free",
           "price": 11
         },
         {
           "id": "7",
           "imgUrl": "assets/images/images/c8.jpg",
-
           "detail": "Pampers Baby Dry Diapers With Oil Olive - Size 1 - 60 Pcs",
           "price": 11
         },
         {
           "id": "8",
           "imgUrl": "assets/images/images/c9.jpg",
-
           "detail": "Pampers حفاضات بيبي دراي - مقاس 1 - 21 قطعة",
-          "price": 41        }
+          "price": 41
+        }
       ]
     },
     {
@@ -8474,28 +8612,24 @@
         {
           "id": "9",
           "imgUrl": "assets/images/images/c10.jpg",
-
           "detail": "Keeeper Okt8444 - Disney Mickey Step Stool",
           "price": 21
         },
         {
           "id": "10",
           "imgUrl": "assets/images/images/c11.jpg",
-
           "detail": "Baby Potty & Seat",
           "price": 11
         },
         {
           "id": "11",
           "imgUrl": "assets/images/images/c12.jpg",
-
           "detail": "Put Up The Ladder Kids Toilet Seat",
           "price": 21
         },
         {
           "id": "12",
           "imgUrl": "assets/images/images/c13.jpg",
-
           "detail": "Travel Toilet Potty Training Seat Covers Liners With Carry Bag For Babies",
           "price": 21
         }
@@ -8866,22 +9000,88 @@
       ]
     }
   ],
-  "offers" : [
-    {"name":"اقوي العروض بمناسبه عيد الاضحي" , "offerCards" : [
-      {"imgUrl" : "assets/images/images/malika.jpg" , "detail" : "El Maleka Big Rings Pasta - 1Kg" , "price" : 10 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/malika.jpg" , "detail" : "El Maleka Risoni Pasta - 400g" , "price" : 5 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/malika.jpg" , "detail" : "El Maleka Elbow Pasta - 1Kg" , "price" : 10 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/malika2.jpg" , "detail" : "El Maleka Spaghetti Pasta - 1Kg + 1 Elbow Pasta - 1Kg" , "price" : 18 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/malika3.jpg" , "detail" : "El Maleka Spaghetti Pasta - 1Kg" , "price" : 10 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/malika.jpg" , "detail" : "El Maleka Spaghetti Pasta - 400 g" , "price" : 5 , "button" : "اضافه لسلة التســــوق"}
-    ]},
-    {"name" : "منتجات قام العملاء بشرائها" , "offerCards" : [
-      {"imgUrl" : "assets/images/images/off1.jpg" , "detail" : "Rehana سكر ابيض فاخر- 1 كيلوجرام- 2 قطعة" , "price" : 20 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/off2.jpg" , "detail" : "Mr. Food دقيق أبيض فاخر - متعدد الاستخدام - 1كيلو" , "price" : 8 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/off3.jpg" , "detail" : "Alsuhagy ارز - 5 كجم" , "price" : 48 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/off4.jpg" , "detail" : "Lipton Yellow Label Black Tea - 400" , "price" : 38 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/off5.jpg" , "detail" : "Elmatbakh أرز -5كجم" , "price" : 44 , "button" : "اضافه لسلة التســــوق"},
-      {"imgUrl" : "assets/images/images/offer6.jpg" , "detail" : " Harvest Tomato paste – 800g" , "price" : 19 , "button" : "اضافه لسلة التســــوق"}
-    ]}
+  "offers": [
+    {
+      "name": "اقوي العروض بمناسبه عيد الاضحي",
+      "offerCards": [
+        {
+          "imgUrl": "assets/images/images/malika.jpg",
+          "detail": "El Maleka Big Rings Pasta - 1Kg",
+          "price": 10,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/malika.jpg",
+          "detail": "El Maleka Risoni Pasta - 400g",
+          "price": 5,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/malika.jpg",
+          "detail": "El Maleka Elbow Pasta - 1Kg",
+          "price": 10,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/malika2.jpg",
+          "detail": "El Maleka Spaghetti Pasta - 1Kg + 1 Elbow Pasta - 1Kg",
+          "price": 18,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/malika3.jpg",
+          "detail": "El Maleka Spaghetti Pasta - 1Kg",
+          "price": 10,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/malika.jpg",
+          "detail": "El Maleka Spaghetti Pasta - 400 g",
+          "price": 5,
+          "button": "اضافه لسلة التســــوق"
+        }
+      ]
+    },
+    {
+      "name": "منتجات قام العملاء بشرائها",
+      "offerCards": [
+        {
+          "imgUrl": "assets/images/images/off1.jpg",
+          "detail": "Rehana سكر ابيض فاخر- 1 كيلوجرام- 2 قطعة",
+          "price": 20,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/off2.jpg",
+          "detail": "Mr. Food دقيق أبيض فاخر - متعدد الاستخدام - 1كيلو",
+          "price": 8,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/off3.jpg",
+          "detail": "Alsuhagy ارز - 5 كجم",
+          "price": 48,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/off4.jpg",
+          "detail": "Lipton Yellow Label Black Tea - 400",
+          "price": 38,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/off5.jpg",
+          "detail": "Elmatbakh أرز -5كجم",
+          "price": 44,
+          "button": "اضافه لسلة التســــوق"
+        },
+        {
+          "imgUrl": "assets/images/images/offer6.jpg",
+          "detail": " Harvest Tomato paste – 800g",
+          "price": 19,
+          "button": "اضافه لسلة التســــوق"
+        }
+      ]
+    }
   ]
 }

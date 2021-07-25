@@ -1,3 +1,60 @@
-<div class="cat-container" fxLayout="row wrap" fxLayoutAlign="center start">
+<div
+  *ngIf="category$ | async as _category"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  style="height: auto; background-color: whitesmoke"
+  dir="rtl"
+>
+  <div fxFlex="80" fxFlex.xs="90" fxLayout="column" fxLayoutAlign="center stretch">
+    <br />
+    <br />
+    <mat-card
+      class="banner"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      [ngStyle.xs]="{ 'min-height.px': 200, 'max-height.px': 200 }"
+    >
+      <img fxFlex="100" src="{{_category?.bannerImage}}" alt="" />
+    </mat-card>
+    <br />
+    <mat-card
+      class="section"
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+      fxLayoutGap="10px"
+    >
+      <div class="header b-r-5" fxLayoutAlign="center center">
+        <!-- header -->
+        العنوان
+      </div>
+      <div
+        class="items"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+        fxLayoutGap="5px"
+      >
 
+        <div class="item b-r-3" fxLayout="column" fxLayoutAlign="center stretch"
+        [ngStyle.xs]="{'height.px':150, 'width.px':130}"
+        >
+          <img class="b-r-3"  [ngStyle.xs]="{'height.px':120}" src="../../../../assets/images/banner.jpg" alt="" />
+          <div class="title b-r-3" [ngStyle.xs]="{'height.px':30}" fxLayoutAlign="center center">
+            <!-- title -->
+            اسم المنتج
+          </div>
+        </div>
+        <div class="item b-r-3" fxLayout="column" fxLayoutAlign="center stretch"
+        [ngStyle.xs]="{'height.px':150, 'width.px':140}"
+        >
+          <img class="b-r-3"  [ngStyle.xs]="{'height.px':120}" src="../../../../assets/images/banner.jpg" alt="" />
+          <div class="title b-r-3" [ngStyle.xs]="{'height.px':30}" fxLayoutAlign="center center">
+            <!-- title -->
+            اسم المنتج
+          </div>
+        </div>
+
+      </div>
+    </mat-card>
+    <br />
+  </div>
 </div>

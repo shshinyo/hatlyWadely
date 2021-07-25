@@ -27,7 +27,7 @@ const SHARED_COMPONENTS = [
   PieComponent,
   ItemName,
   SocialMediaFloatingComponent,
-  ItemComponent
+  ItemComponent,
 ];
 
 const LOCAL_DIRECTIVES = [];
