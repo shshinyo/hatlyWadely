@@ -2,17 +2,16 @@ mat-card {
   padding: 0;
   background-color: #ffff;
 }
-.banner {
+.carousel-container {
   min-height: 350px;
   max-height: 350px;
-  // img {
-  //   min-height: inherit;
-  //   max-height: inherit;
-  //   border-radius: 5px;
-  // }
+
   // just leave it alone (-_-)
   .carousel {
-    background-color: #ffff;
+    img {
+      min-height: 350px;
+      max-height: 350px;
+    }
     ::ng-deep {
       .p-galleria.p-galleria-indicator-onitem,
       .p-galleria-indicators {
@@ -43,6 +42,8 @@ mat-card {
     height: 220px;
     width: 195px;
     transition: 0.15s;
+    text-decoration: none;
+    color: black;
     img {
       height: 180px;
     }

@@ -9,38 +9,41 @@
     <br />
     <br />
     <div
-      class="carousel mat-elevation-z1"
-      fxFlex="60"
-      fxLayout="row wrap"
-      fxLayoutAlign="center center"
+      class="carousel-container"
       [ngStyle.xs]="{ 'min-height.px': 200, 'max-height.px': 200 }"
     >
-      <p-galleria
-        fxFill
-        [value]="_category.bannerImages"
-        [responsiveOptions]="responsiveOptions"
-        [containerStyle]="{ width: '100%' }"
-        [numVisible]="5"
-        [autoPlay]="true"
-        [circular]="true"
-        [showItemNavigators]="true"
-        [showThumbnails]="false"
-        [showIndicators]="true"
-        [showItemNavigatorsOnHover]="true"
-        [showIndicatorsOnItem]="true"
-      >
-        <ng-template pTemplate="item" let-item>
-          <img
-            [src]="item.imgUrl"
-            style="width: 100%; display: block; height: calc(60vh)"
-          />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-          <div class="p-grid p-nogutter p-justify-center">
-            <img [src]="item.imgUrl" style="display: block; height: calc(60vh)" />
-          </div>
-        </ng-template>
-      </p-galleria>
+      <div class="carousel mat-elevation-z1" fxLayout="column" fxLayoutAlign="stretch">
+        <p-galleria
+          [value]="_category.bannerImages"
+          [responsiveOptions]="responsiveOptions"
+          [containerStyle]="{ width: '100%' }"
+          [numVisible]="5"
+          [autoPlay]="true"
+          [circular]="true"
+          [showItemNavigators]="true"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [showItemNavigatorsOnHover]="true"
+          [showIndicatorsOnItem]="true"
+        >
+          <ng-template pTemplate="item" let-item>
+            <img
+              [src]="item.imgUrl"
+              style="width: 100%; display: block"
+              [ngStyle.xs]="{ 'max-height.px': 200, 'min-height.px': 200 }"
+            />
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="p-grid p-nogutter p-justify-center">
+              <img
+                [src]="item.imgUrl"
+                style="display: block"
+                [ngStyle.xs]="{ 'max-height.px': 200, 'min-height.px': 200 }"
+              />
+            </div>
+          </ng-template>
+        </p-galleria>
+      </div>
     </div>
     <br />
     <mat-card
@@ -55,12 +58,14 @@
         {{ section.name }}
       </div>
       <div
-        class="items"
+        class="items p-r-4 p-l-4"
         fxLayout="row wrap"
-        fxLayoutAlign="center center"
+        fxLayoutAlign="start center"
+        fxLayoutAlign.xs="center center"
         fxLayoutGap="5px"
       >
-        <div
+        <!-- router here -->
+        <a
           *ngFor="let pType of section.mainSections"
           class="item b-r-3"
           fxLayout="column"
@@ -81,7 +86,7 @@
             <!-- title -->
             {{ pType?.title }}
           </div>
-        </div>
+        </a>
       </div>
     </mat-card>
     <br />
@@ -112,6 +117,8 @@
             fxLayout="row wrap"
             fxLayoutAlign="center start"
           >
+            <!-- router here -->
+
             <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
           </div>
         </ng-template>
