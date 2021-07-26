@@ -4,3 +4,11 @@ export interface Category {
   id: string;
   myProducts:[]
 }
+
+export interface Product {
+  id: string;
+  imgUrl?: string;
+  detail?: string;
+  price?: number;
+  afterDiscount?: number;
+}

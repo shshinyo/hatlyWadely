@@ -8,14 +8,40 @@
   <div fxFlex="80" fxFlex.xs="90" fxLayout="column" fxLayoutAlign="center stretch">
     <br />
     <br />
-    <mat-card
-      class="banner"
+    <div
+      class="carousel mat-elevation-z1"
+      fxFlex="60"
       fxLayout="row wrap"
       fxLayoutAlign="center center"
       [ngStyle.xs]="{ 'min-height.px': 200, 'max-height.px': 200 }"
     >
-      <img fxFlex="100" src="{{_category?.bannerImage}}" alt="" />
-    </mat-card>
+      <p-galleria
+        fxFill
+        [value]="_category.bannerImages"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{ width: '100%' }"
+        [numVisible]="5"
+        [autoPlay]="true"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [showIndicators]="true"
+        [showItemNavigatorsOnHover]="true"
+        [showIndicatorsOnItem]="true"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img
+            [src]="item.imgUrl"
+            style="width: 100%; display: block; height: calc(60vh)"
+          />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="p-grid p-nogutter p-justify-center">
+            <img [src]="item.imgUrl" style="display: block; height: calc(60vh)" />
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
     <br />
     <mat-card
       class="section"
@@ -27,34 +53,71 @@
         <!-- header -->
         العنوان
       </div>
-      <div
-        class="items"
-        fxLayout="row wrap"
-        fxLayoutAlign="center center"
-        fxLayoutGap="5px"
-      >
-
-        <div class="item b-r-3" fxLayout="column" fxLayoutAlign="center stretch"
-        [ngStyle.xs]="{'height.px':150, 'width.px':130}"
+      <div class="items" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div
+          *ngFor="let section of mainSection"
+          fxFlex="100"
+          fxLayout="row wrap"
+          fxLayoutAlign="center center"
+          fxLayoutGap="5px"
         >
-          <img class="b-r-3"  [ngStyle.xs]="{'height.px':120}" src="../../../../assets/images/banner.jpg" alt="" />
-          <div class="title b-r-3" [ngStyle.xs]="{'height.px':30}" fxLayoutAlign="center center">
-            <!-- title -->
-            اسم المنتج
+          <div
+            *ngFor="let pType of section.mainSections"
+            class="item b-r-3"
+            fxLayout="column"
+            fxLayoutAlign="center stretch"
+            [ngStyle.xs]="{ 'height.px': 150, 'width.px': 130 }"
+          >
+            <img
+              class="b-r-3"
+              [ngStyle.xs]="{ 'height.px': 120 }"
+              src="{{ pType?.imgUrl }}"
+              alt=""
+            />
+            <div
+              class="title b-r-3"
+              [ngStyle.xs]="{ 'height.px': 30 }"
+              fxLayoutAlign="center center"
+            >
+              <!-- title -->
+              {{ pType?.title }}
+            </div>
           </div>
         </div>
-        <div class="item b-r-3" fxLayout="column" fxLayoutAlign="center stretch"
-        [ngStyle.xs]="{'height.px':150, 'width.px':140}"
-        >
-          <img class="b-r-3"  [ngStyle.xs]="{'height.px':120}" src="../../../../assets/images/banner.jpg" alt="" />
-          <div class="title b-r-3" [ngStyle.xs]="{'height.px':30}" fxLayoutAlign="center center">
-            <!-- title -->
-            اسم المنتج
-          </div>
-        </div>
-
       </div>
     </mat-card>
     <br />
+    <!-- <div
+      *ngFor="let section of _category.sections.secondSection"
+      class="best-seller b-r-3 mat-elevation-z1"
+      fxLayout="row wrap"
+      fxLayoutAlign="center start"
+      style="margin-top: 15px"
+    >
+      <div class="title" fxFlex="100" fxLayoutAlign="start center">
+        المنتجات الاكثر مبيعا
+      </div>
+
+      <p-carousel
+        fxFlex="100"
+        [value]=""
+        [numVisible]="5"
+        [numScroll]="5"
+        [circular]="true"
+        [autoplayInterval]="6000"
+        [responsiveOptions]=""
+        dir="ltr"
+      >
+        <ng-template let-product pTemplate="item">
+          <div
+            class="image-pic-carousel"
+            fxLayout="row wrap"
+            fxLayoutAlign="center start"
+          >
+            <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div> -->
   </div>
 </div>

@@ -1,12 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { Product } from "../../utilities/shop.interfaces";
 
-export interface Product {
-  id: string;
-  imgUrl?: string;
-  detail?: string;
-  price?: number;
-  afterDiscount?: number;
-}
+
 @Component({
   selector: "item",
   templateUrl: "./item.component.html",

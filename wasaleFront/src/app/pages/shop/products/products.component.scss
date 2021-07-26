@@ -98,38 +98,6 @@ $color: #ff6e00;
   }
 }
 
-.best-seller {
-  .title {
-    height: 40px;
-    border-radius: 4px;
-    margin: 4px 10px;
-    padding: 4px 5px;
-    font-size: 22px;
-    font-weight: 600;
-  }
-  .show-all {
-    font-size: 18px;
-    text-decoration: none;
-  }
-  .show-all:hover {
-    cursor: pointer;
-  }
-  min-height: 250px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  item {
-    margin: 8px 0;
-    border-radius: 5px;
-    transition: 0.1s ease-in;
-  }
-  item:hover,
-  item:checked {
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 15px 6px rgba(214, 214, 214, 1);
-    -moz-box-shadow: 0px 0px 15px 6px rgba(214, 214, 214, 1);
-    box-shadow: 0px 0px 15px 6px rgba(214, 214, 214, 1);
-  }
-}
 
 .offer-con {
   height: 280px;
