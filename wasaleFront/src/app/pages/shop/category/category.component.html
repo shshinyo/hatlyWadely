@@ -44,6 +44,7 @@
     </div>
     <br />
     <mat-card
+      *ngFor="let section of mainSection"
       class="section"
       fxLayout="column"
       fxLayoutAlign="start stretch"
@@ -51,56 +52,53 @@
     >
       <div class="header b-r-5" fxLayoutAlign="center center">
         <!-- header -->
-        العنوان
+        {{ section.name }}
       </div>
-      <div class="items" fxLayout="row wrap" fxLayoutAlign="center center">
+      <div
+        class="items"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+        fxLayoutGap="5px"
+      >
         <div
-          *ngFor="let section of mainSection"
-          fxFlex="100"
-          fxLayout="row wrap"
-          fxLayoutAlign="center center"
-          fxLayoutGap="5px"
+          *ngFor="let pType of section.mainSections"
+          class="item b-r-3"
+          fxLayout="column"
+          fxLayoutAlign="center stretch"
+          [ngStyle.xs]="{ 'height.px': 150, 'width.px': 130 }"
         >
+          <img
+            class="b-r-3"
+            [ngStyle.xs]="{ 'height.px': 120 }"
+            src="{{ pType?.imgUrl }}"
+            alt=""
+          />
           <div
-            *ngFor="let pType of section.mainSections"
-            class="item b-r-3"
-            fxLayout="column"
-            fxLayoutAlign="center stretch"
-            [ngStyle.xs]="{ 'height.px': 150, 'width.px': 130 }"
+            class="title b-r-3"
+            [ngStyle.xs]="{ 'height.px': 30 }"
+            fxLayoutAlign="center center"
           >
-            <img
-              class="b-r-3"
-              [ngStyle.xs]="{ 'height.px': 120 }"
-              src="{{ pType?.imgUrl }}"
-              alt=""
-            />
-            <div
-              class="title b-r-3"
-              [ngStyle.xs]="{ 'height.px': 30 }"
-              fxLayoutAlign="center center"
-            >
-              <!-- title -->
-              {{ pType?.title }}
-            </div>
+            <!-- title -->
+            {{ pType?.title }}
           </div>
         </div>
       </div>
     </mat-card>
     <br />
-    <!-- <div
-      *ngFor="let section of _category.sections.secondSection"
+    <div
+      *ngFor="let secondSection of secondSections"
       class="best-seller b-r-3 mat-elevation-z1"
       fxLayout="row wrap"
       fxLayoutAlign="center start"
       style="margin-top: 15px"
     >
       <div class="title" fxFlex="100" fxLayoutAlign="start center">
-        المنتجات الاكثر مبيعا
+        {{ secondSection.name }}
       </div>
 
       <p-carousel
         fxFlex="100"
-        [value]=""
+        [value]="secondSection.secondSection"
         [numVisible]="5"
         [numScroll]="5"
         [circular]="true"
@@ -118,6 +116,6 @@
           </div>
         </ng-template>
       </p-carousel>
-    </div> -->
+    </div>
   </div>
 </div>

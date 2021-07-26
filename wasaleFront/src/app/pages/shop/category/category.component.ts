@@ -31,14 +31,20 @@ export class CategoryComponent implements OnInit {
     tap((x) => console.log(x))
   );
 
-  mainSection;
-
+  mainSection: [];
+  secondSections: [];
   constructor(private _route: ActivatedRoute, private _shopService: ProductsService) {}
 
   ngOnInit(): void {
     this.category$.pipe(map((cat) => cat.sections)).subscribe((data) => {
-      const section = data.filter((sec) => sec.mainSections);
-      this.mainSection = section;
+      const mainSection = data.filter((sec) => sec.mainSections);
+      const secondSections = data.filter((secSection) => secSection.secondSection);
+      this.mainSection = mainSection;
+      this.secondSections = secondSections;
+      console.log(
+        "🚀 ~ file: category.component.ts ~ line 44 ~ CategoryComponent ~ this.category$.pipe ~ secondSections",
+        this.mainSection
+      );
     });
   }
 }

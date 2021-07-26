@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Product } from "../../utilities/shop.interfaces";
 
-
 @Component({
   selector: "item",
   templateUrl: "./item.component.html",
@@ -16,7 +15,7 @@ export class ItemComponent implements OnInit {
   saleCount(): number {
     const price = this.item.price,
       afterDiscount = this.item.afterDiscount;
-    const sale = (price - afterDiscount) / price;
-    return sale;
+    const sale = ((price - afterDiscount) / price) * 100 + 0.5;
+    return Math.round(sale);
   }
 }
