@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { map, mergeMap, tap } from "rxjs/Operators";
+import { combineLatest } from "rxjs";
+import { map, mergeAll, mergeMap, tap } from "rxjs/Operators";
 import { ProductsService } from "src/app/shared/services/products.service";
 
 @Component({
@@ -22,15 +23,12 @@ export class CategoryComponent implements OnInit {
       numVisible: 1,
     },
   ];
+
   // Reactive abroach
-  category$ = this._route.paramMap.pipe(
-    map((param) => param.get("categoryId")),
-    mergeMap((id) =>
-      this._shopService.getAllCategories$.pipe(
-        map((allCategories) =>
-          allCategories.categories.find((category) => category.id == id)
-        )
-      )
+  categoryId$ = this._route.paramMap.pipe(map((param) => param.get("categoryId")));
+  category$ = combineLatest([this.categoryId$, this._shopService.getAllCategories$]).pipe(
+    map(([categoryId, allCategories]) =>
+      allCategories.categories.find((cat) => cat.id == categoryId)
     )
   );
 
@@ -45,11 +43,6 @@ export class CategoryComponent implements OnInit {
       this.mainSection = mainSection;
       this.secondSections = secondSections;
     });
-    this._route.paramMap
-      .pipe(
-        map((x) => x.get("categoryId")),
-        tap((x) => console.log(x))
-      )
-      .subscribe();
+    
   }
 }
