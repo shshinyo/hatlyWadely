@@ -1,10 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
+import { DataJson, Offer } from "../utilities/shop.interfaces";
 
-export interface Offer {
-  imgUrl: string;
-}
 @Injectable({
   providedIn: "root",
 })
@@ -17,7 +15,7 @@ export class ProductsService {
     { imgUrl: "../../assets/images/images/dd4.jpg" },
     { imgUrl: "../../assets/images/images/dd2.jpg" },
   ];
-  getAllCategories$ = this.http.get<any>(this.url);
+  getAllCategories$: Observable<DataJson> = this.http.get<DataJson>(this.url);
   // for test
   Offers$: Observable<Offer[]> = of(this.data);
   constructor(private http: HttpClient) {}

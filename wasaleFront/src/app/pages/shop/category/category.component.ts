@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { combineLatest, Observable, Subscription } from "rxjs";
-import { debounceTime, filter, find, map, mergeMap, tap } from "rxjs/Operators";
+import { map, mergeMap, tap } from "rxjs/Operators";
 import { ProductsService } from "src/app/shared/services/products.service";
 
 @Component({
@@ -23,12 +22,16 @@ export class CategoryComponent implements OnInit {
       numVisible: 1,
     },
   ];
-  categoryId$ = this._route.params.pipe(find((param) => param["categoryId"]));
-  category$ = combineLatest([this.categoryId$, this._shopService.getAllCategories$]).pipe(
-    map(([categoryId, allCategories]) =>
-      allCategories.categories.find((cat) => cat.id == categoryId.categoryId)
-    ),
-    tap((x) => console.log(x))
+  // Reactive abroach
+  category$ = this._route.paramMap.pipe(
+    map((param) => param.get("categoryId")),
+    mergeMap((id) =>
+      this._shopService.getAllCategories$.pipe(
+        map((allCategories) =>
+          allCategories.categories.find((category) => category.id == id)
+        )
+      )
+    )
   );
 
   mainSection: [];
@@ -41,10 +44,12 @@ export class CategoryComponent implements OnInit {
       const secondSections = data.filter((secSection) => secSection.secondSection);
       this.mainSection = mainSection;
       this.secondSections = secondSections;
-      console.log(
-        "🚀 ~ file: category.component.ts ~ line 44 ~ CategoryComponent ~ this.category$.pipe ~ secondSections",
-        this.mainSection
-      );
     });
+    this._route.paramMap
+      .pipe(
+        map((x) => x.get("categoryId")),
+        tap((x) => console.log(x))
+      )
+      .subscribe();
   }
 }
