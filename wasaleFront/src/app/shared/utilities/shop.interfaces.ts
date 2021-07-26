@@ -12,3 +12,20 @@ export interface Product {
   price?: number;
   afterDiscount?: number;
 }
+
+
+export interface Offer {
+  imgUrl: string;
+}
+
+export interface DataJson {
+  categories?: any[];
+  cards?: [];
+  secondCards?: [];
+  myFooter?: [];
+  secondCard?: [];
+  thirdCard?: [];
+  fourthCard?: [];
+  options?: [];
+  offers?: [];
+}
