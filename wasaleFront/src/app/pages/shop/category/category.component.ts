@@ -33,6 +33,8 @@ export class CategoryComponent implements OnInit {
     )
   );
 
+
+
   mainSection: [];
   secondSections: [];
   constructor(private _route: ActivatedRoute, private _shopService: ProductsService) {}

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-2" style="border: 1px solid red;" id="myDiv">
       <div class="container" style="margin-top:30px;">
-        <div class="row" *ngIf="product">
+        <div class="row" *ngIf="myProduct">
           <div class="col-3" style="border: 1px solid rgb(228, 182, 182);" id="myDiv">
 
       <h5>التوصيل والارجاع</h5>
@@ -38,17 +38,16 @@
     </div>
 
     <div class="col-md-6">
-      <h3 style="text-align: right; margin-top: 20px;">{{product?.detail}}</h3>
+      <h3 style="text-align: right; margin-top: 20px;">{{myProduct?.detail}}</h3>
       <hr>
-      <h4 style="text-align: center;">{{product?.price}}</h4>
-      <p style="text-align: center;" *ngIf="product.rating">التقييــــــــــــــم</p>
+      <h4 style="text-align: center;">{{myProduct?.price}}</h4>
+      <p style="text-align: center;" *ngIf="myProduct.rating">التقييــــــــــــــم</p>
 
-      <app-star-directive [rating]="product?.rating" style="margin-bottom: -18px;"></app-star-directive>
-      <button mat-button color="primary" style="width: 365px;margin-top: 10px;height: 35px;" class="bg-info" (click)="addToCart(product)">{{product?.button}}</button>
+      <button mat-button color="primary" style="width: 365px;margin-top: 10px;height: 35px;" class="bg-info" (click)="addToCart(myProduct)">{{myProduct?.button}}</button>
     </div>
 
       <div class="col-md-3">
-        <img src="{{product?.imgUrl}}">
+        <img src="{{myProduct?.imgUrl}}">
       </div>
   </div>
 </div>

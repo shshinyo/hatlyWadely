@@ -18,6 +18,7 @@ import { SocialMediaFloatingComponent } from "./components/social-media-floating
 import { FooterComponent } from "../global/Grid/footer/footer.component";
 import { ItemComponent } from "./components/item/item.component";
 import { ItemName } from "./pipes/item-name.pipe";
+import { StarComponent } from "./star/star.component";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -28,6 +29,7 @@ const SHARED_COMPONENTS = [
   ItemName,
   SocialMediaFloatingComponent,
   ItemComponent,
+  StarComponent
 ];
 
 const LOCAL_DIRECTIVES = [];

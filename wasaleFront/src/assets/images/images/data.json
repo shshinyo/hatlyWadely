@@ -29,21 +29,23 @@
           "title": " شوكولاته ومسليات"
         },
         {
-          "id": "4",
+          "id": "",
           "imgUrl": "assets/images/images/w4.jpg",
           "title": "مشروبات"
         }
       ]
     },
     {
-      "name": " مستلزمات النضافه",
+      "name": " مستلزمات النضافه", "id" : "clean" ,
       "secondSection": [
         {
           "id": "5",
           "imgUrl": "assets/images/images/x1.jpg",
           "detail": "Finish مسحوق تنظيف الأطباق - 1 كيلو - 2+1 عبوة",
           "price": 212 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "2.6"
         },
         {
           "id": "6",
@@ -55,14 +57,18 @@
           ],
           "detail": "Lipton Pure Non-Bitter Green Tea - 25 Bags",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "4"
         },
         {
           "id": "7",
           "imgUrl": "assets/images/images/x3.jpg",
           "detail": "Clorox Clothes Stain Remover – 1.8L",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "3.8"
         },
         {
           "id": "8",
@@ -74,12 +80,14 @@
           ],
           "detail": "Slite Sunflower Oil - 750ml",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "3.3"
         }
       ]
     },
     {
-      "name": " الاعلي مبيعا",
+      "name": " الاعلي مبيعا", "id" : "mostSells" ,
       "secondSection": [
         {
           "id": "9",
@@ -91,28 +99,36 @@
           ],
           "detail": "Dettol Antiseptic Liquid Cleaner - 235 ML",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "2.5"
         },
         {
           "id": "10",
           "imgUrl": "assets/images/images/y2.jpg",
           "detail": "Veroll ملمع ومعطر للزجاج برائحة جوز الهند- 450 مل - 2 قطع + فوطة تنظيف",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "4.5"
         },
         {
           "id": "11",
           "imgUrl": "assets/images/images/y3.jpg",
           "detail": "Harpic Waves Marine Splash Toilet Cleaner – 35gm",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "3.5"
         },
         {
           "id": "12",
           "imgUrl": "assets/images/images/y4.jpg",
           "detail": "Veroll منظف وملمع زجاج برائحة الخوخ - 500 مل - 3 قطع - 2 فوطة هدية",
           "price": 220 ,
-          "afterDiscount" : 150
+          "afterDiscount" : 150 ,
+          "button" :"اضافه لسلة التســــــــوق",
+          "rating" : "2"
         }
       ]
     }

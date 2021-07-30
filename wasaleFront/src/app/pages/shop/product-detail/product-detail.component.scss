@@ -1,0 +1,83 @@
+.cont {
+  background-color: rgb(236, 236, 236);
+}
+.childDiv {
+  background-color: white;
+  text-align: center;
+  margin-left: 50px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px 4px 0 0;
+  padding: .75em .75em 0 .75em;
+  height: 60px;
+  text-align: center;
+}
+.blur {
+  filter: blur(8px);
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  height: 14px;
+}
+.p {
+  text-align: right;
+}
+.secondCont {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+}
+.rate {
+  position: relative;
+    font-size: 21px;
+    top: -45px;
+    width: 72px;
+}
+.price {
+  font-size: 18px;
+  margin-top: -35px;
+}
+#myBtn {
+  color: white;
+  background-color: orange;
+  font-weight: bold;
+  width: 500px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.thirdCont{
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.proPic {
+  border-radius: 10px;    width: 381px;
+    margin-bottom: 20px;
+
+}
+.offerImg {
+  width: 500px;
+  height: 421px;
+  border-radius: 6px;
+}
+.offerImg2 {
+  width: 366px;
+    margin-left: 7px;
+    height: 221px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+
+
+}
+.data {
+  background-color: #f5f4f4;
+}
+.summerPic {
+  width: 1158px;
+    margin-left: 39px;
+    border-radius: 10px;
+}

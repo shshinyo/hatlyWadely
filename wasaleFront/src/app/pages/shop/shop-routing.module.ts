@@ -1,3 +1,4 @@
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CategoryComponent } from "./category/category.component";
@@ -12,10 +13,10 @@ const routes: Routes = [
     path: ":categoryId",
     component: CategoryComponent,
   },
-  // {
-  //   path:":categoryId/:categoryType",
-  //   component:CategoryComponent
-  // }
+   {
+     path:":categoryName/:categ/:categoryType",
+     component:ProductDetailComponent
+   }
   // {
   //   path:":categoryId/:categoryTypeId/:productId",
   //   component:CategoryComponent

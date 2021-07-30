@@ -2,7 +2,7 @@ import { Input } from "@angular/core";
 import { Component, OnChanges, OnInit, SimpleChanges } from "@angular/core";
 
 @Component({
-  selector: "app-star-directive",
+  selector: "app-star",
   templateUrl: "./star.component.html",
   styleUrls: ["./star.component.scss"],
 })
