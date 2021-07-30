@@ -1,78 +1,114 @@
-<div fxLayout="row wrap" class="cont"  fxLayoutAlign="center" fxLayoutGap="10px">
-  <div fxFlex="23"  class="childDiv mat-elevation-z8 mt-3" fxFlex.xs="70" fxFlexAlign.xs="center">
+<div
+  fxLayout="row wrap"
+  class="cont"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+>
+  <div
+    fxFlex="23"
+    class="childDiv mat-elevation-z8 mt-3"
+    fxFlex.xs="70"
+    fxFlexAlign.xs="center"
+  >
     <h5>التوصيل والارجاع</h5>
-    <hr>
-    <p class="info"> <br> استمتع بشحن مجاني في جميع أنحاء مصر عند<br> إستخدام بطاقة الائتمان الخاصة بك في الدفع من خلال
-      hatly
-      على طلبات بقيمة 300 جنيه أو أكثر</p>
-    <hr>
+    <hr />
+    <p class="info">
+      <br />
+      استمتع بشحن مجاني في جميع أنحاء مصر عند<br />
+      إستخدام بطاقة الائتمان الخاصة بك في الدفع من خلال hatly على طلبات بقيمة 300 جنيه أو
+      أكثر
+    </p>
+    <hr />
     <h5>اختار العنوان</h5>
     <div fxLayoutAlign="center center">
-    <mat-form-field appearance="fill" class="formField" fxFlex="97">
-      <mat-label class="myLabel">المحافظه</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let myOption of options" [value]="myOption.region" (click)="pushInSelect(myOption)">
-          {{myOption.region}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div fxLayoutAlign="center center" >
-    <mat-form-field appearance="fill" class="formField" fxFlex="97">
-      <mat-label class="myLabel">المدينه</mat-label>
-      <mat-select class="mb-5">
-        <mat-option *ngFor="let item of myArray" [value]="item.place" (click)="onBlur()">
-          {{item.place}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-    <div class="data" *ngIf="showDiv" >
-      <p
-       style="text-align: center;" *ngFor="let elem of myInfoArr" [class.blur]="blur">{{elem.data}}</p>
+      <mat-form-field appearance="fill" class="formField" fxFlex="97">
+        <mat-label class="myLabel">المحافظه</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let myOption of options"
+            [value]="myOption.region"
+            (click)="pushInSelect(myOption)"
+          >
+            {{ myOption.region }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxLayoutAlign="center center">
+      <mat-form-field appearance="fill" class="formField" fxFlex="97">
+        <mat-label class="myLabel">المدينه</mat-label>
+        <mat-select class="mb-5">
+          <mat-option
+            *ngFor="let item of myArray"
+            [value]="item.place"
+            (click)="onBlur()"
+          >
+            {{ item.place }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="data" *ngIf="showDiv">
+      <p style="text-align: center" *ngFor="let elem of myInfoArr" [class.blur]="blur">
+        {{ elem.data }}
+      </p>
     </div>
     <div>
       <h5>سياسه الاسترجاع</h5>
-      <p class="P"><br> ضرورة الإبلاغ عنها فى غضون 24 ساعة من تاريخ الإستلام. <br> الشخصى) وحتي 30 يوم للمنتجات التالفة
-        مع <br> الملابس الداخلية ومنتجات الإستخدام <br> استرجاع المنتجات مجاناً لمدة 14 يوم </p>
+      <p class="P">
+        <br />
+        ضرورة الإبلاغ عنها فى غضون 24 ساعة من تاريخ الإستلام. <br />
+        الشخصى) وحتي 30 يوم للمنتجات التالفة مع <br />
+        الملابس الداخلية ومنتجات الإستخدام <br />
+        استرجاع المنتجات مجاناً لمدة 14 يوم
+      </p>
     </div>
   </div>
 
-
-  <div  fxLayout="column" fxFlex="40" class="secondCont mt-3" dir="rtl">
-    <h4 class="mt-4 mb-5">{{product?.detail}}</h4>
-    <div [title]="product?.rating" >
+  <div fxLayout="column" fxFlex="40" class="secondCont mt-3" dir="rtl">
+    <h4 class="mt-4 mb-5">{{ product?.detail }}</h4>
+    <div [title]="product?.rating">
       <app-star [rating]="product?.rating"></app-star>
     </div>
-    <div >
-    <p class="rate">التقييــم</p>
-  </div>
     <div>
-      <p class="price"> سعر المنتج       {{product?.price}} جنيه</p>
+      <p class="rate">التقييــم</p>
+    </div>
+    <div>
+      <p class="price">سعر المنتج {{ product?.price }} جنيه</p>
     </div>
     <div fxFlex="100">
-      <button mat-button id="myBtn">{{product?.button}}</button>
+      <button mat-button id="myBtn">{{ product?.button }}</button>
     </div>
-    <div style="background-color: #ddd; border: 5px solid white;border-radius: 10px;" fxFlex="100">
-      <img class="offerImg" src="assets/images/images/hatly.jpg">
+    <div
+      style="background-color: #ddd; border: 5px solid white; border-radius: 10px"
+      fxFlex="100"
+    >
+      <img class="offerImg" src="assets/images/images/hatly.jpg" />
     </div>
   </div>
 
-
-  <div fxFlex="30" class="thirdCont mt-3" >
-    <img class="proPic" src="{{product?.imgUrl}}" title="صورة المنتج">
+  <div fxFlex="30" class="thirdCont mt-3">
+    <img class="proPic" src="{{ product?.imgUrl }}" title="صورة المنتج" />
     <div>
-      <img class="offerImg2" src="assets/images/images/hatly.jpg">
+      <img class="offerImg2" src="assets/images/images/hatly.jpg" />
     </div>
   </div>
-  <div fxFlex="100" fxLayoutAlign="center center" class="mb-4" >
-    <img class="summerPic" src="assets/images/images/summer.jpg">
+  <div fxFlex="100" fxLayoutAlign="center center" class="mb-4">
+    <img class="summerPic" src="assets/images/images/summer.jpg" />
   </div>
-<div fxFlex="100" fxLayoutAlign="center center">
-  <div fxFlex="91"  style="background-color: white; height: 135px;border-radius: 10px;margin-left: 25px;">
-    <h3 style="text-align: right;">مواصفات المنتج</h3>
-  <hr>
-  <p fxLayoutAlign="end" style="font-size: 20px;">{{product?.detail}}</p>
+  <div fxFlex="100" fxLayoutAlign="center center">
+    <div
+      fxFlex="91"
+      style="
+        background-color: white;
+        height: 135px;
+        border-radius: 10px;
+        margin-left: 25px;
+      "
+    >
+      <h3 style="text-align: right">مواصفات المنتج</h3>
+      <hr />
+      <p fxLayoutAlign="end" style="font-size: 20px">{{ product?.detail }}</p>
+    </div>
   </div>
-</div>
 </div>

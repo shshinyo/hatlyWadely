@@ -1,4 +1,4 @@
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CategoryComponent } from "./category/category.component";
@@ -13,14 +13,20 @@ const routes: Routes = [
     path: ":categoryId",
     component: CategoryComponent,
   },
+  {
+    path: ":categoryId/:productId",
+    component: ProductDetailComponent,
+  },
+  /*
    {
-     path:":categoryName/:categ/:categoryType",
-     component:ProductDetailComponent
-   }
-  // {
-  //   path:":categoryId/:categoryTypeId/:productId",
-  //   component:CategoryComponent
-  // }
+    path:":categoryId/:categoryTypeId/:productId",
+    component:ProductDetailComponent
+  }
+  */
+  //  {
+  //    path:":categoryName/:categ/:categoryType",
+  //    component:ProductDetailComponent
+  //  }
 ];
 
 @NgModule({
