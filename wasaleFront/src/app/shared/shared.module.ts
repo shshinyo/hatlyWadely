@@ -19,6 +19,7 @@ import { FooterComponent } from "../global/Grid/footer/footer.component";
 import { ItemComponent } from "./components/item/item.component";
 import { ItemName } from "./pipes/item-name.pipe";
 import { StarComponent } from "./star/star.component";
+import { Error404 } from "./components/Error404/error404.component";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -29,7 +30,8 @@ const SHARED_COMPONENTS = [
   ItemName,
   SocialMediaFloatingComponent,
   ItemComponent,
-  StarComponent
+  StarComponent,
+  Error404,
 ];
 
 const LOCAL_DIRECTIVES = [];

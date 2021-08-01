@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-dashboard",
-  templateUrl: "./dashboard.component.html",
-  styleUrls: ["./dashboard.component.scss"],
+  templateUrl: "./error404.component.html",
+  styleUrls: ["./error404.component.scss"],
 })
-export class Dashboard404 implements OnInit {
+export class Error404 implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

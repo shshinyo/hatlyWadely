@@ -1,0 +1,61 @@
+<div
+  class="sub-header mat-elevation-z2"
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+>
+  <span
+    class="p-input-icon-left"
+    fxLayout="row wrap"
+    fxFlex.xs="90"
+    [ngStyle.lt-md]="{ width: '250px' }"
+    [ngStyle.xs]="{ margin: '10px 0' }"
+  >
+    <i
+      class="pi pi-search"
+      style="cursor: pointer"
+      [ngStyle]="searchInput.value ? { color: 'red' } : { color: 'gray' }"
+    ></i>
+    <input
+      #searchInput
+      pInputText
+      type="text"
+      placeholder="البحث عن المنتجات والعلامات التجارية والاقسام"
+      [value]="search"
+      (keydown.enter)="onSearch(searchInput.value)"
+    />
+  </span>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    fxFlex.xs="100"
+    [ngStyle.xs]="{ margin: '20px 0' }"
+  >
+    <button class="button1" mat-button fxLayoutAlign="center center">
+      <mat-icon>account_circle</mat-icon>
+      تسجيل الدخول
+    </button>
+    <button
+      class="button1 cart"
+      mat-button
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+    >
+      <span class="num" fxFlex="100">15</span>
+      <div fxFlex="100" fxLayoutAlign="center center">
+        <mat-icon>shopping_cart</mat-icon>
+        عربه التسوق
+      </div>
+    </button>
+  </div>
+</div>
+<div class="body-container" fxLayout="row wrap" fxLayoutAlign="center center" dir="rtl">
+  <div
+    fxFlex="80"
+    fxFlex.md="90"
+    fxFlex.xs="95"
+    fxLayout="column"
+    fxLayoutAlign="center stretch"
+  >
+    <router-outlet></router-outlet>
+  </div>
+</div>

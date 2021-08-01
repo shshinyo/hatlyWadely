@@ -1,5 +1,4 @@
 import { Routes } from "@angular/router";
-import { Dashboard404 } from "../Error404/dashboard.component";
 import { ContactsComponent } from "./contacts/contacts.component";
 import { OffersComponent } from "./offers/offers.component";
 import { OurServiceComponent } from "./our-service/our-service.component";

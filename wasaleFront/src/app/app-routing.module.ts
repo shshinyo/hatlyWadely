@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { Dashboard404 } from "./Error404/dashboard.component";
 
 import { GlobalComponent } from "./global/global.component";
 import { AdminGuard } from "./core/Guards/admin.guard";
+import { Error404 } from "./shared/components/Error404/error404.component";
 
 const routes: Routes = [
   {
@@ -40,7 +40,7 @@ const routes: Routes = [
       },
       {
         path: "notfound",
-        component: Dashboard404,
+        component: Error404,
       },
     ],
   },
@@ -52,7 +52,7 @@ const routes: Routes = [
   },
   {
     path: "notfound",
-    component: Dashboard404,
+    component: Error404,
   },
   {
     path: "",

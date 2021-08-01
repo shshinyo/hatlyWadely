@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { Dashboard404 } from "../Error404/dashboard.component";
+import { Error404 } from "../shared/components/Error404/error404.component";
 import { DefaultComponent } from "./default/default.component";
 import { LayoutComponent } from "./layoutContainer.component";
 
@@ -14,7 +14,7 @@ export const routes: Routes = [
       },
       {
         path: "notfound",
-        component: Dashboard404,
+        component: Error404,
       },
       {
         path: "**",

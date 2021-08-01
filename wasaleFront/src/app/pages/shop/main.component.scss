@@ -1,0 +1,28 @@
+$color: #ff6e00;
+.body-container {
+  width: 100%;
+  background-color: whitesmoke;
+}
+.sub-header {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  min-height: 72px;
+  width: 100%;
+  padding: 0;
+  direction: rtl;
+  background-color: #ffff;
+  ::ng-deep {
+    .p-inputtext {
+      height: 45px;
+      width: 400px;
+      text-align: start;
+    }
+  }
+  .cart {
+    span {
+      height: 20px;
+      color: $color;
+    }
+  }
+}

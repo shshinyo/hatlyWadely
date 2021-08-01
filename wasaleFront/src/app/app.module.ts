@@ -13,17 +13,17 @@ import { PagesModule } from "./pages/pages.module";
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { UserModule } from "./user/user.module";
 import { GlobalModule } from "./global/global.module";
-import { Dashboard404 } from "./Error404/dashboard.component";
 import { SouqModule } from "./pages/souq/souq.module";
 import { CartModule } from "./pages/souq/cart/cart.module";
 import { ShopModule } from "./pages/shop/shop.module";
+import { Error404 } from "./shared/components/Error404/error404.component";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
 @NgModule({
-  declarations: [AppComponent, Dashboard404],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     SharedModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { zip } from "rxjs";
 import { map } from "rxjs/Operators";
 import { ProductsService } from "src/app/shared/services/products.service";
@@ -37,7 +37,7 @@ export class CategoryComponent implements OnInit {
 
   mainSection: [];
   secondSections: [];
-  constructor(private _route: ActivatedRoute, private _shopService: ProductsService) {}
+  constructor(private _route: ActivatedRoute,private _router:Router, private _shopService: ProductsService) {}
 
   ngOnInit(): void {
     this.category$.pipe(map((cat) => cat.sections)).subscribe((data) => {
@@ -46,5 +46,9 @@ export class CategoryComponent implements OnInit {
       this.mainSection = mainSection;
       this.secondSections = secondSections;
     });
+  }
+
+  productsFilter():void{
+    this._router.navigateByUrl("productFilter")
   }
 }
