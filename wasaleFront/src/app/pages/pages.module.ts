@@ -18,12 +18,7 @@ import { ContactsComponent } from "./contacts/contacts.component";
     OurServiceComponent,
     ContactsComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    SharedModule,
-    DragDropModule,
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule, DragDropModule],
   providers: [],
 })
 export class PagesModule {}

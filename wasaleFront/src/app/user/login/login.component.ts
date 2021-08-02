@@ -109,7 +109,7 @@ export class LoginComponent implements OnInit {
   }
 
   registration(registerForm) {
-    console.log(registerForm)
+    console.log(registerForm);
     // post form here
   }
 

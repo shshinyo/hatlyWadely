@@ -73,10 +73,7 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // fromEvent(this.filterBanner.nativeElement, "mouseout").subscribe((_) => {
-    //   // this.displayCarousel = true;
-    //   console.log("sandjskahdjksahd");
-    // });
+
   }
 
   ngOnDestroy() {
@@ -102,25 +99,4 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   //   console.log(this.filteredProducts);
   // }
 
-  // test for search
-  // private _fetchItem(): void {
-  //   this.productsService.getAllCategories$
-  //     .pipe(
-  //       map((x) => {
-  //         x.categories.map((c) => {
-  //           c.myProducts.map((t) => {
-  //             t.myProductss.map((products) => {
-  //               console.log(products);
-  //               products.details.map((product) => {
-  //                 product.filter((d) => {
-  //                   this.search ? d.detail == this.search : true;
-  //                 });
-  //               });
-  //             });
-  //           });
-  //         });
-  //       })
-  //     )
-  //     .subscribe();
-  // }
 }

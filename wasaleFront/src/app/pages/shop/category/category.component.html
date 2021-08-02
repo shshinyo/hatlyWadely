@@ -57,7 +57,7 @@
     fxLayoutGap="5px"
   >
     <!-- router here -->
-    
+
     <!-- Implement search word ( string ) -->
     <a
       *ngFor="let pType of section.mainSections"
@@ -109,8 +109,9 @@
     <ng-template let-product pTemplate="item">
       <div class="image-pic-carousel" fxLayout="row wrap" fxLayoutAlign="center start">
         <!-- router here -->
+        <!-- Implement router complete like this => ( categoryName/ productId) -->
 
-        <item fxFlex="97" [item]="product" [routerLink]="['/shop', product.id]"></item>
+        <item fxFlex="97" [item]="product" [routerLink]="['/shop',product.categoryName , product.id]"></item>
       </div>
     </ng-template>
   </p-carousel>

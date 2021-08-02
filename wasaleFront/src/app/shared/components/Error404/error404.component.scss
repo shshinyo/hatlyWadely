@@ -1,7 +1,12 @@
-.wrapper {
-  svg {
-    height: 70vh;
-    width: 100%;
+#container {
+  height: 90vh;
+  width: 100%;
+  justify-items: start;
+  .wrapper {
+    svg {
+      height: 60vh;
+      width: 100%;
+    }
   }
 }
 .cls-1 {

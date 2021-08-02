@@ -16,7 +16,7 @@
       fxFlex="100"
       fxLayoutAlign="start center"
       *ngFor="let product of products"
-      [routerLink]="['category', product.id]"
+      [routerLink]="['/shop', product.id]"
     >
       <!-- Enter icon -->
       <img class="svg-icon" src="{{ product.icon }}" />
@@ -89,7 +89,12 @@
   >
     <ng-template let-product pTemplate="item">
       <div class="image-pic-carousel" fxLayout="row wrap" fxLayoutAlign="center start">
-        <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
+        <!-- Implement router complete like this => ( categoryName/ productId) -->
+        <item
+          fxFlex="97"
+          [item]="product"
+          [routerLink]="['/shop', product.categoryName, product.id]"
+        ></item>
       </div>
     </ng-template>
   </p-carousel>
@@ -157,7 +162,12 @@
   >
     <ng-template let-product pTemplate="item">
       <div class="image-pic-carousel" fxLayout="row wrap" fxLayoutAlign="center start">
-        <item fxFlex="97" [item]="product" [routerLink]="[product.id]"></item>
+        <!-- Implement router complete like this => ( categoryName/ productId) -->
+        <item
+          fxFlex="97"
+          [item]="product"
+          [routerLink]="['/shop', product.categoryName, product.id]"
+        ></item>
       </div>
     </ng-template>
   </p-carousel>

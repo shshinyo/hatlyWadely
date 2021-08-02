@@ -1,10 +1,12 @@
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+
 import { MainComponent } from "./main.component";
 import { CategoryComponent } from "./category/category.component";
 import { ProductsComponent } from "./products/products.component";
 import { FilterComponent } from "./filter/filter.component";
+import { Error404 } from "src/app/shared/components/Error404/error404.component";
 
 const routes: Routes = [
   {
@@ -17,25 +19,27 @@ const routes: Routes = [
         pathMatch: "full",
       },
       {
-        path: "category/:categoryId",
-        component: CategoryComponent,
+        path: "notfound",
+        component: Error404,
       },
       {
         path: "search/:productFilter",
         component: FilterComponent,
       },
       {
-        path: ":productId",
+        path: ":categoryId",
+        component: CategoryComponent,
+      },
+      {
+        path: ":categoryId/:productId",
         component: ProductDetailComponent,
+      },
+      {
+        path: "**",
+        redirectTo: "notfound",
       },
     ],
   },
-  /*
-   {
-    path:":categoryId/:categoryTypeId/:productId",
-    component:ProductDetailComponent
-  }
-  */
 ];
 
 @NgModule({

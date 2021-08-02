@@ -19,6 +19,7 @@ import { FilterComponent } from "./filter/filter.component";
     CategoryComponent,
     ShopInfoComponent,
     FilterComponent,
+
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })
