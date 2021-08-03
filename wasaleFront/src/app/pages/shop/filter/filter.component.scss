@@ -6,3 +6,59 @@
   min-height: 600px;
   background-color: #ffffff;
 }
+#filterBtn {
+font-weight: bold;
+font-size: 17px;
+}
+.line {
+  height: .1px;
+    opacity: 12%;
+}
+.cardsDiv {
+  min-height: 200px;
+}
+.cardsDiv:hover ,.cardsDiv:active {
+  top: -2px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(48, 46, 46, 0.75);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(48, 46, 46, 0.75);
+  box-shadow: 0px 0px 13px 0px rgba(48, 46, 46, 0.75);
+  border-radius: 10px;
+}
+#priceP {
+  text-align: left;font-weight: bold;font-size: 18px;height: 50px;margin: 0px 8px;
+}
+.cardImg {
+  height: 186px;
+    width: 180px;
+    background-color: #ffffff;
+    border: .5px solid #ddd;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+.rateDiv {
+  text-align: end;margin-top: 20px;margin-top: 45px;
+  margin-left: 55px;
+}
+.toCart {
+  background-color: orange;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0px 5px 5px;
+
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+  text-align: right;
+
+}
+.myHieght {
+height: 120px;
+width: 90px;
+margin-right: 5px !important;
+}
