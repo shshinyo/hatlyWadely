@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       title: "التفاصيل",
-      router: "",
+      router: "/shop/profile/details",
       icon: "info",
     },
     {

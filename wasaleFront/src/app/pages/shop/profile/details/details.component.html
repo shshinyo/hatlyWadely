@@ -1,0 +1,65 @@
+<div class="title-1" fxLayout="row" fxLayoutAlign="start center">التفاصيل</div>
+<hr class="hr" />
+<div class="main-cont" fxLayout=" row wrap" fxLayoutAlign="center center">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="saveChanges(form)"
+    novalidate
+    class="details-form"
+    fxFlex="100"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center center"
+    fxLayoutAlign.xs="center stretch"
+    dir="rtl"
+  >
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>الاسم الاول</mat-label>
+      <input formControlName="firstName" type="text" matInput />
+      <mat-error>{{requiredError}}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>الاسم الاخير</mat-label>
+      <input formControlName="lastName" type="text" matInput />
+      <mat-error>{{requiredError}}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>البريد الالكتروني</mat-label>
+      <input formControlName="email" type="email" matInput />
+      <mat-icon matSuffix>alternate_email</mat-icon>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>رقم الهاتف (اختياري)</mat-label>
+      <span matPrefix>+20 &nbsp;</span>
+      <input formControlName="phoneNumber" matInput type="tel" />
+      <mat-icon
+        matSuffix
+        [ngStyle]="{ color: form.get('phoneNumber').valid ? 'rgb(0, 177, 0)' : '' }"
+        >{{ form.get("phoneNumber").valid ? "done" : "mode_edit" }}</mat-icon
+      >
+      <mat-error>{{requiredError}}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>النوع(اختياري)</mat-label>
+      <mat-select formControlName="type">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{ type.type }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>التاريخ</mat-label>
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button fxFlex="90" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+      حفظ التغيرات
+    </button>
+  </form>
+</div>

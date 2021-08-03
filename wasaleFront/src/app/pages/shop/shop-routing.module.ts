@@ -11,6 +11,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { OverviewComponent } from "./profile/overview/overview.component";
 import { OrdersComponent } from "./profile/orders/orders.component";
 import { SavedComponent } from "./profile/saved/saved.component";
+import { DetailsComponent } from "./profile/details/details.component";
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
           {
             path: "saved-orders",
             component: SavedComponent,
+          },
+          {
+            path: "details",
+            component: DetailsComponent,
           },
           {
             path: "",
