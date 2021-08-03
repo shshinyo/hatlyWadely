@@ -9,6 +9,7 @@ import { FilterComponent } from "./filter/filter.component";
 import { Error404 } from "src/app/shared/components/Error404/error404.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { OverviewComponent } from "./profile/overview/overview.component";
+import { OrdersComponent } from "./profile/orders/orders.component";
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
         path: "profile",
         component: ProfileComponent,
         children: [
+          {
+            path: "orders",
+            component: OrdersComponent,
+          },
           {
             path: "",
             component: OverviewComponent,

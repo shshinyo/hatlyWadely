@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       title: "الطلبات",
-      router: "",
+      router: "/shop/profile/orders",
       icon: "inventory_2",
     },
     {

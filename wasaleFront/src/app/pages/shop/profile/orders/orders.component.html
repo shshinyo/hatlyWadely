@@ -1,0 +1,54 @@
+<div class="title-1" fxLayout="row" fxLayoutAlign="start center">الطلبات</div>
+<hr class="hr" />
+<div class="main-cont" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+  <mat-tab-group mat-align-tabs="start">
+    <!-- Tap One -->
+    <mat-tab label="الطلبات (0)" fxLayout="column" fxLayoutAlign="start stretch"
+      ><div class="cont" fxLayout="row wrap" fxLayoutAlign="center center">
+        <!--  -->
+        <div
+          *ngIf="!thereExistOrder"
+          class="no-order"
+          fxLayout="row wrap"
+          fxLayoutAlign="center center"
+        >
+          <img src="assets/images/orders.abbfb10f.svg" alt="" />
+          <br fxFlex="100" />
+          <div fxFlex="100" class="title-1" fxLayout="row" fxLayoutAlign="center center">
+            لم تقم بطلب أي منتج حتي الأن
+          </div>
+          <br fxFlex="100" />
+          <p fxFlex="100" fxLayoutAlign="center center">
+            سوف يتم حفظ كل منتجاتك هنا حتي تستطيع متابعة حالتهم في أي وقت.
+          </p>
+          <br fxFlex="100" />
+          <button mat-button color="primary" routerLink="/shop">متابعة التسوق</button>
+        </div>
+      </div></mat-tab
+    >
+    <!-- Tap Two -->
+    <mat-tab label="الطلبات المغلقة (0)" fxLayout="column" fxLayoutAlign="start stretch"
+      ><div
+        *ngIf="!thereExistOrder"
+        class="cont"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+      >
+        <!--  -->
+        <div class="no-order" fxLayout="row wrap" fxLayoutAlign="center center">
+          <img src="assets/images/orders.abbfb10f.svg" alt="" />
+          <br fxFlex="100" />
+          <div fxFlex="100" class="title-1" fxLayout="row" fxLayoutAlign="center center">
+            لا توجد طلبات مغلقه للعرض
+          </div>
+          <br fxFlex="100" />
+          <p fxFlex="100" fxLayoutAlign="center center">
+            سيتم حفظ جميع طلباتك التى تم استكمالها هنا.
+          </p>
+          <br fxFlex="100" />
+          <button mat-button color="primary" routerLink="/shop">بدء التسوق</button>
+        </div>
+      </div></mat-tab
+    >
+  </mat-tab-group>
+</div>

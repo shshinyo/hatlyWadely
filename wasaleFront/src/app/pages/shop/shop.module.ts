@@ -12,6 +12,7 @@ import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
 import { FilterComponent } from "./filter/filter.component";
 import { ProfileComponent } from './profile/profile.component';
 import { OverviewComponent } from './profile/overview/overview.component';
+import { OrdersComponent } from './profile/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { OverviewComponent } from './profile/overview/overview.component';
     FilterComponent,
     ProfileComponent,
     OverviewComponent,
+    OrdersComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })
