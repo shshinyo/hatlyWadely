@@ -11,12 +11,10 @@ import { SharedModule } from "./shared/shared.module";
 import { AppComponent } from "./app.component";
 import { PagesModule } from "./pages/pages.module";
 import { DashboardModule } from "./dashboard/dashboard.module";
-import { UserModule } from "./user/user.module";
 import { GlobalModule } from "./global/global.module";
 import { SouqModule } from "./pages/souq/souq.module";
 import { CartModule } from "./pages/souq/cart/cart.module";
 import { ShopModule } from "./pages/shop/shop.module";
-import { Error404 } from "./shared/components/Error404/error404.component";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -31,9 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     PagesModule,
     DashboardModule,
-    UserModule,
     GlobalModule,
-    // SouqModule,
     ShopModule,
     CartModule,
     ToastrModule.forRoot(),

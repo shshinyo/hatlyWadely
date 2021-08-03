@@ -3,27 +3,59 @@
   fxLayout="row wrap"
   fxLayoutAlign="center center"
 >
-  <span
-    class="p-input-icon-left"
-    fxLayout="row wrap"
-    fxFlex.xs="90"
-    [ngStyle.lt-md]="{ width: '250px' }"
-    [ngStyle.xs]="{ margin: '10px 0' }"
-  >
-    <i
-      class="pi pi-search"
-      style="cursor: pointer"
-      [ngStyle]="searchInput.value ? { color: 'red' } : { color: 'gray' }"
-    ></i>
-    <input
-      #searchInput
-      pInputText
-      type="text"
-      placeholder="البحث عن المنتجات والعلامات التجارية والاقسام"
-      [value]="search"
-      (keydown.enter)="onSearch(searchInput.value)"
-    />
-  </span>
+  <div fxLayout="row wrap" fxFlex.xs="90">
+    <a fxLayoutAlign="center center" (click)="op2.toggle($event)">
+      <mat-icon>menu</mat-icon>
+    </a>
+    <p-overlayPanel
+      #op2
+      appendTo="body"
+      [autoZIndex]="true"
+      [showCloseIcon]="false"
+      [style]="{
+        'width': '240px',
+        'padding': '0px !important',
+        'border-radius': '5px'
+      }"
+    >
+      <ng-template pTemplate fxLayout="column" fxLayoutAlign="start stretch">
+        <div
+          class="tap"
+          fxLayout="row"
+          fxLayoutAlign="end center"
+          *ngFor="let category of categories"
+          [routerLink]="[category.id]"
+          (click)="op2.hide()"
+        >
+          <!-- Enter icon -->
+          {{ category.name }}
+          <img class="svg-icon" src="{{ category.icon }}" />
+        </div>
+      </ng-template>
+    </p-overlayPanel>
+
+    <span
+      class="p-input-icon-left"
+      fxLayout="row wrap"
+      fxFlex.xs="80"
+      [ngStyle.lt-md]="{ width: '250px' }"
+      [ngStyle.xs]="{ margin: '10px 0' }"
+    >
+      <i
+        class="pi pi-search"
+        style="cursor: pointer"
+        [ngStyle]="searchInput.value ? { color: 'red' } : { color: 'gray' }"
+      ></i>
+      <input
+        #searchInput
+        pInputText
+        type="text"
+        placeholder="البحث عن المنتجات والعلامات التجارية والاقسام"
+        [value]="search"
+        (keydown.enter)="onSearch(searchInput.value)"
+      />
+    </span>
+  </div>
   <div
     fxLayout="row wrap"
     fxLayoutAlign="center center"

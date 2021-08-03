@@ -116,14 +116,9 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   }
 
   // account_circle
-  constructor(
-    private router: Router,
-    private authService: AuthService,
-    private souqser: SouqService
-  ) {
+  constructor(private router: Router, private authService: AuthService) {
     console.log(this.loggedIn);
   }
-  @ViewChild("span") span: ElementRef<any>;
   ngOnInit(): void {}
 
   @HostBinding("@toggle")

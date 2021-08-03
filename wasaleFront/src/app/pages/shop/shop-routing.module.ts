@@ -34,6 +34,10 @@ const routes: Routes = [
         path: ":categoryId/:productId",
         component: ProductDetailComponent,
       },
+      // {
+      //   path: "user",
+
+      // },
       {
         path: "**",
         redirectTo: "notfound",

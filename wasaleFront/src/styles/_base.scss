@@ -107,7 +107,10 @@ $color: #ff6e00;
 .button1:hover {
   color: $color;
 }
-
+a:hover,
+a:active {
+  cursor: pointer;
+}
 .best-seller {
   .title {
     height: 40px;

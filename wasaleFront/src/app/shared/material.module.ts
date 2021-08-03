@@ -48,51 +48,9 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
 import { AvatarModule } from "primeng/avatar";
 import { AvatarGroupModule } from "primeng/avatargroup";
 import { TableModule } from "primeng/table";
+import { OverlayPanelModule } from "primeng/overlaypanel";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatAutocompleteModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatListModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatTreeModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatBadgeModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatRippleModule,
-    MatBottomSheetModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatTooltipModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTableModule,
-    MatSelectModule,
-    MatNativeDateModule,
-    AvatarModule,
-    AvatarGroupModule,
-    TableModule,
-  ],
   exports: [
     MatAutocompleteModule,
     MatCheckboxModule,
@@ -134,6 +92,7 @@ import { TableModule } from "primeng/table";
     AvatarModule,
     AvatarGroupModule,
     TableModule,
+    OverlayPanelModule,
   ],
 })
 export class MaterialModule {}

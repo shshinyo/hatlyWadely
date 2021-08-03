@@ -3,15 +3,30 @@ $color: #ff6e00;
   width: 100%;
   background-color: whitesmoke;
 }
+.tap {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 0 !important;
+}
+.tap:hover {
+  cursor: pointer;
+  color: $color;
+  background-color: whitesmoke;
+}
+
 .sub-header {
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 99;
   min-height: 72px;
   width: 100%;
   padding: 0;
   direction: rtl;
   background-color: #ffff;
+  a {
+    margin-left: 20px;
+  }
   ::ng-deep {
     .p-inputtext {
       height: 45px;
