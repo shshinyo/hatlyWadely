@@ -10,6 +10,8 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { CategoryComponent } from "./category/category.component";
 import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
 import { FilterComponent } from "./filter/filter.component";
+import { ProfileComponent } from './profile/profile.component';
+import { OverviewComponent } from './profile/overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FilterComponent } from "./filter/filter.component";
     CategoryComponent,
     ShopInfoComponent,
     FilterComponent,
+    ProfileComponent,
+    OverviewComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })

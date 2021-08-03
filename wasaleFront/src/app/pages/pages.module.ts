@@ -9,6 +9,7 @@ import { OffersComponent } from "./offers/offers.component";
 import { SoonComponent } from "./soon/soon.component";
 import { OurServiceComponent } from "./our-service/our-service.component";
 import { ContactsComponent } from "./contacts/contacts.component";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactsComponent } from "./contacts/contacts.component";
     SoonComponent,
     OurServiceComponent,
     ContactsComponent,
+    LoginComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule, DragDropModule],
   providers: [],

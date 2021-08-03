@@ -1,0 +1,52 @@
+*:not(mat-icon, .avatar) {
+  font-family: "serif" !important;
+}
+
+.main-cont {
+  min-height: 550px;
+  padding: 0;
+}
+.side {
+  min-height: 300px;
+  padding: 0;
+  background-color: #ffffff;
+}
+.tap,
+.tap-active {
+  height: 43px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: #2e2b2b;
+  mat-icon {
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    margin: 0 12px;
+  }
+}
+.tap {
+  font-size: 17px;
+}
+.tap:hover {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #edededa3;
+  mat-icon {
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin: 0 12px;
+  }
+}
+.tap-active {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ededed;
+  mat-icon {
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin: 0 12px;
+  }
+}

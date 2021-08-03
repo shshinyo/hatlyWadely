@@ -1,0 +1,38 @@
+<br />
+<div class="layout" fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="15px">
+  <!-- side details -->
+  <mat-card
+    class="side mat-elevation-z1"
+    fxFlex="22"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+  >
+    <a
+      *ngFor="let tap of profileTaps"
+      routerLink="{{ tap.router }}"
+      routerLinkActive="tap-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="tap"
+      fxLayoutAlign="start center"
+      dir="rtl"
+    >
+      <mat-icon>{{ tap.icon }}</mat-icon>
+      {{ tap.title }}
+    </a>
+    <hr class="hr" />
+    <div fxLayoutAlign="center center">
+      <button class="button-2" mat-button style="color: #f68b1e">تسجيل الخروج</button>
+    </div>
+  </mat-card>
+  <!-- filter container -->
+  <mat-card
+    class="main-cont mat-elevation-z1"
+    fxFlex="73"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+  >
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+<br />
+<br />

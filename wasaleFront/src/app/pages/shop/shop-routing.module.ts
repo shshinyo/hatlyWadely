@@ -7,6 +7,8 @@ import { CategoryComponent } from "./category/category.component";
 import { ProductsComponent } from "./products/products.component";
 import { FilterComponent } from "./filter/filter.component";
 import { Error404 } from "src/app/shared/components/Error404/error404.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { OverviewComponent } from "./profile/overview/overview.component";
 
 const routes: Routes = [
   {
@@ -17,6 +19,17 @@ const routes: Routes = [
         path: "",
         component: ProductsComponent,
         pathMatch: "full",
+      },
+      {
+        path: "profile",
+        component: ProfileComponent,
+        children: [
+          {
+            path: "",
+            component: OverviewComponent,
+            pathMatch: "full",
+          },
+        ],
       },
       {
         path: "notfound",
@@ -34,10 +47,7 @@ const routes: Routes = [
         path: ":categoryId/:productId",
         component: ProductDetailComponent,
       },
-      // {
-      //   path: "user",
 
-      // },
       {
         path: "**",
         redirectTo: "notfound",
