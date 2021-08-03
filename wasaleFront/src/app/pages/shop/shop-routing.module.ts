@@ -10,6 +10,7 @@ import { Error404 } from "src/app/shared/components/Error404/error404.component"
 import { ProfileComponent } from "./profile/profile.component";
 import { OverviewComponent } from "./profile/overview/overview.component";
 import { OrdersComponent } from "./profile/orders/orders.component";
+import { SavedComponent } from "./profile/saved/saved.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
           {
             path: "orders",
             component: OrdersComponent,
+          },
+          {
+            path: "saved-orders",
+            component: SavedComponent,
           },
           {
             path: "",

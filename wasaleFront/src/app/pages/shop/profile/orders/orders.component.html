@@ -7,7 +7,7 @@
       ><div class="cont" fxLayout="row wrap" fxLayoutAlign="center center">
         <!--  -->
         <div
-          *ngIf="!thereExistOrder"
+          *ngIf="thereExistOrder"
           class="no-order"
           fxLayout="row wrap"
           fxLayoutAlign="center center"
@@ -22,14 +22,14 @@
             سوف يتم حفظ كل منتجاتك هنا حتي تستطيع متابعة حالتهم في أي وقت.
           </p>
           <br fxFlex="100" />
-          <button mat-button color="primary" routerLink="/shop">متابعة التسوق</button>
+          <button mat-raised-button color="primary" routerLink="/shop">متابعة التسوق</button>
         </div>
       </div></mat-tab
     >
     <!-- Tap Two -->
     <mat-tab label="الطلبات المغلقة (0)" fxLayout="column" fxLayoutAlign="start stretch"
       ><div
-        *ngIf="!thereExistOrder"
+        *ngIf="thereExistOrder"
         class="cont"
         fxLayout="row wrap"
         fxLayoutAlign="center center"
@@ -46,7 +46,7 @@
             سيتم حفظ جميع طلباتك التى تم استكمالها هنا.
           </p>
           <br fxFlex="100" />
-          <button mat-button color="primary" routerLink="/shop">بدء التسوق</button>
+          <button mat-raised-button color="primary" routerLink="/shop">بدء التسوق</button>
         </div>
       </div></mat-tab
     >

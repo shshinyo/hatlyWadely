@@ -13,6 +13,7 @@ import { FilterComponent } from "./filter/filter.component";
 import { ProfileComponent } from './profile/profile.component';
 import { OverviewComponent } from './profile/overview/overview.component';
 import { OrdersComponent } from './profile/orders/orders.component';
+import { SavedComponent } from './profile/saved/saved.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OrdersComponent } from './profile/orders/orders.component';
     ProfileComponent,
     OverviewComponent,
     OrdersComponent,
+    SavedComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })

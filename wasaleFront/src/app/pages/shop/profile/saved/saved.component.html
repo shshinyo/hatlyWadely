@@ -1,0 +1,66 @@
+<div class="title-1" fxLayout="row" fxLayoutAlign="start center">المنتجات المحفوظة</div>
+<hr class="hr" />
+<div class="main-cont" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="17px">
+  <!-- check here for is There exist saved product or not -->
+  <div
+    *ngIf="thereExistOrder"
+    class="saved-prod"
+    fxLayout="row wrap"
+    fxLayoutAlign="space-between center"
+    fxLayoutAlign.xs="center center"
+  >
+    <!-- Bind image here -->
+    <img src="assets/images/images/2.jpg" alt="" />
+    <!-- Description -->
+    <div
+      class="dis"
+      fxFlex="65"
+      fxFlex.xs="90"
+      fxLayout="column"
+      fxLayoutAlign="start start"
+      fxLayoutAlign.xs="center center"
+      fxLayoutGap="5px"
+    >
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+    </div>
+    <div
+      class="pay"
+      fxLayout="column"
+      fxLayout.xs="row"
+      fxLayoutAlign="center space-between"
+      fxLayoutGap="20px"
+    >
+      <button mat-raised-button color="primary">اشتري الآن</button>
+      <button mat-button color="primary" fxLayoutAlign="center center">
+        <mat-icon>delete</mat-icon>
+        إزالة
+      </button>
+    </div>
+  </div>
+  <!-- No Products here -->
+  <div class="cont" fxLayout="row wrap" fxLayoutAlign="center center">
+    <!--  -->
+    <div
+      *ngIf="!thereExistOrder"
+      class="no-order"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+    >
+      <img src="assets/images/wishList.svg" alt="" />
+      <br fxFlex="100" />
+      <div fxFlex="100" class="title-1" fxLayout="row" fxLayoutAlign="center center">
+        لم تحفظ المنتج
+      </div>
+      <br fxFlex="100" />
+      <p fxFlex="100" fxLayoutAlign="center center">
+        هل رأيت منتج أعجبك؟ اضغط علي رمز الاعجاب لحفظه في قائمة الحفظ، ستظهر جميع المنتجات
+        المحفوظة هُنا.
+      </p>
+      <br fxFlex="100" />
+      <button mat-raised-button color="primary" routerLink="/shop">متابعة التسوق</button>
+    </div>
+  </div>
+</div>

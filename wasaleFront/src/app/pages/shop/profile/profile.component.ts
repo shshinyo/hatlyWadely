@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { fade } from "src/app/shared/animations/fade";
 
 export interface Tap {
   title: string;
@@ -31,7 +32,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       title: "المنتجات المحفوظة",
-      router: "",
+      router: "/shop/profile/saved-orders",
       icon: "favorite_border",
     },
     {
