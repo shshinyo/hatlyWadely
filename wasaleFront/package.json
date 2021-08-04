@@ -43,6 +43,7 @@
     "ngx-order-pipe": "^2.0.4",
     "ngx-paginate": "^2.0.1",
     "ngx-pagination": "^5.0.0",
+    "ngx-progressbar": "^6.1.1",
     "ngx-scroll-event": "^1.0.8",
     "ngx-star-rating": "0.0.1",
     "ngx-swiper-wrapper": "^10.0.0",

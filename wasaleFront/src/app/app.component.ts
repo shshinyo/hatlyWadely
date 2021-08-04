@@ -4,11 +4,13 @@ import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  template: `
+    <ng-progress></ng-progress>
+    <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
-  constructor(private _router:Router,private translateService: TranslateService) {
+  constructor(private _router: Router, private translateService: TranslateService) {
     this.translateService.setDefaultLang("en");
     const lang = localStorage.getItem("lang") || "en";
     this.translateService.use(lang);

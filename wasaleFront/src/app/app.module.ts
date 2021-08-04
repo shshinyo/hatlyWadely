@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
@@ -12,7 +12,6 @@ import { AppComponent } from "./app.component";
 import { PagesModule } from "./pages/pages.module";
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { GlobalModule } from "./global/global.module";
-import { SouqModule } from "./pages/souq/souq.module";
 import { CartModule } from "./pages/souq/cart/cart.module";
 import { ShopModule } from "./pages/shop/shop.module";
 // AoT requires an exported function for factories

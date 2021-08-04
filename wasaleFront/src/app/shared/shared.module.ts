@@ -3,9 +3,12 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { ToastrModule } from "ngx-toastr";
-import { AngularSvgIconModule } from "angular-svg-icon";
 import { TranslateModule } from "@ngx-translate/core";
+import { AngularSvgIconModule } from "angular-svg-icon";
+
+import { NgProgressModule } from "ngx-progressbar";
+import { NgProgressRouterModule } from "ngx-progressbar/router";
+import { NgProgressHttpModule } from "ngx-progressbar/http";
 
 import { MaterialModule } from "./material.module";
 import { HighchartsChartModule } from "highcharts-angular";
@@ -43,12 +46,13 @@ const THIRD_MODULES = [
   PrimeNgModule,
   FlexLayoutModule,
   HighchartsChartModule,
-  TranslateModule,
-  ToastrModule.forRoot({
-    timeOut: 4000,
-    positionClass: "toast-top-left",
-    preventDuplicates: true,
+  NgProgressModule.withConfig({
+    spinnerPosition: "left",
+    color: "#f68b1e"
   }),
+  NgProgressHttpModule,
+  TranslateModule,
+
   AngularSvgIconModule.forRoot(),
 ];
 
