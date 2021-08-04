@@ -17,14 +17,25 @@
   >
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div class="title-2" fxLayoutAlign="center center">تفاصيل الحساب</div>
-      <a class="edit-btn" fxLayoutAlign="center center">
+      <a
+        class="edit-btn"
+        fxLayoutAlign="center center"
+        routerLink="/shop/profile/details"
+      >
         <mat-icon class=".mat-icon-1">edit</mat-icon></a
       >
     </div>
     <hr class="hr" />
     <div class="content" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
       <!-- content here -->
-      <button mat-button class="button-2" style="color: #f68b1e">تغير كلمة المرور</button>
+      <button
+        mat-button
+        class="button-2"
+        style="color: #f68b1e"
+        routerLink="/shop/profile/change-pass"
+      >
+        تغير كلمة المرور
+      </button>
     </div>
   </div>
   <div
@@ -36,7 +47,11 @@
   >
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div class="title-2" fxLayoutAlign="center center">جهات الاتصال</div>
-      <a class="edit-btn" fxLayoutAlign="center center">
+      <a
+        class="edit-btn"
+        fxLayoutAlign="center center"
+        routerLink="/shop/profile/address"
+      >
         <mat-icon class=".mat-icon-1">edit</mat-icon></a
       >
     </div>

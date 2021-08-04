@@ -111,7 +111,11 @@
         <!-- router here -->
         <!-- Implement router complete like this => ( categoryName/ productId) -->
 
-        <item fxFlex="97" [item]="product" [routerLink]="['/shop',product.categoryName , product.id]"></item>
+        <item
+          fxFlex="97"
+          [item]="product"
+          [routerLink]="['/shop', product.categoryName, product.id]"
+        ></item>
       </div>
     </ng-template>
   </p-carousel>
