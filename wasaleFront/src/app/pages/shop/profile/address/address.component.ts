@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
   styleUrls: ["./address.component.scss"],
 })
 export class AddressComponent implements OnInit {
-  addAddress: boolean = true;
+  addAddress: boolean = false;
   editAddress: boolean = false;
   form: FormGroup;
   // address here
