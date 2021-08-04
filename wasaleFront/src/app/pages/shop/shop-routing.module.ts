@@ -12,6 +12,7 @@ import { OverviewComponent } from "./profile/overview/overview.component";
 import { OrdersComponent } from "./profile/orders/orders.component";
 import { SavedComponent } from "./profile/saved/saved.component";
 import { DetailsComponent } from "./profile/details/details.component";
+import { AddressComponent } from "./profile/address/address.component";
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
           {
             path: "details",
             component: DetailsComponent,
+          },
+          {
+            path: "address",
+            component: AddressComponent,
           },
           {
             path: "",

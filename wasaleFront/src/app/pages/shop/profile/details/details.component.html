@@ -16,13 +16,13 @@
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
       <mat-label>الاسم الاول</mat-label>
       <input formControlName="firstName" type="text" matInput />
-      <mat-error>{{requiredError}}</mat-error>
+      <mat-error>{{ requiredError }}</mat-error>
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
       <mat-label>الاسم الاخير</mat-label>
       <input formControlName="lastName" type="text" matInput />
-      <mat-error>{{requiredError}}</mat-error>
+      <mat-error>{{ requiredError }}</mat-error>
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
@@ -37,15 +37,15 @@
       <input formControlName="phoneNumber" matInput type="tel" />
       <mat-icon
         matSuffix
-        [ngStyle]="{ color: form.get('phoneNumber').valid ? 'rgb(0, 177, 0)' : '' }"
-        >{{ form.get("phoneNumber").valid ? "done" : "mode_edit" }}</mat-icon
+        [ngStyle]="{ color: !form.get('phoneNumber').valid ? 'red' : '' }"
+        >{{ form.get("phoneNumber").errors?.pattern ? "mode_edit" : "" }}</mat-icon
       >
-      <mat-error>{{requiredError}}</mat-error>
+      <mat-error>{{ requiredError }}</mat-error>
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
       <mat-label>النوع(اختياري)</mat-label>
-      <mat-select formControlName="type">
+      <mat-select formControlName="type" >
         <mat-option *ngFor="let type of types" [value]="type.value">
           {{ type.type }}
         </mat-option>
@@ -53,12 +53,18 @@
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
-      <mat-label>التاريخ</mat-label>
+      <mat-label>تاريخ الميلاد(اختياري)</mat-label>
       <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <button fxFlex="90" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    <button
+      fxFlex="90"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
       حفظ التغيرات
     </button>
   </form>

@@ -36,7 +36,7 @@ export class DetailsComponent implements OnInit {
       lastName: "Eldeeb",
       email: "moahmed.eldeib5@gmail.com",
       phoneNumber: "01098799837",
-      type: "mail",
+      type: 0,
     });
   }
 
@@ -54,9 +54,9 @@ export class DetailsComponent implements OnInit {
       firstName: ["", Validators.required],
       lastName: ["", Validators.required],
       email: [{ value: "", disabled: true }],
-      phoneNumber: ["", [Validators.required, Validators.pattern(patternNumberOnly)]],
+      phoneNumber: ["", [Validators.pattern(patternNumberOnly)]],
       type: [""],
-      date: [""],
+      date: Date,
     });
   }
 }

@@ -42,7 +42,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       title: "جهات الاتصال",
-      router: "",
+      router: "/shop/profile/address",
       icon: "contact_mail",
     },
     {

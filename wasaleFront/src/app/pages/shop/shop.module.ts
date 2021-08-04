@@ -15,6 +15,7 @@ import { OverviewComponent } from './profile/overview/overview.component';
 import { OrdersComponent } from './profile/orders/orders.component';
 import { SavedComponent } from './profile/saved/saved.component';
 import { DetailsComponent } from './profile/details/details.component';
+import { AddressComponent } from './profile/address/address.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DetailsComponent } from './profile/details/details.component';
     OrdersComponent,
     SavedComponent,
     DetailsComponent,
+    AddressComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })

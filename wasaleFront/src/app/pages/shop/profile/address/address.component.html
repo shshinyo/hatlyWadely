@@ -1,0 +1,176 @@
+<!-- Default view -->
+<div
+  *ngIf="!addAddress"
+  class="title-1"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>دفتر العنواين</div>
+  <button
+    class="button-3"
+    mat-raised-button
+    color="primary"
+    (click)="onAddEditAddressForm()"
+  >
+    اضافة عنوان جديد
+  </button>
+</div>
+<hr *ngIf="!addAddress" class="hr" />
+
+<div
+  *ngIf="!addAddress"
+  class="main-cont"
+  fxLayout=" row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="15px"
+>
+  <div
+    class="card"
+    fxFlex="47"
+    fxFlex.xs="90"
+    fxLayout="column"
+    fxLayoutAlign="space-between stretch"
+  >
+    <div
+      class="content p-2"
+      fxLayout="column"
+      fxLayoutAlign="start start"
+      fxLayoutGap="5px"
+    >
+      <!-- content here -->
+      <p>العنوان</p>
+      <p>التليفون</p>
+      <p>شويه هبد</p>
+    </div>
+    <div class="edit-tap" fxLayout="row" fxLayoutAlign="space-between center">
+      <div
+        class="title-2"
+        fxLayoutAlign="center center"
+        style="color: rgb(196, 196, 196)"
+      >
+        تعين كعنوان افتراضي
+      </div>
+      <a class="edit-btn" fxLayoutAlign="center center" (click)="onAddEditAddressForm(5)">
+        <mat-icon class=".mat-icon-1">edit</mat-icon></a
+      >
+    </div>
+  </div>
+</div>
+<!-- New address or edit -->
+<div *ngIf="addAddress" class="title-1" fxLayout="row" fxLayoutAlign="start center">
+  <a fxLayoutAlign="center center" style="margin: 0 5px" (click)="backButton()">
+    <mat-icon>arrow_forward</mat-icon></a
+  >
+  {{ editAddress ? "تعديل العنوان" : "إضافة عنوان جديد" }}
+</div>
+<hr *ngIf="addAddress" class="hr" />
+<div
+  *ngIf="addAddress"
+  class="main-cont"
+  fxLayout=" row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="15px"
+>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="saveChanges(form)"
+    novalidate
+    class="details-form"
+    fxFlex="100"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center center"
+    fxLayoutAlign.xs="center stretch"
+    dir="rtl"
+  >
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>الاسم الاول</mat-label>
+      <input formControlName="firstName" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>الاسم الاخير</mat-label>
+      <input formControlName="lastName" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>رقم الهاتف </mat-label>
+      <span matPrefix>+20 &nbsp;</span>
+      <input formControlName="phoneNumber" matInput type="tel" />
+      <mat-icon
+        matSuffix
+        [ngStyle]="{ color: !form.get('phoneNumber').valid ? 'red' : '' }"
+        >{{ form.get("phoneNumber").errors?.pattern ? "mode_edit" : "" }}</mat-icon
+      >
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>رقم هاتف اضافي (اختياري)</mat-label>
+      <span matPrefix>+20 &nbsp;</span>
+      <input formControlName="anotherPhoneNumber" matInput type="tel" />
+      <mat-icon
+        matSuffix
+        [ngStyle]="{ color: !form.get('anotherPhoneNumber').valid ? 'red' : '' }"
+        >{{ form.get("anotherPhoneNumber").errors?.pattern ? "mode_edit" : "" }}</mat-icon
+      >
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex="97" appearance="fill">
+      <mat-label>العنوان</mat-label>
+      <input formControlName="address" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex="97" appearance="fill">
+      <mat-label>تفاصيل أكثر حول العنوان</mat-label>
+      <input formControlName="addressDetails" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>المنطقة</mat-label>
+      <select formControlName="area" matNativeControl required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>المدينة</mat-label>
+      <select formControlName="city" matNativeControl required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
+    <!--  -->
+
+    <div fxFlex="97" fxLayout="row" fxLayoutAlign="start center">
+      <section fxFlex.gt-xs="47">
+        <mat-checkbox formControlName="makeDefault"
+          >استخدم العنوان كعنوان إفتراضي</mat-checkbox
+        >
+      </section>
+    </div>
+    <br />
+    <br />
+    <!--  -->
+    <button
+      fxFlex="90"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      حفظ التغيرات
+    </button>
+  </form>
+  <br />
+</div>

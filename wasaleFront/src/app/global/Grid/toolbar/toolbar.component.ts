@@ -91,13 +91,6 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
       icon: "sports_handball",
       disabled: true,
     },
-    {
-      location: "cart/info",
-      outletName: "null",
-      name: "سلة المتجر",
-      icon: "add_shopping_cart",
-      disabled: false,
-    },
   ];
 
   // user is logged in
