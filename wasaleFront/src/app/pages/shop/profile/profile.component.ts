@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { fade } from "src/app/shared/animations/fade";
+import { Paths } from "src/app/shared/utilities/const";
 
 export interface Tap {
   title: string;
@@ -13,12 +15,6 @@ export interface Tap {
 })
 export class ProfileComponent implements OnInit {
   lang: any;
-
-  constructor() {}
-
-  ngOnInit(): void {
-    this.lang = document.documentElement.lang;
-  }
   profileTaps: Array<Tap> = [
     {
       title: "حسابي",
@@ -51,4 +47,14 @@ export class ProfileComponent implements OnInit {
       icon: "security",
     },
   ];
+
+  constructor(private _router: Router) {}
+
+  ngOnInit(): void {
+    this.lang = document.documentElement.lang;
+  }
+  // Implement logout here
+  logOut(): void {
+    this._router.navigateByUrl(Paths.shop);
+  }
 }

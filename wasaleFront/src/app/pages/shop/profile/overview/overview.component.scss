@@ -1,23 +1,2 @@
 $color: #f68b1e;
 
-.main-cont {
-  padding: 10px;
-  .card {
-    height: 200px;
-    margin: 7.5px 0;
-    border-radius: 5px;
-    .edit-btn {
-      height: 33px;
-      width: 33px;
-      padding: 10px;
-      border-radius: 50%;
-      outline: none;
-      border: none;
-      text-decoration: none;
-      color: $color;
-    }
-    .edit-btn:hover {
-      background-color: #ff6f0021;
-    }
-  }
-}

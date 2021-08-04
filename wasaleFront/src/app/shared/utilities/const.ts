@@ -16,5 +16,5 @@ export const Const = {
 };
 
 export const Paths = {
-  shop: "/home",
+  shop: "/shop",
 };
