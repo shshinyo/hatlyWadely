@@ -1,0 +1,85 @@
+<div class="title-1" fxLayout="row" fxLayoutAlign="space-between center">
+  تغيير كلمة المرور
+</div>
+<hr class="hr" />
+
+<div
+  class="main-cont"
+  fxLayout=" row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="15px"
+>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="saveChanges(form)"
+    novalidate
+    class="details-form"
+    fxFlex.gt-xs="47"
+    fxFlex.xs="95"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    dir="rtl"
+  >
+    <mat-form-field fxFlex="100" appearance="fill">
+      <mat-label>كلمة المرور الجديدة</mat-label>
+      <input
+        [type]="hideNewPass ? 'password' : 'text'"
+        formControlName="newPass"
+        required
+        matInput
+        autofocus
+      />
+      <button mat-icon-button matSuffix (click)="hideNewPass = !hideNewPass">
+        <mat-icon>{{ hideNewPass ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error *ngIf="form.get('newPass').invalid && form.get('newPass').touched">{{
+        passErrMessage(form.get("newPass"))
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field fxFlex="100" appearance="fill">
+      <mat-label>تأكيد كلمة المرور</mat-label>
+      <input
+        [type]="hideConfirmPass ? 'password' : 'text'"
+        formControlName="confirmPass"
+        required
+        matInput
+        autofocus
+      />
+      <button mat-icon-button matSuffix (click)="hideConfirmPass = !hideConfirmPass">
+        <mat-icon>{{ hideConfirmPass ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error
+        *ngIf="form.get('confirmPass').invalid && form.get('confirmPass').touched"
+        >{{ passErrMessage(form.get("confirmPass")) }}</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field fxFlex="100" appearance="fill">
+      <mat-label>أدخل المرور الحالية</mat-label>
+      <input
+        [type]="hideCurrentPass ? 'password' : 'text'"
+        formControlName="currentPass"
+        required
+        matInput
+        autofocus
+      />
+      <button mat-icon-button matSuffix (click)="hideCurrentPass = !hideCurrentPass">
+        <mat-icon>{{ hideCurrentPass ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error
+        *ngIf="form.get('currentPass').invalid && form.get('currentPass').touched"
+        >{{ passErrMessage(form.get("currentPass")) }}</mat-error
+      >
+    </mat-form-field>
+    <!--  -->
+    <button
+      fxFlex="90"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      حفظ التغيرات
+    </button>
+  </form>
+</div>

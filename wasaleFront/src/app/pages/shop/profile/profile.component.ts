@@ -47,7 +47,7 @@ export class ProfileComponent implements OnInit {
     },
     {
       title: "تغير كلمة المرور",
-      router: "",
+      router: "/shop/profile/change-pass",
       icon: "security",
     },
   ];

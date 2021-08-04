@@ -13,6 +13,7 @@ import { OrdersComponent } from "./profile/orders/orders.component";
 import { SavedComponent } from "./profile/saved/saved.component";
 import { DetailsComponent } from "./profile/details/details.component";
 import { AddressComponent } from "./profile/address/address.component";
+import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
           {
             path: "address",
             component: AddressComponent,
+          },
+          {
+            path: "change-pass",
+            component: ResetPassComponent,
           },
           {
             path: "",
