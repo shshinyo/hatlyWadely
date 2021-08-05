@@ -1,5 +1,13 @@
-import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+} from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { BehaviorSubject, Subject } from "rxjs";
+import { debounceTime, filter, tap } from "rxjs/Operators";
 import { ModalService } from "src/app/shared/services/modal.service";
 
 export interface Image {
@@ -13,9 +21,12 @@ export interface Image {
   templateUrl: "./my-products.component.html",
   styleUrls: ["./my-products.component.scss"],
 })
-export class MyProductsComponent implements OnInit {
+export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   addProduct: boolean = false;
   editProduct: boolean = false;
+  StateSubject = new BehaviorSubject(false);
+  StateSubject$ = this.StateSubject.asObservable();
+  formState: boolean;
   form: FormGroup;
   // address here
   clientProduct = [];
@@ -52,7 +63,6 @@ export class MyProductsComponent implements OnInit {
       imageShow: null,
     },
   ];
-
   constructor(
     private _fb: FormBuilder,
     private _cd: ChangeDetectorRef,
@@ -62,13 +72,20 @@ export class MyProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.clientProduct = [{}, {}, {}];
+    this.StateSubject$.subscribe((x) => (this.formState = x));
+    this.clientProduct = [{}, {}, {}, {}, {}];
   }
-
+  ngAfterViewInit(): void {}
+  ngOnDestroy(): void {
+    if (this.formState == false) {
+    }
+  }
   // If there is Id then Edit else add new address
   onAddEditProductForm(id?: any): void {
     this.editProduct = id ? true : false;
     this.addProduct = true;
+    this.form.reset();
+    this.StateSubject.next(true);
     if (id) {
       // get product image array and assign it to filePicker
       this.form.patchValue({
@@ -83,19 +100,46 @@ export class MyProductsComponent implements OnInit {
       });
     }
     // Add new
-    this.form.reset();
   }
   backButton(): void {
-    this.addProduct = false;
-    this.editProduct = false;
-    this.form.reset();
+    if (this.formState) {
+      this._modal
+        .confirmDialog("هل أنت متأكد من عدم الاكمال ؟!")
+        .pipe(filter((confirm) => !!confirm))
+        .subscribe((_) => {
+          this.addProduct = false;
+          this.editProduct = false;
+          this.form.reset();
+        });
+    }
   }
-  saveChanges(form: FormGroup): void {
-    console.log(form.value);
-    console.log(this.filePicker);
+  saveChanges(form: FormGroup, state: string): void {
+    const imgUploaded = this.filePicker.filter((file) => file.file !== null || undefined);
+    const data = { ...imgUploaded, ...form.value };
+
+    const command = {
+      images: data[0],
+      name: data.name,
+      categoryType: data.categoryType,
+      details: data.details,
+      price: data.price,
+      afterDiscount: 200,
+      color: data.color,
+      searchWord: data.searchWord,
+    };
+    console.log(command);
+
     this.addProduct = false;
     this.editProduct = false;
-    this._modal.snackbar("تم اضافة منتج جديد", "success");
+    this.StateSubject.next(false);
+    if (state == "new") {
+      // call post API
+      this._modal.snackbar("تم اضافة منتج جديد", "success");
+    }
+    if (state == "edit") {
+      // call path API
+      this._modal.snackbar("تم تعديل المنتج بنجاح", "success");
+    }
   }
 
   // file selector

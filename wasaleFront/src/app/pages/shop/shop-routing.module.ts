@@ -2,6 +2,8 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
+import { DeactivateGuard } from "src/app/shared/Guards/deactivate.guard";
+
 import { MainComponent } from "./main.component";
 import { CategoryComponent } from "./category/category.component";
 import { ProductsComponent } from "./products/products.component";
@@ -33,6 +35,7 @@ const routes: Routes = [
           {
             path: "my-products",
             component: MyProductsComponent,
+            // canDeactivate: [DeactivateGuard],
           },
           {
             path: "orders",

@@ -27,7 +27,7 @@
   <div
     *ngFor="let product of clientProduct"
     class="saved-prod"
-    fxFlex="32"
+    fxFlex="31.6"
     fxFlex.xs="97"
     fxLayout="row wrap"
     fxLayoutAlign="center center"
@@ -84,7 +84,6 @@
   </div>
   <form
     [formGroup]="form"
-    (ngSubmit)="saveChanges(form)"
     novalidate
     class="details-form"
     fxFlex="100"
@@ -196,6 +195,7 @@
       mat-raised-button
       color="primary"
       type="submit"
+      (click)="saveChanges(form, editProduct ? 'edit' : 'new')"
       [disabled]="form.invalid"
     >
       {{ editProduct ? "حفظ التغيرات" : "نشر للبيع" }}

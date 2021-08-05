@@ -10,7 +10,7 @@ export interface IDialogContent {
 
 @Component({
   template: `
-    <h1 mat-dialog-title class="text-center text-gray-800">
+    <h1 mat-dialog-title class="text-end text-gray-800">
       <mat-icon style="font-size:20px;">arrow_back_ios_new</mat-icon>
       {{ data.title }}
     </h1>
