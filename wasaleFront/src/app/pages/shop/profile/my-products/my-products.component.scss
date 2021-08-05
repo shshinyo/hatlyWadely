@@ -1,0 +1,106 @@
+$img-size: 150px;
+
+.details-form {
+  min-height: auto;
+  padding: 0;
+  ::ng-deep {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: #ffffff;
+    }
+    mat-form-field {
+      margin-left: 0 !important;
+      margin: 5px 17px;
+    }
+  }
+}
+
+.saved-prod {
+  min-height: 150px;
+  border-radius: 5px;
+  margin: 7.5px 0;
+  border: 0.4px solid rgb(228, 228, 228);
+  img {
+    min-height: $img-size;
+    max-height: $img-size;
+    min-width: calc($img-size + 50px);
+    max-width: calc($img-size + 50px);
+    object-fit: contain;
+  }
+  .dis {
+  }
+  .pay {
+    margin: 10px 20px;
+  }
+}
+
+.media-picker-item {
+  position: relative;
+  height: $img-size;
+  width: $img-size;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 30px;
+  background-color: whitesmoke;
+  color: orange;
+  .remove-img {
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    z-index: 9;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    background-color: #ffffff;
+    mat-icon {
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+      color: red;
+    }
+  }
+  .remove-img:hover {
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    z-index: 9;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    mat-icon {
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+      color: red;
+    }
+  }
+  .image-full {
+    min-height: $img-size;
+    max-height: $img-size;
+    min-width: $img-size;
+    max-width: $img-size;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  img,
+  video {
+    height: 70px;
+    width: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  :hover {
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(238, 238, 238);
+  }
+}

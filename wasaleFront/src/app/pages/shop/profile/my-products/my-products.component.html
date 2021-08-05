@@ -1,0 +1,205 @@
+<!-- Default view -->
+<div
+  *ngIf="!addProduct"
+  class="title-1"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>منتجاتي</div>
+  <button
+    class="button-3"
+    mat-raised-button
+    color="primary"
+    (click)="onAddEditProductForm()"
+  >
+    اضافة منتج (للبيع)
+  </button>
+</div>
+<hr *ngIf="!addProduct" class="hr" />
+
+<div
+  *ngIf="!addProduct"
+  class="main-cont"
+  fxLayout="row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="15px"
+>
+  <div
+    *ngFor="let product of clientProduct"
+    class="saved-prod"
+    fxFlex="32"
+    fxFlex.xs="97"
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+  >
+    <!-- Bind image here -->
+    <img src="assets/images/images/2.jpg" alt="" />
+    <!-- Description -->
+    <div
+      class="dis"
+      fxFlex="100"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      fxLayoutGap="5px"
+    >
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>وصفك الجميل يا بيلو هنا</p>
+    </div>
+    <div class="pay" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
+      <button
+        mat-button
+        color="primary"
+        fxLayoutAlign="center center"
+        (click)="onAddEditProductForm(5)"
+      >
+        <mat-icon>edit</mat-icon>
+        تعديل
+      </button>
+      <button mat-button color="primary" fxLayoutAlign="center center">
+        <mat-icon>delete</mat-icon>
+        إزالة
+      </button>
+    </div>
+  </div>
+</div>
+<!-- New address or edit -->
+<div *ngIf="addProduct" class="title-1" fxLayout="row" fxLayoutAlign="start center">
+  <a fxLayoutAlign="center center" style="margin: 0 5px" (click)="backButton()">
+    <mat-icon>arrow_forward</mat-icon></a
+  >
+  {{ editProduct ? "تعديل تفاصيل المنتج" : "إضافة منتج جديد ( للبيع )" }}
+</div>
+<hr *ngIf="addProduct" class="hr" />
+<div
+  *ngIf="addProduct"
+  class="main-cont"
+  fxLayout=" row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="15px"
+>
+  <div class="title-1" fxFlex="100" fxLayoutAlign="center center" style="color: orange">
+    من فضلك املأ البيانات الاتية
+  </div>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="saveChanges(form)"
+    novalidate
+    class="details-form"
+    fxFlex="100"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center center"
+    fxLayoutAlign.xs="center stretch"
+    dir="rtl"
+  >
+    <!-- file picker hand made (Mohamed Eldeeb) -->
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      style="background-color: rgba(248, 248, 248, 0.259); border-radius: 8px"
+    >
+      <div class="title-2" fxFlex="100" fxLayoutAlign="start center">
+        اضافة صورة ( صور ) للمنتج
+      </div>
+      <label
+        *ngFor="let p of filePicker"
+        class="media-picker-item"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+        [for]="p.id"
+      >
+        <a
+          *ngIf="p.file"
+          class="remove-img"
+          fxLayoutAlign="center center"
+          (click)="onRemoveImg(p.id)"
+        >
+          <mat-icon class="mat-icon-1">highlight_off</mat-icon></a
+        >
+        <div *ngIf="!p.file" fxFill fxLayout="row wrap" fxLayoutAlign="center center">
+          +
+        </div>
+        <div
+          *ngIf="p.file"
+          fxFlex="100"
+          fxLayout="row wrap"
+          fxLayoutAlign="center center"
+        >
+          <img class="image-full" [src]="p.imageShow" />
+        </div>
+        <input
+          type="file"
+          [id]="p.id"
+          #input
+          (change)="onSelectFile($event, input.files, p.id)"
+          hidden
+        />
+      </label>
+    </div>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>اسم المنتج</mat-label>
+      <input formControlName="name" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>الفئة التي ينتمي اليها </mat-label>
+      <select formControlName="categoryType" matNativeControl required>
+        <option value="category">بقاله</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex="96" appearance="fill">
+      <mat-label>وصف المنتج</mat-label>
+      <textarea
+        formControlName="details"
+        matInput
+        placeholder="وصف مختصر للمنتج"
+      ></textarea>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>السعر</mat-label>
+      <input formControlName="price" type="number" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>بعد الخصم ( اختياري )</mat-label>
+      <input formControlName="afterDiscount" type="number" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>اللون ( اختياري )</mat-label>
+      <input formControlName="color" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <!--  -->
+    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
+      <mat-label>كلمة البحث( اختياري )</mat-label>
+      <input formControlName="searchWord" type="text" matInput />
+      <mat-error>{{ requiredError }}</mat-error>
+    </mat-form-field>
+    <br />
+    <br />
+    <!--  -->
+    <button
+      fxFlex="90"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      {{ editProduct ? "حفظ التغيرات" : "نشر للبيع" }}
+    </button>
+  </form>
+  <br />
+</div>

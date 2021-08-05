@@ -14,6 +14,7 @@ import { SavedComponent } from "./profile/saved/saved.component";
 import { DetailsComponent } from "./profile/details/details.component";
 import { AddressComponent } from "./profile/address/address.component";
 import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
+import { MyProductsComponent } from "./profile/my-products/my-products.component";
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
         path: "profile",
         component: ProfileComponent,
         children: [
+          {
+            path: "my-products",
+            component: MyProductsComponent,
+          },
           {
             path: "orders",
             component: OrdersComponent,

@@ -44,6 +44,8 @@ export class AddressComponent implements OnInit {
   }
   saveChanges(form: FormGroup): void {
     console.log(form.value);
+    this.addAddress = false;
+    this.editAddress = false;
   }
 
   get requiredError(): string {

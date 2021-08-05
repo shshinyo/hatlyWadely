@@ -22,6 +22,11 @@ export class ProfileComponent implements OnInit {
       icon: "person_outline",
     },
     {
+      title: "منتجاتي",
+      router: "/shop/profile/my-products",
+      icon: "category",
+    },
+    {
       title: "الطلبات",
       router: "/shop/profile/orders",
       icon: "inventory_2",
@@ -34,7 +39,7 @@ export class ProfileComponent implements OnInit {
     {
       title: "التفاصيل",
       router: "/shop/profile/details",
-      icon: "info",
+      icon: "contact_support",
     },
     {
       title: "جهات الاتصال",

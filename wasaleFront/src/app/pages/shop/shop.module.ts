@@ -17,6 +17,7 @@ import { SavedComponent } from "./profile/saved/saved.component";
 import { DetailsComponent } from "./profile/details/details.component";
 import { AddressComponent } from "./profile/address/address.component";
 import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
+import { MyProductsComponent } from './profile/my-products/my-products.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
     DetailsComponent,
     AddressComponent,
     ResetPassComponent,
+    MyProductsComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })
