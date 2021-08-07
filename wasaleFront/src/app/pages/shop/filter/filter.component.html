@@ -2,66 +2,111 @@
 <br />
 <div class="layout" fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="15px">
   <!-- side details -->
-  <mat-card class="side mat-elevation-z1" fxFlex="22" fxLayout="column" fxLayoutAlign="start stretch" fxHide fxShow.gt-xs>
-<div fxLayout="column">
-  <label id="example-radio-group-label" style="font-weight: bold;">تقييم المنتج</label>
-  <mat-radio-group
-    aria-labelledby="example-radio-group-label"
-    class="example-radio-group" fxLayout="column" dir="rtl">
-    <mat-radio-button class="example-radio-button" *ngFor="let elem of rateCheck" [value]="elem" style="text-align: end;">
-     <div fxLayout="row" style="position: relative;top: 35px; left: 20px;">
-      <app-star [rating]="elem.rate"></app-star>
-     </div>
-     أو أكثر
-    </mat-radio-button>
-  </mat-radio-group>
-  <!-- second rate -->
-<div fxLayout="column" style="margin-top: 20px;">
-  <label id="example-radio-group-label" style="font-weight: bold;">تقييم البائع</label>
-  <mat-radio-group
-    aria-labelledby="example-radio-group-label"
-    class="example-radio-group" dir="rtl">
-    <mat-radio-button class="example-radio-button" *ngFor="let elem of rateCheck2" [value]="elem">
-     {{elem.rate}}
-    </mat-radio-button>
-  </mat-radio-group>
-</div>
-</div>
-</mat-card>
-  <!-- filter container -->
-  <mat-card class="filter-container mat-elevation-z1" fxFlex="73" fxLayout="column" fxLayoutAlign="start stretch" fxLayout.xs="column" fxFlex.xs="100" fxLayoutGap.xs="2px">
-<div dir="ltr" style="height: 23px;">
-<button mat-button id="filterBtn" class="bg-light" [matMenuTriggerFor]="menu"> : ترتيب حسب</button>
-<mat-menu #menu="matMenu">
-  <button fxLayoutAlign="end" mat-menu-item *ngFor="let item of menuButton">{{item.name}}</button>
-</mat-menu>
-</div>
-<hr class="line">
-
-<div class="cardsDiv" fxLayout="row" *ngFor="let card of cards" dir="ltr" fxLayoutGap="1%">
-<div fxFlex="30" fxLayout="column" fxLayoutAlign="space-between start">
-    <p fxFlex="40" id="priceP" class="mt-3">{{card.price}}</p>
-    <button mat-button class="toCart">اضافه لسلة التسوق</button>
-</div>
-<div fxFlex="40" class="mt-3">
-  <p style="text-align: end;">{{card.details}}</p>
-  <div class="rateDiv" fxLayout="row">
-    <div fxFlex="50" fxFlex.xs="20" fxFlexOffset.xs="-80px" style="position: relative;left: 50px;" title="{{card.rate}}">
-      <app-star [rating]="card.rate"></app-star>
+  <mat-card
+    class="side mat-elevation-z1"
+    fxFlex="22"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxHide
+    fxShow.gt-xs
+  >
+    <div fxLayout="column">
+      <label id="example-radio-group-label" style="font-weight: bold">تقييم المنتج</label>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        fxLayout="column"
+        dir="rtl"
+      >
+        <mat-radio-button
+          class="example-radio-button"
+          *ngFor="let elem of rateCheck"
+          [value]="elem"
+          style="text-align: end"
+        >
+          <div fxLayout="row" style="position: relative; top: 35px; left: 20px">
+            <app-star [rating]="elem.rate"></app-star>
+          </div>
+          أو أكثر
+        </mat-radio-button>
+      </mat-radio-group>
+      <!-- second rate -->
+      <div fxLayout="column" style="margin-top: 20px">
+        <label id="example-radio-group-label" style="font-weight: bold"
+          >تقييم البائع</label
+        >
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
+          dir="rtl"
+        >
+          <mat-radio-button
+            class="example-radio-button"
+            *ngFor="let elem of rateCheck2"
+            [value]="elem"
+          >
+            {{ elem.rate }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
     </div>
-   <div fxFlex="40" fxFlex.xs="20" fxFlexOffset.xs="135px" style="position: relative;
-   bottom: 37px;">
-    <p>التقييم</p>
-   </div>
-</div>
-</div>
-<div fxFlex="25" fxFlex.xs="30" >
-<img fxFlex.xs="100"  class="cardImg" ngClass.xs="myHieght" src="{{card.imgUrl}}">
-</div>
-</div>
-</mat-card>
-</div>
+  </mat-card>
+  <!-- filter container -->
+  <mat-card
+    class="filter-container mat-elevation-z1"
+    fxFlex="73"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxLayout.xs="column"
+    fxFlex.xs="100"
+    fxLayoutGap.xs="2px"
+  >
+    <div dir="ltr" style="height: 23px">
+      <button mat-button id="filterBtn" class="bg-light" [matMenuTriggerFor]="menu">
+        : ترتيب حسب
+      </button>
+      <mat-menu #menu="matMenu">
+        <button fxLayoutAlign="end" mat-menu-item *ngFor="let item of menuButton">
+          {{ item.name }}
+        </button>
+      </mat-menu>
+    </div>
+    <hr class="line" />
 
+    <div
+      class="cardsDiv card m-t-8"
+      fxLayout="row"
+      *ngFor="let card of cards"
+      dir="ltr"
+      fxLayoutGap="1%"
+    >
+      <div fxFlex="35" fxLayout="column" fxLayoutAlign="space-around start">
+        <p fxFlex="40" id="priceP" class="mt-3">{{ card.price }}</p>
+        <button mat-raised-button color="primary">اضافه لسلة التسوق</button>
+      </div>
+      <div fxFlex="40" fxLayout="column" fxLayoutAlign="start stretch">
+        <p fxLayoutAlign="end center" class="m-t-8">{{ card.details }}</p>
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <app-star
+            class="h-40"
+            fxFlex="25"
+            fxFlexAlign="end"
+            [rating]="card.rate"
+          ></app-star>
+          <div fxFlex="35" fxLayoutAlign="center center" class="h-40">التقييم</div>
+        </div>
+      </div>
+      <div fxFlex="25" fxFlex.xs="30">
+        <img
+          fxFlex.xs="100"
+          class="cardImg"
+          ngClass.xs="myHieght"
+          src="{{ card.imgUrl }}"
+        />
+      </div>
+    </div>
+  </mat-card>
+</div>
 
 <br />
 <br />

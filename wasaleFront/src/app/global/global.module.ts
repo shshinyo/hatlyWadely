@@ -12,6 +12,7 @@ import { SideNavComponent } from "./Grid/side-nav/side-nav.component";
 import { SymbolNamePipe } from "../shared/pipes/symbol-name.pipe";
 import { CasedNamePipe } from "../shared/pipes/cased-name.pipe";
 import { GlobalRoutingModule } from "./global-routing.module";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GlobalRoutingModule } from "./global-routing.module";
     SideNavComponent,
     SymbolNamePipe,
     CasedNamePipe,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
