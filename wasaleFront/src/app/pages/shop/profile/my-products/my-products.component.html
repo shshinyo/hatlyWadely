@@ -130,6 +130,7 @@
           <img class="image-full" [src]="p.imageShow" />
         </div>
         <input
+          *ngIf="!p.file"
           type="file"
           [id]="p.id"
           #input
