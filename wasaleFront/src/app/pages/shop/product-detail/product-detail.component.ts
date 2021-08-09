@@ -13,9 +13,8 @@ import { zip } from "rxjs";
 export class ProductDetailComponent implements OnInit {
   // Reactive abroach
   productId$ = this._route.paramMap.pipe(map((param) => param.get("productId")));
-  
 
-  product;
+
   myArray: [];
   options: [];
   myInfoArr: [];
@@ -27,18 +26,24 @@ export class ProductDetailComponent implements OnInit {
     private souqSer: SouqService,
     private _shopService: ProductsService
   ) {}
+  product = {
+    "detail" : "rice hatly wadely 5 kg" ,
+    "price" : "45" ,
+    "imgUrl" : "assets/images/images/p1.jpg",
+    "rating" : "4.5"
+  }
 
   ngOnInit(): void {
     // this.productId$.subscribe(console.log);
-    // this.souqSer.getAllCategories().subscribe((res) => {
+     this.souqSer.getAllCategories().subscribe((res) => {
     //   this.product = res.categories
     //     .find((product) => product.id == this.myMainId)
     //     .sections.find((product) => product.id == this.myCateg)
     //     .secondSection.find((elem) => elem.id == this.myThirdId);
     //   this.offersArr = res.offers;
-    //   this.options = res.options;
+      this.options = res.options;
     //   console.log("haha", this.product);
-    // });
+    });
   }
   pushInSelect(myOption) {
     this.myArray = myOption.city;

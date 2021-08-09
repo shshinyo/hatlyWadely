@@ -2,7 +2,7 @@
   <div
     fxFlex="23"
     class="childDiv mat-elevation-z8 mt-3"
-    fxFlex.xs="70"
+    fxFlex.xs="100"
     fxFlexAlign.xs="center"
   >
     <h5>التوصيل والارجاع</h5>
@@ -60,50 +60,43 @@
     </div>
   </div>
 
-  <div fxLayout="column" fxFlex="40" class="secondCont mt-3" dir="rtl">
-    <h4 class="mt-4 mb-5">{{ product?.detail }}</h4>
-    <div [title]="product?.rating">
+  <div fxLayout="column" fxFlex="45" class="secondCont mt-3"  fxFlex.xs="100">
+    <div>
+    <p style="font-size: 22px; margin: 5px 5px;" fxFlex="90" fxFlex.xs="90">{{ product?.detail }}</p>
+    <i class="far fa-heart" id="heartIcon"></i>
+  </div>
+    <div fxLayout="row" fxFlex="6" class="m-r-5" fxFlex.xs="20">
+      <div fxFlex="20" >التقييــم</div>
       <app-star [rating]="product?.rating"></app-star>
     </div>
-    <div>
-      <p class="rate">التقييــم</p>
+    <div fxLayoutAlign="start center">
+      <p class="price" class="m-r-5">سعر المنتج {{ product?.price }} جنيه</p>
     </div>
-    <div>
-      <p class="price">سعر المنتج {{ product?.price }} جنيه</p>
-    </div>
-    <div fxFlex="100">
-      <button mat-button id="myBtn">{{ product?.button }}</button>
-    </div>
-    <div
-      style="background-color: #ddd; border: 5px solid white; border-radius: 10px"
-      fxFlex="100"
-    >
-      <img class="offerImg" src="assets/images/images/hatly.jpg" />
+    <div fxLayout="column" fxLayoutAlign="center stretch" >
+      <button mat-raised-button color="primary" >اضافة الي السلة</button>
     </div>
   </div>
 
-  <div fxFlex="30" class="thirdCont mt-3">
-    <img class="proPic" src="{{ product?.imgUrl }}" title="صورة المنتج" />
-    <div>
-      <img class="offerImg2" src="assets/images/images/hatly.jpg" />
-    </div>
+  <div fxFlex="25" class="thirdCont mt-3" fxLayout.xs="row" fxFlex.xs="95">
+    <img fxFlex="100" style="height: 253px;border-radius: 10px;" src="{{ product?.imgUrl }}" title="صورة المنتج" />
   </div>
-  <div fxFlex="100" fxLayoutAlign="center center" class="mb-4">
-    <img class="summerPic" src="assets/images/images/summer.jpg" />
+
+  <div fxFlex="95" fxLayoutAlign="center center" class="subOffer" fxLayout.xs="row" >
+    <img fxFlex="100" ngClass.xs="myOfferPic" class="b-r-5" src="assets/images/images/summer.jpg" />
   </div>
-  <div fxFlex="100" fxLayoutAlign="center center">
+
+  <div fxFlex="95" fxLayoutAlign="center center">
     <div
-      fxFlex="91"
+      fxFlex="100"
       style="
         background-color: white;
         height: 135px;
-        border-radius: 10px;
-        margin-left: 25px;
+        border-radius: 5px;
       "
     >
       <h3 style="text-align: right">مواصفات المنتج</h3>
       <hr />
-      <p fxLayoutAlign="end" style="font-size: 20px">{{ product?.detail }}</p>
+      <p fxLayoutAlign="start" style="font-size: 22px">{{ product?.detail }}</p>
     </div>
   </div>
 </div>

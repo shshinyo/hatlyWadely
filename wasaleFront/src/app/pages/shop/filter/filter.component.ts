@@ -18,6 +18,7 @@ export class FilterComponent implements OnInit {
   ]
 
   rateCheck = [
+    {"rate" : "5"},
     {"rate" : "4" },
     {"rate" : "3" },
     {"rate" : "2" },

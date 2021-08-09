@@ -4,7 +4,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from "@angular/core";
 @Component({
   selector: "app-star",
   template: `
-    <div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutAlign="start center" dir="ltr">
       <div id="crop" [style.width.px]="cropWidth" fxLayoutAlign="center center">
         <div
           style="width: 75px;"

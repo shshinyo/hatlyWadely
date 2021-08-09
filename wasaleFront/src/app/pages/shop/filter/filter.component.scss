@@ -28,17 +28,15 @@ font-size: 17px;
   text-align: left;font-weight: bold;font-size: 18px;height: 50px;margin: 0px 8px;
 }
 .cardImg {
-  height: 186px;
-    width: 180px;
-    background-color: #ffffff;
-    border: .5px solid #ddd;
-    border-radius: 10px;
-    margin-top: 6px;
+
+  max-width: 173px;
+  max-height: 187px;
+  background-color: #ffffff;
+  border: 0.5px solid #ddd;
+  border-radius: 10px;
+  margin-top: 6px;
 }
-.rateDiv {
-  text-align: end;margin-top: 20px;margin-top: 45px;
-  margin-left: 55px;
-}
+
 .toCart {
   background-color: orange;
   color: #ffffff;
@@ -52,13 +50,9 @@ font-size: 17px;
   margin: 15px 0;
 }
 
-.example-radio-button {
-  margin: 5px;
-  text-align: right;
 
-}
 .myHieght {
-height: 120px;
+height: 140px;
 width: 90px;
 margin-right: 5px !important;
 }
