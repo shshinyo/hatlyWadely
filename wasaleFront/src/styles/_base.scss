@@ -1,5 +1,9 @@
 @import "variables";
 
+* {
+  font-family: "serif";
+}
+
 $color: #f68b1e;
 // border
 .b-r-5 {
@@ -235,5 +239,3 @@ a:active {
     }
   }
 }
-
-

@@ -29,6 +29,7 @@ const routes: Routes = [
         loadChildren: () =>
           import("./pages/souq/cart/cart.module").then((m) => m.CartModule),
       },
+      
       {
         path: "notfound",
         component: Error404,

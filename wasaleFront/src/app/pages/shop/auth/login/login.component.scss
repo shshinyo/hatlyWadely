@@ -1,0 +1,32 @@
+$color: #f68b1e;
+
+.form,
+.divider {
+  min-height: 62vh;
+}
+
+.divider {
+  width: 1px;
+  background-color: #e1e1e1e6;
+}
+
+h1 {
+  color: $color;
+}
+
+.details-form {
+  min-height: auto;
+  padding: 0;
+  ::ng-deep {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: whitesmoke;
+    }
+    mat-form-field {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+.form {
+  background-color: whitesmoke;
+}

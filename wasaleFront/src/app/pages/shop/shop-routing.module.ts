@@ -4,6 +4,9 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { DeactivateGuard } from "src/app/shared/Guards/deactivate.guard";
 
+import { LoginComponent } from "./auth/login/login.component";
+import { RegisterComponent } from "./auth/register/register.component";
+
 import { MainComponent } from "./main.component";
 import { CategoryComponent } from "./category/category.component";
 import { ProductsComponent } from "./products/products.component";
@@ -67,6 +70,14 @@ const routes: Routes = [
       {
         path: "notfound",
         component: Error404,
+      },
+      {
+        path: "login",
+        component: LoginComponent,
+      },
+      {
+        path: "register",
+        component: RegisterComponent,
       },
       {
         path: "search/:productFilter",

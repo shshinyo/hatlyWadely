@@ -27,9 +27,10 @@ export class MainComponent implements OnInit {
     this.productsService.getAllCategories$.subscribe((res) => {
       this.categories = res.categories;
     });
-    this.subscription = this._router.events
-    .pipe(filter((event) => event instanceof NavigationEnd))
-    .subscribe(() => this.content.scrollTo({ top: 0 }));
+
+    // this.subscription = this._router.events
+    // .pipe(filter((event) => event instanceof NavigationEnd))
+    // .subscribe(() => this.content.scrollTo({ top: 0 }));
 
   }
 

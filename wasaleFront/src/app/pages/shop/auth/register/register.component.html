@@ -1,0 +1,198 @@
+<br />
+<br />
+<div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="registration(registration(form))"
+    novalidate
+    class="details-form"
+    fxFlex="72"
+    fxFlex.xs="97"
+    fxLayout="row wrap"
+    fxLayoutAlign="space-between start"
+    fxLayoutAlign.xs="center start"
+    dir="rtl"
+  >
+    <h3 fxFlex="100" fxLayoutAlign="start center">إنشاء حساب..</h3>
+    <!--  -->
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-between center"
+      fxLayoutAlign.xs="center start"
+      formGroupName="name"
+    >
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label>الاسم الاول</mat-label>
+        <input formControlName="firstName" matInput autofocus />
+        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix
+          >done_all</mat-icon
+        >
+        <mat-error>{{ displayErrorMessage.name }}</mat-error>
+      </mat-form-field>
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label>اسم العائلة</mat-label>
+        <input formControlName="lastName" matInput />
+        <mat-icon class="right" *ngIf="form.get('name').get('lastName').valid" matSuffix
+          >done_all</mat-icon
+        >
+        <mat-error>{{ displayErrorMessage.name }}</mat-error>
+      </mat-form-field>
+    </div>
+    <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+      <mat-label>الهاتف المحمول</mat-label>
+      <span matPrefix>+20 &nbsp;</span>
+      <input
+        formControlName="phoneNumber"
+        matInput
+        type="tel"
+        placeholder="أدخل 11 رقم"
+      />
+      <mat-icon class="right" *ngIf="form.get('phoneNumber').valid" matSuffix
+        >done_all</mat-icon
+      >
+      <mat-error>{{ displayErrorMessage.phone }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+      <mat-label>العنوان</mat-label>
+      <input
+        formControlName="location"
+        matInput
+        placeholder=" المحافظة - المدينة - القرية"
+      />
+      <mat-icon *ngIf="form.get('location').invalid" matSuffix>location_on</mat-icon>
+      <mat-icon class="right" *ngIf="form.get('location').valid" matSuffix
+        >done_all</mat-icon
+      >
+      <mat-error>{{ displayErrorMessage.location }}</mat-error>
+    </mat-form-field>
+
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-between center"
+      fxLayoutAlign.xs="center start"
+      formGroupName="_email"
+    >
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label>البريد الالكتروني</mat-label>
+        <input formControlName="email" type="email" matInput />
+        <mat-icon *ngIf="form.get('_email').get('email').invalid" matSuffix
+          >alternate_email</mat-icon
+        >
+        <mat-icon class="right" *ngIf="form.get('_email').get('email').valid" matSuffix
+          >done_all</mat-icon
+        >
+        <mat-error>{{ displayErrorMessage.email }}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label>إعادة البريد الالكتروني</mat-label>
+        <input formControlName="confirmEmail" type="email" matInput />
+        <mat-icon *ngIf="form.get('_email').get('confirmEmail').invalid" matSuffix
+          >alternate_email</mat-icon
+        >
+        <mat-icon
+          class="right"
+          *ngIf="form.get('_email').get('confirmEmail').valid"
+          matSuffix
+          >done_all</mat-icon
+        >
+        <mat-error *ngIf="form.get('_email')?.invalid">
+          البريد الالكتروني غير متطابق
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-between center"
+      fxLayoutAlign.xs="center start"
+      formGroupName="passwordGroup"
+    >
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label
+          >كلمة السر
+          <mat-icon>https</mat-icon>
+        </mat-label>
+        <input
+          formControlName="password"
+          matInput
+          [type]="hidePass ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hidePass = !hidePass"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidePass"
+        >
+          <mat-icon>{{ hidePass ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error>{{ displayErrorMessage.password }}</mat-error>
+      </mat-form-field>
+      <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
+        <mat-label
+          >إعادة تعين كلمة السر
+          <mat-icon>https</mat-icon>
+        </mat-label>
+        <input
+          formControlName="confirmPassword"
+          matInput
+          [type]="hidePass ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hidePass = !hidePass"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidePass"
+        >
+          <mat-icon>{{ hidePass ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+
+        <mat-error>{{ displayErrorMessage.confirmPassword }}</mat-error>
+      </mat-form-field>
+      <mat-error *ngIf="form.get('passwordGroup').errors?.match"
+        >كلمة السر غير متطابقة !</mat-error
+      >
+    </div>
+    <!--  -->
+    <mat-radio-group
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center"
+      formControlName="role"
+      style="min-height: 40px"
+    >
+      <h5 fxFlex="100">من انت ؟</h5>
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="1" color="primary"
+        >بائع</mat-radio-button
+      >
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="2" color="primary"
+        >مشتري</mat-radio-button
+      >
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="3" color="primary"
+        >كلاهما</mat-radio-button
+      >
+      <!-- <mat-error fxFlex="100" >كلمة السر غير متطابقة !</mat-error> -->
+    </mat-radio-group>
+    <!--  -->
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      style="margin-top: 20px"
+    >
+      <button fxFlex="70" mat-raised-button color="primary">إنشاء حساب</button>
+    </div>
+  </form>
+</div>
+<!--  -->
+<!-- End-->
+<!--  -->

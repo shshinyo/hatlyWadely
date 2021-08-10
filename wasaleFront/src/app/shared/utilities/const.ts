@@ -10,7 +10,7 @@ export const Const = {
   },
   Name: {
     TitleMaxLength: 4,
-    MinLength: 2,
+    MinLength: 3,
     MaxLength: 32,
   },
 };

@@ -91,3 +91,7 @@ $config: mat.define-typography-config();
 .snack-error {
   background-color: orangered;
 }
+
+mat-error {
+  font-size: 14px;
+}

@@ -1,0 +1,93 @@
+<br />
+<br />
+<div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start">
+  <div
+    class="form"
+    fxFlex="48"
+    fxFlex.xs="97"
+    fxLayout="row wrap"
+    fxLayoutAlign="center start"
+  >
+    <form
+      [formGroup]="form"
+      (ngSubmit)="login(form.value)"
+      novalidate
+      class="details-form"
+      fxFlex="90"
+      fxLayout="column"
+      fxLayoutAlign="center stretch"
+      dir="rtl"
+    >
+      <h1 fxLayoutAlign="center center">تسجيل الدخول</h1>
+      <br />
+      <!--  -->
+      <mat-form-field appearance="fill">
+        <mat-label>البريد الالكتروني</mat-label>
+        <input formControlName="email" type="email" matInput required autofocus />
+        <mat-error *ngIf="form.get('email').invalid">{{ emailError }}</mat-error>
+      </mat-form-field>
+      <!--  -->
+      <mat-form-field appearance="fill">
+        <mat-label>كلمة المرور </mat-label>
+        <input
+          formControlName="password"
+          [type]="hidePass ? 'password' : 'text'"
+          required
+          matInput
+        />
+        <button mat-icon-button matSuffix (click)="hidePass = !hidePass">
+          <mat-icon>{{ hidePass ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error *ngIf="form.get('password').invalid"
+          >من فضلك ادخل كلمة المرور</mat-error
+        >
+      </mat-form-field>
+      <!--  -->
+      <br />
+      <section fxLayoutAlign="start center">
+        <mat-checkbox formControlName="rememberMe" color="primary">تذكرني ؟</mat-checkbox>
+      </section>
+      <br />
+      <button
+        class="button-2"
+        mat-raised-button
+        type="submit"
+        color="primary"
+        [disabled]="form.invalid"
+      >
+        تسجيل الدخول
+      </button>
+
+      <div class="line" fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="45" style="height: 1px; background-color: #cacaca"></div>
+        <div fxFlex="5" fxLayoutAlign="center center" style="color: #9a938f">أو</div>
+        <div fxFlex="45" style="height: 1px; background-color: #cacaca"></div>
+      </div>
+
+      <button
+        mat-raised-button
+        class="button-2"
+        color="theme"
+        routerLink="/shop/register"
+      >
+        انشاء حساب جديد
+      </button>
+    </form>
+  </div>
+  <!--  -->
+  <!-- End-->
+  <!--  -->
+
+  <div class="divider" fxHide.xs fxFlexAlign="center"></div>
+  <!--  -->
+
+  <div
+    class="form"
+    fxFlex="48"
+    fxFlex.xs="97"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+  >
+    <!-- Details about us here -->
+  </div>
+</div>

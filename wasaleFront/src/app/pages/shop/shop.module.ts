@@ -17,7 +17,9 @@ import { SavedComponent } from "./profile/saved/saved.component";
 import { DetailsComponent } from "./profile/details/details.component";
 import { AddressComponent } from "./profile/address/address.component";
 import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
-import { MyProductsComponent } from './profile/my-products/my-products.component';
+import { MyProductsComponent } from "./profile/my-products/my-products.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { MyProductsComponent } from './profile/my-products/my-products.component
     AddressComponent,
     ResetPassComponent,
     MyProductsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [CommonModule, ShopRoutingModule, SharedModule],
 })
