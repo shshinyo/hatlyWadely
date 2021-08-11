@@ -37,11 +37,21 @@ export class RegisterComponent implements OnInit {
     private _authService: AuthService
   ) {
     this._registration();
+
+    // Define an instance of the validator for use with this form,
+    // passing in this form's set of validation messages.
+    this.genericValidator = new GenericValidator(this.validationMessages);
+  }
+
+  ngOnInit(): void {
     // Defines all of the validation messages for the form.
     // These could instead be retrieved from a file or database.
     this.validationMessages = {
-      name: {
-        required: "من فضلك ادخل الاسم",
+      firstName: {
+        required: "هذا الحقل مطلوب",
+      },
+      lastName: {
+        required: "هذا الحقل مطلوب",
       },
       phone: {
         required: "من فضلك ادخل رقم الهاتف المحمول",
@@ -51,7 +61,7 @@ export class RegisterComponent implements OnInit {
         required: "ادخل محل السكن",
       },
       _email: {
-        isMatch: "البريد الالكتروني غير متطابق",
+        match: "البريد الالكتروني غير متطابق",
       },
 
       email: {
@@ -72,13 +82,7 @@ export class RegisterComponent implements OnInit {
         required: "يجب اختيار نوع من المعروض امامك",
       },
     };
-
-    // Define an instance of the validator for use with this form,
-    // passing in this form's set of validation messages.
-    this.genericValidator = new GenericValidator(this.validationMessages);
   }
-
-  ngOnInit(): void {}
   ngAfterViewInit(): void {
     // Watch for the blur event from any input element on the form.
     // This is required because the valueChanges does not provide notification on blur
@@ -89,28 +93,14 @@ export class RegisterComponent implements OnInit {
     // Merge the blur event observable with the valueChanges observable
     // so we only need to subscribe once.
     merge(this.form.valueChanges, ...controlBlurs)
-      .pipe(debounceTime(500))
+      .pipe(debounceTime(300))
       .subscribe((value) => {
         this.displayErrorMessage = this.genericValidator.processMessages(this.form);
       });
   }
 
-  login(authForm): void {
-    if (authForm && authForm.valid) {
-      this._authService.login(authForm.value.email, authForm.value.password);
-
-      if (this._authService.redirectUrl) {
-        this._router.navigateByUrl(this._authService.redirectUrl);
-      }
-      // else {
-      //   this.router.navigateByUrl("/welcome");
-      // }
-    }
-  }
-
   registration(registerForm) {
     console.log(registerForm);
-    // post form here
   }
 
   passwordMatcher = (control: AbstractControl) => {

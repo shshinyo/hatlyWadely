@@ -29,6 +29,9 @@ $color: #ff6e00;
     margin-left: 20px;
   }
   ::ng-deep {
+    .mat-menu-content {
+      min-width: 225px !important;
+    }
     .p-inputtext {
       height: 45px;
       width: 400px;

@@ -63,15 +63,24 @@
     fxFlex.xs="100"
     [ngStyle.xs]="{ margin: '20px 0' }"
   >
+    <!-- routerLink="/shop/login" -->
     <button
       class="button1"
       mat-button
       fxLayoutAlign="center center"
-      routerLink="/shop/login"
+      [matMenuTriggerFor]="bMenu"
     >
-      <mat-icon>account_circle</mat-icon>
+      <mat-icon>perm_identity</mat-icon>
       تسجيل الدخول
+      <mat-icon>expand_more</mat-icon>
     </button>
+    <mat-menu #bMenu="matMenu" fxLayout="column" fxLayoutAlign="start stretch">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <button fxFlex="50" mat-menu-item>Item 1</button>
+      </div>
+
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <button
       class="button1 cart"
       mat-button

@@ -28,7 +28,7 @@
         <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix
           >done_all</mat-icon
         >
-        <mat-error>{{ displayErrorMessage.name }}</mat-error>
+        <mat-error>{{ displayErrorMessage.firstName }}</mat-error>
       </mat-form-field>
       <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
         <mat-label>اسم العائلة</mat-label>
@@ -36,7 +36,7 @@
         <mat-icon class="right" *ngIf="form.get('name').get('lastName').valid" matSuffix
           >done_all</mat-icon
         >
-        <mat-error>{{ displayErrorMessage.name }}</mat-error>
+        <mat-error>{{ displayErrorMessage.lastName }}</mat-error>
       </mat-form-field>
     </div>
     <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
@@ -88,7 +88,7 @@
       </mat-form-field>
 
       <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
-        <mat-label>إعادة البريد الالكتروني</mat-label>
+        <mat-label>إعادة تعين البريد الالكتروني</mat-label>
         <input formControlName="confirmEmail" type="email" matInput />
         <mat-icon *ngIf="form.get('_email').get('confirmEmail').invalid" matSuffix
           >alternate_email</mat-icon
@@ -157,7 +157,7 @@
 
         <mat-error>{{ displayErrorMessage.confirmPassword }}</mat-error>
       </mat-form-field>
-      <mat-error *ngIf="form.get('passwordGroup').errors?.match"
+      <mat-error *ngIf="form.get('passwordGroup')?.errors?.match"
         >كلمة السر غير متطابقة !</mat-error
       >
     </div>
@@ -190,6 +190,17 @@
       style="margin-top: 20px"
     >
       <button fxFlex="70" mat-raised-button color="primary">إنشاء حساب</button>
+    </div>
+    <div
+      fxFlex="100"
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      style="margin-top: 15px"
+    >
+      <div fxFlex="100" fxLayoutAlign="center center">هل لديك حساب الفعل ؟</div>
+      <button class="button-2" mat-button color="primary" routerLink="/shop/login">
+        تسجيل الدخول
+      </button>
     </div>
   </form>
 </div>
