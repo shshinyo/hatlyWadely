@@ -7,7 +7,7 @@
     novalidate
     class="details-form"
     fxFlex="72"
-    fxFlex.xs="97"  
+    fxFlex.xs="97"
     fxLayout="row wrap"
     fxLayoutAlign="space-between start"
     fxLayoutAlign.xs="center start"
@@ -25,8 +25,7 @@
       <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
         <mat-label>الاسم الاول</mat-label>
         <input formControlName="firstName" matInput autofocus />
-        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix
-          >done_all</mat-icon
+        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix >done_all</mat-icon
         >
         <mat-error>{{ displayErrorMessage.firstName }}</mat-error>
       </mat-form-field>

@@ -49,23 +49,27 @@ export class RegisterComponent implements OnInit {
     this.validationMessages = {
       firstName: {
         required: "هذا الحقل مطلوب",
+        minLength : `يجب الا يقل الاسم عن ${Const.Name.MinLength} احرف` ,
+        maxLength : `يجب الا يزيد الاسم عن ${Const.Name.MaxLength} احرف`
       },
       lastName: {
         required: "هذا الحقل مطلوب",
+        minLength : `احرف ${Const.Name.MinLength} يجب الا يقل الاسم عن` ,
+        maxLength : `احرف ${Const.Name.MaxLength} يجب الا يزيد الاسم عن`
       },
       phone: {
         required: "من فضلك ادخل رقم الهاتف المحمول",
         pattern: "لابد من البد بالارقام الاتية 010 ،012 ،015 ،011 ويكون مكون من 11 رقم",
       },
       location: {
-        required: "ادخل محل السكن",
+        required: " ادخل العنوان الخاص بك",
       },
       _email: {
         match: "البريد الالكتروني غير متطابق",
       },
 
       email: {
-        required: "البريد الالكتروني مطلوب",
+        required: "ادخل البريد الالكتروني",
         email: "ادخل بريد صالح(لابد من ان يحتوي عليexample.com@)",
       },
       passwordGroup: {
@@ -73,10 +77,11 @@ export class RegisterComponent implements OnInit {
       },
       password: {
         required: "ادخل كلمة السر",
-        manlength: "يجب ان لا تقل كلمة السر عن 8 حروف او ارقام.",
+        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`
       },
       confirmPassword: {
-        required: "اعادة تعين كلمة السر مطلوب",
+        required: "اعادة كتابة كلمة السر ",
+        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`
       },
       type: {
         required: "يجب اختيار نوع من المعروض امامك",
