@@ -4,8 +4,7 @@ import {
   FormBuilder,
   FormControlName,
   FormGroup,
-  ValidatorFn,
-  Validators,
+  Validators
 } from "@angular/forms";
 import { Router } from "@angular/router";
 import { fromEvent, Observable, merge } from "rxjs";

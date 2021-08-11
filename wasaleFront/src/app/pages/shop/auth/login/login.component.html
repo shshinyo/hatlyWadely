@@ -1,12 +1,16 @@
 <br />
 <br />
-<div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start">
+<div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="2%">
   <div
     class="form"
-    fxFlex="48"
+    fxFlex="40"
     fxFlex.xs="97"
     fxLayout="row wrap"
     fxLayoutAlign="center start"
+    ngClass.xs="pushBottom"
+
+
+
   >
     <form
       [formGroup]="form"
@@ -86,8 +90,27 @@
     fxFlex="48"
     fxFlex.xs="97"
     fxLayout="column"
-    fxLayoutAlign="start stretch"
+    fxLayoutAlign="start"
   >
-    <!-- Details about us here -->
-  </div>
+  <mat-card class="info mat-elevation-z2 b-r-5" >
+    <div class="header"> => هاتلي وديلي - افضل موقع للتسوق عبر الإنترنت</div>
+    <hr>
+    <p class="myP">
+      أصبحت مواقع التسوق عبر الإنترنت الآن جزء من حياتنا اليومية، لأن الجميع يتمتع
+      بإمكانية شراء كل ما يحتاجه، سواء كانت ملابس أو إلكترونيات، دون الحاجة إلى الانتقال
+      من المنزل. هذا ما يقدمه سوق هاتلي وديلي، والأفضل من هذا أننا نوفر لك امكانية
+      العثور علي كل المنتجات التي تبحث عنها في متجر واحد. هذا ما يجعلنا أحد أفضل مواقع
+      تسوق عبر الإنترنت في مصر.
+    </p>
+    <div class="header"> => استمتع بعروض وخصومات لا تنتهي</div>
+    <hr>
+    <p class="myP">
+      هاتي وديلي هو موقع تسوق الكتروني ممتع وسهل الاستخدام عند الحاجة إلي شراء أي نوع من
+      المنتجات والأجهزة. نؤكد لك أنك ستعثر على شيء يعجبك في الكتالوج الخاص بنا عند
+      التصفح عبر الانترنت في موقعنا. نوفر لكم كتالوج ملابس اون لاين يحتوي علي أكثر من
+      مليون منتج للاختيار من بينهم! يمكنك التسوق لأي شيء تحتاجه سواء كنت تبحث عن ملابس
+    </p>
+    </mat-card>
+</div>
+
 </div>
