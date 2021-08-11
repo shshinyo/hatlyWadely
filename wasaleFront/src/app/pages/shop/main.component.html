@@ -63,7 +63,8 @@
     fxFlex.xs="100"
     [ngStyle.xs]="{ margin: '20px 0' }"
   >
-    <!-- routerLink="/shop/login" -->
+  <!--  -->
+  <!-- Danger here -->
     <button
       class="button1"
       mat-button
@@ -74,13 +75,23 @@
       تسجيل الدخول
       <mat-icon>expand_more</mat-icon>
     </button>
-    <mat-menu #bMenu="matMenu" fxLayout="column" fxLayoutAlign="start stretch">
-      <div fxLayout="row wrap" fxLayoutAlign="center center">
-        <button fxFlex="50" mat-menu-item>Item 1</button>
+    <mat-menu class="menu" #bMenu="matMenu">
+      <div class="m-t-b-8" fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+        <button fxFlex="80" mat-raised-button color="primary" routerLink="/shop/login">
+          تسجيل الدخول
+        </button>
       </div>
-
-      <button mat-menu-item>Item 2</button>
+      <hr class="hr" />
+      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon>person_outline</mat-icon>
+        الحساب
+      </button>
+      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon>favorite_border</mat-icon>
+        المنتجات المحفوظة
+      </button>
     </mat-menu>
+    <!--  -->
     <button
       class="button1 cart"
       mat-button

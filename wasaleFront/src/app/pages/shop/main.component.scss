@@ -29,9 +29,6 @@ $color: #ff6e00;
     margin-left: 20px;
   }
   ::ng-deep {
-    .mat-menu-content {
-      min-width: 225px !important;
-    }
     .p-inputtext {
       height: 45px;
       width: 400px;
@@ -43,5 +40,22 @@ $color: #ff6e00;
       height: 20px;
       color: $color;
     }
+  }
+}
+
+::ng-deep .menu.mat-menu-panel {
+  min-width: 195px;
+  direction: rtl !important;
+  button.mat-menu-item {
+    padding: 0 !important;
+  }
+  .mat-menu-item .mat-icon {
+    margin: 0 5px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ::ng-deep .menu.mat-menu-panel {
+    min-width: 170px;
   }
 }
