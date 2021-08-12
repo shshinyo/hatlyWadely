@@ -1,15 +1,17 @@
-<div class="item" fxLayout="row wrap" fxLayoutAlign="center center" dir="rtl">
+<div class="item" fxLayout="column" fxLayoutAlign="start stretch" dir="rtl">
   <div class="sale-con" fxLayout="row wrap" fxLayoutAlign="end center">
     <div class="sale b-r-2" *ngIf="_item.afterDiscount" fxLayoutAlign="center center">
       - {{ saleCount() }} %
     </div>
   </div>
 
-  <img [src]="_item.imgUrl" alt="" width="170" height="170" />
-  <div fxFlex="100" *ngIf="_item.detail" class="name">{{ _item.detail | itemName }}</div>
-  <div fxFlex="100" *ngIf="_item.afterDiscount" class="prc">
-    {{ _item.afterDiscount }} جنيه
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <img [src]="_item.imgUrl" alt="" width="170" height="170" />
   </div>
+  <div *ngIf="_item.detail" class="name">
+    {{ _item.detail | itemName: 30 }}
+  </div>
+  <div *ngIf="_item.afterDiscount" class="prc">{{ _item.afterDiscount }} جنيه</div>
   <!-- check here for discound -->
-  <div fxFlex="100" *ngIf="_item.price" class="disc">{{ _item.price }} جنيه</div>
+  <div *ngIf="_item.price" class="disc">{{ _item.price }} جنيه</div>
 </div>
