@@ -63,8 +63,8 @@
     fxFlex.xs="100"
     [ngStyle.xs]="{ margin: '20px 0' }"
   >
-  <!--  -->
-  <!-- Danger here -->
+    <!--  -->
+    <!-- Danger here -->
     <button
       class="button1"
       mat-button
@@ -82,11 +82,21 @@
         </button>
       </div>
       <hr class="hr" />
-      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+      <button
+        mat-menu-item
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        routerLink="/shop/profile"
+      >
         <mat-icon>person_outline</mat-icon>
         الحساب
       </button>
-      <button mat-menu-item fxLayout="row" fxLayoutAlign="start center">
+      <button
+        mat-menu-item
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        routerLink="/shop/profile/saved-orders"
+      >
         <mat-icon>favorite_border</mat-icon>
         المنتجات المحفوظة
       </button>
