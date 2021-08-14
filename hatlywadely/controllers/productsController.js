@@ -28,7 +28,7 @@ async function getProduct(req,res){
         if(isValidObjectId(id) ){
             let product =  await  Product.findById(id);
                 if(product){
-                    res.json(product);
+                    res.status(200).json(product);
 
                 }else{
                     res.json({state:1,message:'product didnt Found'});

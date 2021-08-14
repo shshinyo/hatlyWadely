@@ -14,12 +14,35 @@ app.use(express.static(path.join(__dirname,'dist/front')));
 mongoose.connect(process.env.MONGODB_URI_LOCAL, {useNewUrlParser: true, useUnifiedTopology: true}).
 catch(error => handleError(error));
 ;
+const swaggerUi = require("swagger-ui-express");
+ require("./swagger.js");
+const swaggerJsDoc= require("swagger-jsdoc");
+const swaggerOptions = {
+	swaggerDefinition: {
+	  info: {
+		version: "1.0.0",
+		title: "products API",
+		description: "products API Information",
+		contact: {
+		  name: "Amazing Developer"
+		},
+		servers: ["http://localhost:3100"]
+	  }
+	},
+	// ['.routes/*.js']
+	apis: [".routes/*.js","swagger.js"]
+  };
+  
+  const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocs) );
 
+ app.get("/customers", (req, res) => {
+	res.status(200).send("Customer results");
+  });
 app.use('/api/offers',require('./routes/offersRouter'));
 app.use('/api/users',require('./routes/usersRouter'));
 app.use('/api/products',require('./routes/productsRouter'));
 app.use('/api/categories',require('./routes/categoryRouter'));
-
 
 
 
