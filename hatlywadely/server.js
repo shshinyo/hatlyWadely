@@ -17,6 +17,10 @@ catch(error => handleError(error));
 
 app.use('/api/offers',require('./routes/offersRouter'));
 app.use('/api/users',require('./routes/usersRouter'));
+app.use('/api/products',require('./routes/productsRouter'));
+app.use('/api/categories',require('./routes/categoryRouter'));
+
+
 
 
 app.get("*", (req, res) => {
