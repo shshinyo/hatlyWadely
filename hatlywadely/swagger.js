@@ -80,7 +80,7 @@
  *    parameters:
  *    - productId : id
  *      required: true
- *      description: Use to get products of specific categoru
+ *      description: Use to get products of specific category
  *    responses:
  *      '200':
  *        description: A successful response
@@ -91,6 +91,25 @@
  * /api/products/add:
  *  post:
 
+ *      responses: 
+ *        '201':
+ *            description: Created
+ */
+
+/**
+ * @swagger
+ * /api/users/addToCart/{productId}/{userId}:
+ *  post:
+ *      description: Use to add to cart
+ *      responses: 
+ *        '201':
+ *            description: Created
+ */
+ /**
+ * @swagger
+ * /api/users/newUse:
+ *  post:
+ *      description: Use to create new user
  *      responses: 
  *        '201':
  *            description: Created
