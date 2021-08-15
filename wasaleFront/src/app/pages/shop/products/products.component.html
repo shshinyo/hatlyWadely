@@ -2,16 +2,19 @@
   class="banner"
   fxLayout="row"
   fxLayoutAlign="space-between center"
+  fxLayoutAlign.xs="center center"
   dir="rtl"
   fxLayoutGap="20px"
 >
   <div
+  fxHide.xs
     class="sideNav mat-elevation-z1"
     fxFlex="20"
     fxLayout="row wrap"
     fxLayoutAlign="center start"
   >
     <div
+
       class="tap"
       fxFlex="100"
       fxLayoutAlign="start center"
@@ -28,6 +31,7 @@
   <div
     class="carousel mat-elevation-z1"
     fxFlex="60"
+    fxFlex.xs="100"
     fxLayout="row wrap"
     fxLayoutAlign="center center"
   >
@@ -59,7 +63,7 @@
     </p-galleria>
   </div>
 
-  <div class="ads" fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center space-between">
+  <div fxHide.xs class="ads" fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center space-between">
     <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
       <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
     </div>

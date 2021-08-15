@@ -20,9 +20,12 @@ import { ConfirmDialogComponent } from "./components/confirm-dialog.component";
 import { SocialMediaFloatingComponent } from "./components/social-media-floating.component";
 import { FooterComponent } from "../global/Grid/footer/footer.component";
 import { ItemComponent } from "./components/item/item.component";
-import { ItemName } from "./pipes/item-name.pipe";
 import { StarComponent } from "./star/star.component";
 import { Error404 } from "./components/Error404/error404.component";
+
+import { ItemName } from "./pipes/item-name.pipe";
+import { SymbolNamePipe } from "./pipes/symbol-name.pipe";
+import { CasedNamePipe } from "./pipes/cased-name.pipe";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -30,12 +33,16 @@ const SHARED_COMPONENTS = [
   ConfirmDialogComponent,
   CardComponent,
   PieComponent,
-  ItemName,
   SocialMediaFloatingComponent,
   ItemComponent,
   StarComponent,
   Error404,
 ];
+const SHARED_PIPES =[
+  SymbolNamePipe,
+    CasedNamePipe,
+    ItemName
+]
 
 const LOCAL_DIRECTIVES = [];
 
@@ -70,6 +77,7 @@ const COMMON_MODULES = [
     ...LOCAL_COMPONENTS,
     ...LOCAL_DIRECTIVES,
     ...SHARED_DIRECTIVES,
+    ...SHARED_PIPES
   ],
   imports: [...COMMON_MODULES, ...THIRD_MODULES],
   exports: [
@@ -77,6 +85,8 @@ const COMMON_MODULES = [
     ...COMMON_MODULES,
     ...THIRD_MODULES,
     ...SHARED_DIRECTIVES,
+    ...SHARED_PIPES
+
   ],
 })
 export class SharedModule {}

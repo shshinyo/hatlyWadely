@@ -9,8 +9,6 @@ import { SharedModule } from "../shared/shared.module";
 import { GlobalComponent } from "./global.component";
 import { ToolbarComponent } from "./Grid/toolbar/toolbar.component";
 import { SideNavComponent } from "./Grid/side-nav/side-nav.component";
-import { SymbolNamePipe } from "../shared/pipes/symbol-name.pipe";
-import { CasedNamePipe } from "../shared/pipes/cased-name.pipe";
 import { GlobalRoutingModule } from "./global-routing.module";
 
 @NgModule({
@@ -18,8 +16,6 @@ import { GlobalRoutingModule } from "./global-routing.module";
     GlobalComponent,
     ToolbarComponent,
     SideNavComponent,
-    SymbolNamePipe,
-    CasedNamePipe,
   ],
   imports: [
     CommonModule,
