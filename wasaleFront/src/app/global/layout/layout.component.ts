@@ -18,11 +18,10 @@ import { Subscription } from "rxjs";
 import { filter } from "rxjs/Operators";
 
 @Component({
-  selector: "app-global",
-  templateUrl: "./global.component.html",
-  styleUrls: ["./global.component.scss"],
+  templateUrl: "./layout.component.html",
+  styleUrls: ["./layout.component.scss"],
 })
-export class GlobalComponent implements OnInit {
+export class LayoutComponent implements OnInit {
   // // After routing to to Top 0
   @ViewChild("content", { static: true }) content: MatSidenavContent;
   subscription: Subscription;

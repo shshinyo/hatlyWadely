@@ -9,11 +9,8 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { SharedModule } from "./shared/shared.module";
 import { AppComponent } from "./app.component";
-import { PagesModule } from "./pages/pages.module";
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { GlobalModule } from "./global/global.module";
-import { CartModule } from "./pages/souq/cart/cart.module";
-import { ShopModule } from "./pages/shop/shop.module";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -26,11 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SharedModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    PagesModule,
     DashboardModule,
     GlobalModule,
-    ShopModule,
-    CartModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

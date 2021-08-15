@@ -1,29 +1,26 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { HttpClientModule } from "@angular/common/http";
 
 import { SharedModule } from "../shared/shared.module";
-
-import { GlobalComponent } from "./global.component";
-import { ToolbarComponent } from "./Grid/toolbar/toolbar.component";
-import { SideNavComponent } from "./Grid/side-nav/side-nav.component";
 import { GlobalRoutingModule } from "./global-routing.module";
+import { DragDropModule } from "@angular/cdk/drag-drop";
+
+import { LayoutComponent } from "./layout/layout.component";
+import { StaticsModule } from "./modules/static/statics.module";
+import { SideNavComponent } from "./layout/side-nav/side-nav.component";
+import { ToolbarComponent } from "./layout/toolbar/toolbar.component";
+
+const LAY_OUT = [LayoutComponent, ToolbarComponent, SideNavComponent];
 
 @NgModule({
-  declarations: [
-    GlobalComponent,
-    ToolbarComponent,
-    SideNavComponent,
-  ],
+  declarations: [...LAY_OUT],
   imports: [
     CommonModule,
-    SharedModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
     GlobalRoutingModule,
+
+    SharedModule,
+    StaticsModule,
+    DragDropModule,
   ],
 })
 export class GlobalModule {}

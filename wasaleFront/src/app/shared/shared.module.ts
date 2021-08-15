@@ -18,7 +18,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PrimeNgModule } from "./primeng.module";
 import { ConfirmDialogComponent } from "./components/confirm-dialog.component";
 import { SocialMediaFloatingComponent } from "./components/social-media-floating.component";
-import { FooterComponent } from "../global/Grid/footer/footer.component";
+import { FooterComponent } from "../global/layout/footer/footer.component";
 import { ItemComponent } from "./components/item/item.component";
 import { StarComponent } from "./star/star.component";
 import { Error404 } from "./components/Error404/error404.component";

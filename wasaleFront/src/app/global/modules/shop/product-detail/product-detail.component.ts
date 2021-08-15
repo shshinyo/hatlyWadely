@@ -1,9 +1,8 @@
 import { filter, map, find, tap } from "rxjs/Operators";
-import { SouqService } from "./../../../shared/services/shop-service.service";
-import { ProductsService } from "./../../../shared/services/products.service";
+import { SouqService } from "./../../../../shared/services/shop-service.service";
+import { ProductsService } from "../../../../shared/services/products.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
-import { zip } from "rxjs";
 
 @Component({
   selector: "app-product-detail",

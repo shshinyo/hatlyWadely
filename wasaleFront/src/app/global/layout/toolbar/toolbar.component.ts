@@ -9,7 +9,6 @@ import {
   Output,
   ViewChild,
 } from "@angular/core";
-import { ThemePalette } from "@angular/material/core";
 import { Router } from "@angular/router";
 import { fromEvent } from "rxjs";
 import {
@@ -22,7 +21,6 @@ import {
 } from "rxjs/Operators";
 import { newUser } from "src/app/shared/utilities/authUser";
 import { AuthService } from "src/app/shared/services/auth.service";
-import { SouqService } from "src/app/shared/services/shop-service.service";
 
 enum VisibilityState {
   Visible = "visible",

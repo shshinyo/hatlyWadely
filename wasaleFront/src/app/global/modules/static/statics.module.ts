@@ -1,14 +1,14 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { SharedModule } from "../shared/shared.module";
-import { routes } from "./routes";
-import { DragDropModule } from "@angular/cdk/drag-drop";
+
+import { StaticsRoutingModule } from "./statics-routing.module";
+import { SharedModule } from "src/app/shared/shared.module";
+
 import { WelcomePageComponent } from "./welcome-page/welcome-page.component";
-import { OffersComponent } from "./offers/offers.component";
-import { SoonComponent } from "./soon/soon.component";
-import { OurServiceComponent } from "./our-service/our-service.component";
 import { ContactsComponent } from "./contacts/contacts.component";
+import { OffersComponent } from "./offers/offers.component";
+import { OurServiceComponent } from "./our-service/our-service.component";
+import { SoonComponent } from "./soon/soon.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { ContactsComponent } from "./contacts/contacts.component";
     OurServiceComponent,
     ContactsComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule, DragDropModule],
-  providers: [],
+  imports: [CommonModule, StaticsRoutingModule, SharedModule,],
 })
-export class PagesModule {}
+export class StaticsModule {}
