@@ -6,7 +6,7 @@ import {
   OnInit,
   ViewChild,
 } from "@angular/core";
-import { MatSidenavContent } from "@angular/material/sidenav";
+import { MatSidenav, MatSidenavContent } from "@angular/material/sidenav";
 import {
   NavigationCancel,
   NavigationEnd,
@@ -17,11 +17,15 @@ import {
 import { Subscription } from "rxjs";
 import { filter } from "rxjs/Operators";
 
+import { SideToggleService } from "./side-toggle.service";
+
 @Component({
   templateUrl: "./layout.component.html",
   styleUrls: ["./layout.component.scss"],
 })
 export class LayoutComponent implements OnInit {
+  @ViewChild("sidenav") sidenav: MatSidenav;
+  sideToggle: boolean = false;
   // // After routing to to Top 0
   @ViewChild("content", { static: true }) content: MatSidenavContent;
   subscription: Subscription;
@@ -31,7 +35,7 @@ export class LayoutComponent implements OnInit {
   screenMin = false;
   winWidth;
 
-  constructor(private _router: Router) {}
+  constructor(private _router: Router, private _sideToggleService: SideToggleService) {}
 
   ngOnInit(): void {
     this.getSreenSize();
@@ -52,6 +56,12 @@ export class LayoutComponent implements OnInit {
         this.loading = false;
       }
     });
+
+    this._sideToggleService.sideNavToggleSubject.subscribe((x) => {
+      if (x) {
+        this.sidenav.toggle();
+      }
+    });
   }
 
   @HostListener("window:resize", ["$event"])
@@ -63,19 +73,11 @@ export class LayoutComponent implements OnInit {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-  // dashboardControl(): boolean {
-  //   const url = window.location.href;
-  //   if (url.includes("/dashboard")) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
 
-  // //preload Three-dots
   ngAfterViewInit(): void {
     this.hidePreloader();
   }
+
 
   private hidePreloader(): void {
     const el = document.getElementById("globalLoader");

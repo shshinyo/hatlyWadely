@@ -7,14 +7,13 @@
   fxLayoutGap="20px"
 >
   <div
-  fxHide.xs
+    fxHide.xs
     class="sideNav mat-elevation-z1"
     fxFlex="20"
     fxLayout="row wrap"
     fxLayoutAlign="center start"
   >
     <div
-
       class="tap"
       fxFlex="100"
       fxLayoutAlign="start center"
@@ -53,17 +52,28 @@
         <img
           [src]="item.imgUrl"
           style="width: 100%; display: block; height: calc(60vh)"
+          [ngStyle.xs]="{ height: 'calc(40vh)' }"
         />
       </ng-template>
       <ng-template pTemplate="thumbnail" let-item>
         <div class="p-grid p-nogutter p-justify-center">
-          <img [src]="item.imgUrl" style="display: block; height: calc(60vh)" />
+          <img
+            [src]="item.imgUrl"
+            style="display: block; height: calc(60vh)"
+            [ngStyle.xs]="{ height: 'calc(40vh)' }"
+          />
         </div>
       </ng-template>
     </p-galleria>
   </div>
 
-  <div fxHide.xs class="ads" fxFlex="20" fxLayout="row wrap" fxLayoutAlign="center space-between">
+  <div
+    fxHide.xs
+    class="ads"
+    fxFlex="20"
+    fxLayout="row wrap"
+    fxLayoutAlign="center space-between"
+  >
     <div fxFlex="100" class="ad mat-elevation-z1" fxLayoutAlign="center center">
       <img fxFlex="100" src="assets/images/3699591.jpg" alt="" />
     </div>
@@ -88,7 +98,7 @@
     [numScroll]="5"
     [circular]="true"
     [autoplayInterval]="6000"
-    [responsiveOptions]="cards"
+    [responsiveOptions]="responsiveOptions"
     dir="ltr"
   >
     <ng-template let-product pTemplate="item">
@@ -161,7 +171,7 @@
     [numScroll]="5"
     [circular]="true"
     [autoplayInterval]="6000"
-    [responsiveOptions]="cards"
+    [responsiveOptions]="responsiveOptions"
     dir="ltr"
   >
     <ng-template let-product pTemplate="item">

@@ -26,20 +26,7 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   //  hide and show on hover (filter & carouser)
   search: string | null = null;
   //  hide and show on hover (filter & carouser)
-  responsiveOptions: any[] = [
-    {
-      breakpoint: "1024px",
-      numVisible: 5,
-    },
-    {
-      breakpoint: "768px",
-      numVisible: 3,
-    },
-    {
-      breakpoint: "560px",
-      numVisible: 1,
-    },
-  ];
+  responsiveOptions: any[];
   carouselOffers$ = this.souqSer.Offers$;
   products: any;
   filteredProducts: any;
@@ -70,11 +57,27 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.mediaSub = this._mediaObserver.media$.subscribe((change: MediaChange) => {
       console.log(change.mqAlias);
     });
+
+    this.responsiveOptions = [
+      {
+        breakpoint: "1024px",
+        numVisible: 5,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "768px",
+        numVisible: 3,
+        numScroll: 1,
+      },
+      {
+        breakpoint: "560px",
+        numVisible: 1,
+        numScroll: 1,
+      },
+    ];
   }
 
-  ngAfterViewInit(): void {
-
-  }
+  ngAfterViewInit(): void {}
 
   ngOnDestroy() {
     this.mediaSub.unsubscribe();
@@ -98,5 +101,4 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   //   console.log(this.filteredProducts);
   // }
-
 }

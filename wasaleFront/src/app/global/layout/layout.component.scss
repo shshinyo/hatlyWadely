@@ -7,6 +7,9 @@ mat-sidenav-container,
 mat-sidenav-content {
   height: 100%;
 }
+mat-sidenav {
+  width: 20%;
+}
 .global-container {
   height: calc(100% - 60px) !important;
 }
@@ -75,5 +78,14 @@ mat-sidenav {
   // }
   side-nav {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .global-container {
+    height: 100% !important;
+  }
+  mat-sidenav {
+    width: 85%;
   }
 }

@@ -26,7 +26,8 @@ $color: #ff6e00;
   direction: rtl;
   background-color: #ffff;
   a {
-    margin-left: 20px;
+    text-decoration: none;
+    color: #000000;
   }
   ::ng-deep {
     .p-inputtext {
@@ -47,7 +48,7 @@ $color: #ff6e00;
   min-width: 195px;
   direction: rtl !important;
   button.mat-menu-item {
-    padding: 0 !important;
+    padding: 0 10px !important;
   }
   .mat-menu-item .mat-icon {
     margin: 0 5px !important;

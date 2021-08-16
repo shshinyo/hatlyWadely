@@ -1,9 +1,8 @@
-import { NgModule } from "@angular/core";
+import { HostListener, NgModule, OnInit } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { LayoutComponent } from "./layout/layout.component";
 import { Error404 } from "../shared/components/Error404/error404.component";
-
 
 export const routes: Routes = [
   {
@@ -12,7 +11,7 @@ export const routes: Routes = [
     children: [
       {
         path: "",
-        redirectTo: "",
+        redirectTo: "/shop",
         pathMatch: "full",
       },
       {
@@ -36,6 +35,7 @@ export const routes: Routes = [
         path: "notfound",
         component: Error404,
       },
+
     ],
   },
 ];

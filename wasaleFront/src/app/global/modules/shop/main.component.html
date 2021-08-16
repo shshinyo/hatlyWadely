@@ -2,10 +2,14 @@
   class="sub-header mat-elevation-z2"
   fxLayout="row wrap"
   fxLayoutAlign="center center"
-  #content
 >
-  <div fxLayout="row wrap" fxFlex.xs="90">
-    <a fxLayoutAlign="center center" (click)="op2.toggle($event)">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex.xs="95">
+
+    <a
+      fxLayoutAlign="center center"
+      (click)="onToggle()"
+      [ngStyle.gt-xs]="{ 'margin-left': '20px' }"
+    >
       <mat-icon>menu</mat-icon>
     </a>
     <p-overlayPanel
@@ -38,7 +42,7 @@
     <span
       class="p-input-icon-left"
       fxLayout="row wrap"
-      fxFlex.xs="80"
+      fxFlex.xs="70"
       [ngStyle.lt-md]="{ width: '250px' }"
       [ngStyle.xs]="{ margin: '10px 0' }"
     >
@@ -56,13 +60,13 @@
         (keydown.enter)="onSearch(searchInput.value)"
       />
     </span>
+    <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
+      <mat-icon>perm_identity</mat-icon> </a
+    ><a fxHide.gt-xs fxLayoutAlign="center center">
+      <mat-icon>shopping_cart</mat-icon>
+    </a>
   </div>
-  <div
-    fxLayout="row wrap"
-    fxLayoutAlign="center center"
-    fxFlex.xs="100"
-    [ngStyle.xs]="{ margin: '20px 0' }"
-  >
+  <div fxHide.xs fxLayout="row wrap" fxLayoutAlign="center center" fxFlex.xs="100">
     <!--  -->
     <!-- Danger here -->
     <button
