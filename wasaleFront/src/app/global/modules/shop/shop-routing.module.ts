@@ -20,6 +20,7 @@ import { DetailsComponent } from "./profile/details/details.component";
 import { AddressComponent } from "./profile/address/address.component";
 import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
 import { MyProductsComponent } from "./profile/my-products/my-products.component";
+import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
 
 const routes: Routes = [
   {
@@ -104,4 +105,23 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ShopRoutingModule {}
+export class ShopRoutingModule {
+  static components = [
+    MainComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    CategoryComponent,
+    ShopInfoComponent,
+    FilterComponent,
+    ProfileComponent,
+    OverviewComponent,
+    OrdersComponent,
+    SavedComponent,
+    DetailsComponent,
+    AddressComponent,
+    ResetPassComponent,
+    MyProductsComponent,
+    LoginComponent,
+    RegisterComponent,
+  ];
+}

@@ -1,7 +1,9 @@
-import { HostListener, NgModule, OnInit } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { LayoutComponent } from "./layout/layout.component";
+import { SideNavComponent } from "./layout/side-nav/side-nav.component";
+import { ToolbarComponent } from "./layout/toolbar/toolbar.component";
 import { Error404 } from "../shared/components/Error404/error404.component";
 
 export const routes: Routes = [
@@ -26,16 +28,9 @@ export const routes: Routes = [
           import("./modules/shop/shop.module").then((m) => m.ShopModule),
       },
       {
-        path: "cart",
-        loadChildren: () =>
-          import("./modules/souq/cart/cart.module").then((m) => m.CartModule),
-      },
-
-      {
         path: "notfound",
         component: Error404,
       },
-
     ],
   },
 ];
@@ -44,4 +39,6 @@ export const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class GlobalRoutingModule {}
+export class GlobalRoutingModule {
+  static components = [LayoutComponent, ToolbarComponent, SideNavComponent];
+}

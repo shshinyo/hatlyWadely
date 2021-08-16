@@ -49,4 +49,12 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class StaticsRoutingModule {}
+export class StaticsRoutingModule {
+  static components = [
+    WelcomePageComponent,
+    OffersComponent,
+    SoonComponent,
+    OurServiceComponent,
+    ContactsComponent,
+  ];
+}
