@@ -14,7 +14,7 @@ export interface Product {
   category?: string;
   sellingNum?: number;
   rateNum?: number;
-  photos?: [{ type: string }];
+  photos?: [{ type?: string }];
   productAmount?: number;
   price?: number;
   ProductCreator?: string;

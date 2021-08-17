@@ -3,14 +3,14 @@ import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { DataJson, Offer } from "../../shared/utilities/shop.interfaces";
 
-import  {environment}  from "src/environments/environment";
+import  {Environment}  from "src/environments/environment";
 
 @Injectable({
   providedIn: "root",
 })
 export class ProductsService {
 
-  env = environment.api_url
+  env = Environment.api_url
   private readonly url = "../../assets/images/images/data.json";
   data = [
     { imgUrl: "../../assets/images/images/dd1.jpg" },

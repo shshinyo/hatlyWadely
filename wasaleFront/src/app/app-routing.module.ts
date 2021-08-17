@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { AdminGuard } from "./core/Guards/admin.guard";
+import { AdminGuard } from "./core/guards/admin.guard";
 import { Error404 } from "./shared/components/Error404/error404.component";
 
 const routes: Routes = [

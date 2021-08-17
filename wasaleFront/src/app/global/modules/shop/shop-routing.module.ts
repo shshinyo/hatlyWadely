@@ -2,7 +2,7 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { DeactivateGuard } from "src/app/shared/Guards/deactivate.guard";
+import { DeactivateGuard } from "src/app/core/guards/deactivate.guard";
 
 import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";

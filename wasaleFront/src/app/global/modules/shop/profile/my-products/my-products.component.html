@@ -89,8 +89,8 @@
     fxFlex="100"
     fxLayout="row wrap"
     fxLayout.xs="column"
-    fxLayoutAlign="center center"
-    fxLayoutAlign.xs="center stretch"
+    fxLayoutAlign="space-between center"
+    fxLayoutAlign.xs="space-between stretch"
     dir="rtl"
   >
     <!-- file picker hand made (Mohamed Eldeeb) -->
@@ -148,7 +148,7 @@
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
       <mat-label>الفئة التي ينتمي اليها </mat-label>
-      <select formControlName="categoryType" matNativeControl required>
+      <select formControlName="category" matNativeControl required>
         <option value="category">بقاله</option>
         <option value="saab">Saab</option>
         <option value="mercedes">Mercedes</option>
@@ -158,11 +158,7 @@
     <!--  -->
     <mat-form-field fxFlex="96" appearance="fill">
       <mat-label>وصف المنتج</mat-label>
-      <textarea
-        formControlName="details"
-        matInput
-        placeholder="وصف مختصر للمنتج"
-      ></textarea>
+      <textarea formControlName="desc" matInput placeholder="وصف مختصر للمنتج"></textarea>
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
@@ -173,21 +169,17 @@
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
       <mat-label>بعد الخصم ( اختياري )</mat-label>
-      <input formControlName="afterDiscount" type="number" matInput />
+      <input formControlName="sellingNum" type="number" matInput />
       <mat-error>{{ requiredError }}</mat-error>
     </mat-form-field>
     <!--  -->
     <mat-form-field fxFlex.gt-xs="47" appearance="fill">
-      <mat-label>اللون ( اختياري )</mat-label>
-      <input formControlName="color" type="text" matInput />
+      <mat-label>الكمية ( اجباري )</mat-label>
+      <input formControlName="productAmount" type="number" matInput />
       <mat-error>{{ requiredError }}</mat-error>
     </mat-form-field>
     <!--  -->
-    <mat-form-field fxFlex.gt-xs="47" appearance="fill">
-      <mat-label>كلمة البحث( اختياري )</mat-label>
-      <input formControlName="searchWord" type="text" matInput />
-      <mat-error>{{ requiredError }}</mat-error>
-    </mat-form-field>
+
     <br />
     <br />
     <!--  -->
@@ -196,7 +188,7 @@
       mat-raised-button
       color="primary"
       type="submit"
-      (click)="saveChanges(form, editProduct ? 'edit' : 'new')"
+      (click)="saveChanges(form, editProduct ? 'edit' : 'add')"
       [disabled]="form.invalid"
     >
       {{ editProduct ? "حفظ التغيرات" : "نشر للبيع" }}

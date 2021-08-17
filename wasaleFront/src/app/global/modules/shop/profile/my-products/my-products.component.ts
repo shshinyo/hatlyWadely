@@ -6,14 +6,18 @@ import {
   OnInit,
 } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { BehaviorSubject, Subject } from "rxjs";
-import { debounceTime, filter, tap } from "rxjs/Operators";
+import { BehaviorSubject } from "rxjs";
+import { filter } from "rxjs/Operators";
 import { ModalService } from "src/app/core/services/modal.service";
+
+import { ProductService } from "src/app/core/services/product.service";
+import { Product } from "src/app/shared/utilities/interfaces.interface";
 
 export interface Image {
   id: number;
   file: File;
   type: string;
+  name: string;
   imageShow: any;
 }
 @Component({
@@ -21,12 +25,11 @@ export interface Image {
   templateUrl: "./my-products.component.html",
   styleUrls: ["./my-products.component.scss"],
 })
-export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
-  addProduct: boolean = false;
+export class MyProductsComponent implements OnInit, AfterViewInit {
+  addProduct: boolean = true;
   editProduct: boolean = false;
   StateSubject = new BehaviorSubject(false);
   StateSubject$ = this.StateSubject.asObservable();
-  formState: boolean;
   form: FormGroup;
   // address here
   clientProduct = [];
@@ -36,50 +39,51 @@ export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 1,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     },
     {
       id: 2,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     },
     {
       id: 3,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     },
     {
       id: 4,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     },
     {
       id: 5,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     },
   ];
   constructor(
     private _fb: FormBuilder,
-    private _cd: ChangeDetectorRef,
-    private _modal: ModalService
+    private _modal: ModalService,
+    private _productService: ProductService
   ) {
     this._form();
   }
 
   ngOnInit(): void {
-    this.StateSubject$.subscribe((x) => (this.formState = x));
     this.clientProduct = [{}, {}, {}, {}, {}];
   }
   ngAfterViewInit(): void {}
-  ngOnDestroy(): void {
-    if (this.formState == false) {
-    }
-  }
+
   // If there is Id then Edit else add new address
   onAddEditProductForm(id?: any): void {
     this.editProduct = id ? true : false;
@@ -102,43 +106,45 @@ export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     // Add new
   }
   backButton(): void {
-    if (this.formState) {
-      this._modal
-        .confirmDialog("هل أنت متأكد من عدم الاكمال ؟!")
-        .pipe(filter((confirm) => !!confirm))
-        .subscribe((_) => {
-          this.addProduct = false;
-          this.editProduct = false;
-          this.form.reset();
-        });
-    }
+    this._modal
+      .confirmDialog("هل أنت متأكد من عدم الاكمال ؟!")
+      .pipe(filter((confirm) => !!confirm))
+      .subscribe((_) => {
+        this.addProduct = false;
+        this.editProduct = false;
+        this.form.reset();
+      });
   }
-  saveChanges(form: FormGroup, state: string): void {
-    const imgUploaded = this.filePicker.filter((file) => file.file !== null || undefined);
-    const data = { ...imgUploaded, ...form.value };
+  saveChanges(form: FormGroup, state: "edit" | "add"): void {
+    const imgUploaded = this.filePicker
+      .filter((file) => file.file !== null || undefined)
+      .map((file) => ({
+        type: file.name,
+      }));
 
-    const command = {
-      images: data[0],
+    // merging data
+    const data = { imgUploaded, ...form.value };
+
+    const command: Product = {
       name: data.name,
-      categoryType: data.categoryType,
-      details: data.details,
+      desc: data.desc,
+      category: "milk",
+      sellingNum: data.sellingNum,
+      photos: data.imgUploaded,
+      productAmount: data.productAmount,
       price: data.price,
-      afterDiscount: 200,
-      color: data.color,
-      searchWord: data.searchWord,
+      ProductCreator: "ProductCreator id",
     };
     console.log(command);
-
-    this.addProduct = false;
-    this.editProduct = false;
-    this.StateSubject.next(false);
-    if (state == "new") {
-      // call post API
-      this._modal.snackbar("تم اضافة منتج جديد", "success");
-    }
-    if (state == "edit") {
-      // call path API
-      this._modal.snackbar("تم تعديل المنتج بنجاح", "success");
+    if (state == "add") {
+      this._productService.addProduct(command).subscribe({
+        next: () => {
+          this._modal.snackbar("تم اضافة منتج جديد", "success");
+          this.addProduct = false;
+          this.editProduct = false;
+        },
+        error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ طلبك .", "normal"),
+      });
     }
   }
 
@@ -166,6 +172,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     };
 
     fileUp.file = file;
+    fileUp.name = file.name;
   }
 
   onRemoveImg(id?): void {
@@ -178,6 +185,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
       id: id,
       file: null,
       type: null,
+      name: null,
       imageShow: null,
     };
   }
@@ -188,13 +196,12 @@ export class MyProductsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private _form(): void {
     this.form = this._fb.group({
-      name: [null, Validators.required],
-      categoryType: ["category", Validators.required],
-      details: [null, Validators.required],
-      price: [null, Validators.required],
-      afterDiscount: [null],
-      color: [null],
-      searchWord: [null],
+      name: ["", Validators.required],
+      desc: ["", Validators.required],
+      category: ["category", Validators.required],
+      sellingNum: [""],
+      productAmount: ["", Validators.required],
+      price: ["", Validators.required],
     });
   }
 }

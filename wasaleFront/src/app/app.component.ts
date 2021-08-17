@@ -17,9 +17,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     document.documentElement.lang = lang;
   }
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {}
 
