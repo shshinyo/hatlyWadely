@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
+import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { AppComponent } from "./app.component";
 import { DashboardModule } from "./dashboard/dashboard.module";
@@ -23,8 +24,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SharedModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    DashboardModule,
+    CoreModule,
     GlobalModule,
+    DashboardModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

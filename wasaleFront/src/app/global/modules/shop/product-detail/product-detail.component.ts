@@ -1,6 +1,6 @@
 import { filter, map, find, tap } from "rxjs/Operators";
-import { SouqService } from "./../../../../shared/services/shop-service.service";
-import { ProductsService } from "../../../../shared/services/products.service";
+import { SouqService } from "../../../../core/services/shop-service.service";
+import { ProductsService } from "../../../../core/services/products.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 

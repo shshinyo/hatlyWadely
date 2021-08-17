@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { Router } from "@angular/router";
-import { AuthService } from "src/app/shared/services/auth.service";
+import { AuthService } from "src/app/core/services/auth.service";
 @Component({
   selector: "app-welcome-page",
   templateUrl: "./welcome-page.component.html",

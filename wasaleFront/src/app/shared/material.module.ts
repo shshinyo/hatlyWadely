@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 // Material Form Controls
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatCheckboxModule } from "@angular/material/checkbox";
@@ -44,12 +43,6 @@ import { MatTableModule } from "@angular/material/table";
 
 import { DragDropModule } from "@angular/cdk/drag-drop";
 
-// primeNG
-import { AvatarModule } from "primeng/avatar";
-import { AvatarGroupModule } from "primeng/avatargroup";
-import { TableModule } from "primeng/table";
-import { OverlayPanelModule } from "primeng/overlaypanel";
-
 @NgModule({
   exports: [
     MatAutocompleteModule,
@@ -89,10 +82,6 @@ import { OverlayPanelModule } from "primeng/overlaypanel";
     MatTableModule,
     MatNativeDateModule,
     DragDropModule,
-    AvatarModule,
-    AvatarGroupModule,
-    TableModule,
-    OverlayPanelModule,
   ],
 })
 export class MaterialModule {}

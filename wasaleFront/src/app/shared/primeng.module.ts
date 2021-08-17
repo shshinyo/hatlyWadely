@@ -15,6 +15,7 @@ import { FileUploadModule } from "primeng/fileupload";
 import { HttpClientModule } from "@angular/common/http";
 import { CarouselModule } from "primeng/carousel";
 import { GalleriaModule } from "primeng/galleria";
+import { OverlayPanelModule } from "primeng/overlaypanel";
 
 @NgModule({
   exports: [
@@ -34,6 +35,7 @@ import { GalleriaModule } from "primeng/galleria";
     HttpClientModule,
     CarouselModule,
     GalleriaModule,
+    OverlayPanelModule
   ],
 })
 export class PrimeNgModule {}

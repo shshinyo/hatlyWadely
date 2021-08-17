@@ -8,7 +8,7 @@ import {
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { BehaviorSubject, Subject } from "rxjs";
 import { debounceTime, filter, tap } from "rxjs/Operators";
-import { ModalService } from "src/app/shared/services/modal.service";
+import { ModalService } from "src/app/core/services/modal.service";
 
 export interface Image {
   id: number;

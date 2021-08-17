@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable } from "rxjs";
 import { MatDialog } from "@angular/material/dialog";
-import { ConfirmDialogComponent } from "../components/confirm-dialog.component";
+import { ConfirmDialogComponent } from "../../shared/components/confirm-dialog.component";
 
 export type SnackBarVariant = "normal" | "success" | "error";
 

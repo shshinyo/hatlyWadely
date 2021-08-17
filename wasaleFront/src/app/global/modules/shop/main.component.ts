@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ProductsService } from "src/app/shared/services/products.service";
+import { ProductsService } from "src/app/core/services/products.service";
 
 import { QueryParams } from "src/app/shared/utilities/query-params";
 

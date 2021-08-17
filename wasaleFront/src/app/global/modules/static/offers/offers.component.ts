@@ -19,8 +19,8 @@ import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { distinct, filter, map, tap } from "rxjs/Operators";
 import { User } from "src/app/shared/utilities/interfaces.interface";
-import { ModalService } from "src/app/shared/services/modal.service";
-import { UsersService } from "src/app/shared/services/users.service";
+import { ModalService } from "src/app/core/services/modal.service";
+import { UsersService } from "src/app/core/services/users.service";
 @Component({
   selector: "app-offers",
   templateUrl: "./offers.component.html",

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { DataJson, Offer } from "../utilities/shop.interfaces";
+import { DataJson, Offer } from "../../shared/utilities/shop.interfaces";
 
 import  {environment}  from "src/environments/environment";
 

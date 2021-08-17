@@ -9,7 +9,7 @@ import {
 import { Router } from "@angular/router";
 import { fromEvent, Observable, merge } from "rxjs";
 import { debounceTime } from "rxjs/Operators";
-import { AuthService } from "src/app/shared/services/auth.service";
+import { AuthService } from "src/app/core/services/auth.service";
 import { Const } from "src/app/shared/utilities/const";
 import { MatchValidator } from "src/app/shared/utilities/customValidators";
 import { GenericValidator } from "src/app/shared/utilities/genericValidator";

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { newUser } from "src/app/shared/utilities/authUser";
-import { AuthService } from "src/app/shared/services/auth.service";
+import { AuthService } from "src/app/core/services/auth.service";
 
 @Component({
   selector: "side-dash",

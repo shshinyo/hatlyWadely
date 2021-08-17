@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
 import { fromEvent, Observable, merge } from "rxjs";
 import { debounceTime } from "rxjs/Operators";
 import { GenericValidator } from "src/app/shared/utilities/genericValidator";
-import { AuthService, localUsers } from "../../shared/services/auth.service";
+import { AuthService, localUsers } from "../../core/services/auth.service";
 
 @Component({
   selector: "app-login",

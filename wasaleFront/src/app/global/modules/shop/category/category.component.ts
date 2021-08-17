@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { zip } from "rxjs";
 import { map } from "rxjs/Operators";
-import { ProductsService } from "src/app/shared/services/products.service";
+import { ProductsService } from "src/app/core/services/products.service";
 
 @Component({
   templateUrl: "./category.component.html",

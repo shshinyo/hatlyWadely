@@ -10,8 +10,8 @@ import { MediaChange, MediaObserver } from "@angular/flex-layout";
 import { Router, ActivatedRoute } from "@angular/router";
 import { fromEvent, Subscription } from "rxjs";
 import { debounceTime, map, filter } from "rxjs/Operators";
-import { ProductsService } from "src/app/shared/services/products.service";
-import { SouqService } from "src/app/shared/services/shop-service.service";
+import { ProductsService } from "src/app/core/services/products.service";
+import { SouqService } from "src/app/core/services/shop-service.service";
 import { QueryParams } from "src/app/shared/utilities/query-params";
 
 @Component({
