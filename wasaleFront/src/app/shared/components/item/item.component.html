@@ -9,7 +9,7 @@
     <img [src]="_item.imgUrl" alt="" width="170" height="170" />
   </div>
   <div *ngIf="_item.detail" class="name">
-    {{ _item.detail | itemName: 30 }}
+    {{ _item.detail | subString: 30 }}
   </div>
   <div *ngIf="_item.afterDiscount" class="prc">{{ _item.afterDiscount }} جنيه</div>
   <!-- check here for discound -->

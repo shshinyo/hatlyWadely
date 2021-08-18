@@ -29,7 +29,7 @@ export class ModalService {
     });
   }
 
-  confirmDialog(message: string, title = "هل انت متأكد"): Observable<boolean> {
+  confirmDialog(message: string, title = "هل أنت متأكد !!"): Observable<boolean> {
     const ref = this._dialog.open(ConfirmDialogComponent, {
       data: { title: title, message },
       width: "500px",

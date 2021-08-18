@@ -26,8 +26,12 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   StateSubject$ = this.StateSubject.asObservable();
   form: FormGroup;
   // address here
-  clientProduct: Product[];
+  clientProduct: Product[] = [];
   productToEdit: Product;
+  saleCount(price: number, selling: number): number {
+    const sale = ((price - selling) / price) * 100 + 0.5;
+    return Math.round(sale);
+  }
   // Photo picker
   filePicker: Array<Image> = [
     {
@@ -51,20 +55,6 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       name: null,
       imageShow: null,
     },
-    {
-      id: 4,
-      file: null,
-      type: null,
-      name: null,
-      imageShow: null,
-    },
-    {
-      id: 5,
-      file: null,
-      type: null,
-      name: null,
-      imageShow: null,
-    },
   ];
   constructor(
     private _fb: FormBuilder,
@@ -80,7 +70,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
         this.clientProduct = cat.data;
         console.log(
           "🚀 ~ file: my-products.component.ts ~ line 85 ~ MyProductsComponent ~ this._productService.getCategory ~ cat",
-          this.clientProduct
+          cat.data
         );
       },
     });
@@ -169,22 +159,27 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   }
 
   onRemoveProduct(product: Product): void {
-    this._productService.deleteProduct(product._id).subscribe({
-      next: () => {
-        this._modal
-          .confirmDialog(`هل أنت متأكد من حذف المنتج (${product.name}) ؟!`)
-          .pipe(filter((confirm) => !!confirm))
-          .subscribe((_) => {
-            const index = this.clientProduct.findIndex((i) => i._id === product._id);
-            this.clientProduct.splice(index, 1);
+    if (!product) {
+      return;
+    }
+    this._modal
+      .confirmDialog(`هل أنت متأكد من حذف المنتج (${product.name}) ؟!`)
+      .pipe(filter((confirm) => !!confirm))
+      .subscribe((_) => {
+        
+        this._productService.deleteProduct(product._id).subscribe({
+          next: () => {
             this._modal.snackbar(`تم حذف النتج (${product.name}) بنجاح`, "success");
+          },
+          error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ العمليه .", "normal"),
+        });
 
-            this.addProduct = false;
-            this.editProduct = false;
-          });
-      },
-      error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ العمليه .", "normal"),
-    });
+        const index = this.clientProduct.findIndex((i) => i._id === product._id);
+        this.clientProduct.splice(index, 1);
+
+        this.addProduct = false;
+        this.editProduct = false;
+      });
   }
 
   // file selector

@@ -23,7 +23,7 @@ import { ItemComponent } from "./components/item/item.component";
 import { StarComponent } from "./star/star.component";
 import { Error404 } from "./components/Error404/error404.component";
 
-import { ItemName } from "./pipes/item-name.pipe";
+import { SubString } from "./pipes/subString.pipe";
 import { SymbolNamePipe } from "./pipes/symbol-name.pipe";
 import { CasedNamePipe } from "./pipes/cased-name.pipe";
 
@@ -41,7 +41,7 @@ const SHARED_COMPONENTS = [
 const SHARED_PIPES =[
   SymbolNamePipe,
     CasedNamePipe,
-    ItemName
+    SubString
 ]
 
 const LOCAL_DIRECTIVES = [];

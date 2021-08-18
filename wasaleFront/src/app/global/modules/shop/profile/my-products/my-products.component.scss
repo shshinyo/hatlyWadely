@@ -15,6 +15,7 @@ $img-size: 150px;
 }
 
 .saved-prod {
+  position: relative;
   min-height: 150px;
   border-radius: 5px;
   margin: 7.5px 0;
@@ -30,6 +31,22 @@ $img-size: 150px;
   }
   .pay {
     margin: 10px 20px;
+  }
+  .sale-con {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    z-index: 55;
+    .sale {
+      height: 30px;
+      min-width: 50px;
+      font-size: 15px;
+      font-weight: 500;
+      direction: ltr;
+      color: #f68b1e;
+      background-color: #feefde;
+    }
   }
 }
 

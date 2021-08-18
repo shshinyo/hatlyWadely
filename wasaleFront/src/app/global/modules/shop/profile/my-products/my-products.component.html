@@ -44,7 +44,7 @@
   *ngIf="!addProduct && clientProduct.length !== 0"
   class="main-cont"
   fxLayout="row wrap"
-  fxLayoutAlign="start center"
+  fxLayoutAlign="start start"
   fxLayoutGap="15px"
 >
   <div
@@ -56,16 +56,30 @@
     fxLayoutAlign="center center"
   >
     <!-- Bind image here -->
-    <img src="{{ product.photos[0] }}" alt="" />
+    <img src="assets/images/images/48.jpg" alt="" />
     <!-- Description -->
     <div
-      class="dis p-r-4 p-l-4"
+      class="dis p-8"
       fxFlex="100"
       fxLayout="column"
-      fxLayoutAlign="start start"
+      fxLayoutAlign="start stretch"
       fxLayoutGap="5px"
     >
+      <div class="sale-con" fxLayout="row wrap" fxLayoutAlign="end center">
+        <div class="sale b-r-2" *ngIf="product.sellingNum" fxLayoutAlign="center center">
+          - {{ saleCount(product.price, product.sellingNum) }} %
+        </div>
+      </div>
+      <h5>{{ product.name }}</h5>
       <p>{{ product.desc }}</p>
+      <strong *ngIf="!product.sellingNum">{{ product.price }} جنيه</strong>
+      <strong *ngIf="product.sellingNum">{{ product.sellingNum }} جنيه</strong>
+      <div
+        *ngIf="product.sellingNum"
+        style="text-decoration: line-through; font-size: 0.89rem; font-weight: 100"
+      >
+        {{ product.price }} جنيه
+      </div>
       <!-- product details here -->
     </div>
     <div class="pay" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
@@ -127,7 +141,7 @@
       style="background-color: rgba(248, 248, 248, 0.259); border-radius: 8px"
     >
       <div class="title-2" fxFlex="100" fxLayoutAlign="start center">
-        اضافة صورة ( صور ) للمنتج
+        إضافة صورة للمنتج ( اقصي عدد 3 صور )
       </div>
       <label
         *ngFor="let p of filePicker"

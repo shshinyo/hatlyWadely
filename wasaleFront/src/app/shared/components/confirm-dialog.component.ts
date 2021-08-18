@@ -15,7 +15,12 @@ export interface IDialogContent {
       {{ data.title }}
     </h1>
 
-    <div mat-dialog-content class="m-y-8 h-t-18" [innerHTML]="data.message"></div>
+    <div
+      mat-dialog-content
+      class="m-y-8 h-t-18"
+      style="min-height: 40px;"
+      [innerHTML]="data.message"
+    ></div>
 
     <div mat-dialog-actions>
       <button mat-button [mat-dialog-close]="true" aria-label="Ok">موافق</button>
