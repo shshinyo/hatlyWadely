@@ -23,7 +23,6 @@ export class DeactivateGuard implements CanDeactivate<any> {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot
   ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    // formState initially === false
     if (!component.formState) {
       return true;
     }

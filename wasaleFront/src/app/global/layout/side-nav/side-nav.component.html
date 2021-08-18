@@ -1,5 +1,115 @@
-<mat-nav-list fxLayout="row wrap" fxLayoutAlign="center start">
-  <!-- in the future make it photo and clickable button -->
+<mat-nav-list
+  fxFill
+  class="side-container"
+  fxLayout="column"
+  fxLayoutAlign="start stretch"
+  dir="rtl"
+>
+  <div
+    class="header p-l-15 p-r-15"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutAlign.xs="space-between center"
+  >
+    <a (click)="onSidenavClose()" fxLayoutAlign="center center">X</a>
+    <div
+      class="logo"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      (click)="onSidenavClose()"
+      routerLink="/shop"
+    >
+      <span class="word">هاتلي</span>
+      <span class="num">9</span>
+      <span class="word">وديلي</span>
+    </div>
+    <a></a>
+  </div>
+
+  <hr class="hr-1" />
+  <div class="p-l-15 p-r-15" fxLayout="column" fxLayoutAlign="start stretch">
+    <a
+      class="subTitle"
+      (click)="onSidenavClose()"
+      routerLink="/shop/profile"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      >حسابي علي هاتلي
+      <mat-icon>chevron_left</mat-icon>
+    </a>
+    <a
+      *ngFor="let tap of profileTaps"
+      (click)="onSidenavClose()"
+      routerLink="{{ tap.router }}"
+      class="tap"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+    >
+      <mat-icon>{{ tap.icon }}</mat-icon>
+      {{ tap.title }}
+    </a>
+  </div>
+
+  <hr class="hr-1" />
+  <div class="p-l-15 p-r-15" fxLayout="column" fxLayoutAlign="start stretch">
+    <a
+      class="subTitle"
+      (click)="onSidenavClose()"
+      routerLink="/shop/profile"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      >اقسامنا
+      <a style="text-decoration: underline">عرض الكل</a>
+    </a>
+
+    <a
+      *ngFor="let tap of categoryLinks"
+      (click)="onSidenavClose()"
+      routerLink="{{ tap.router }}"
+      class="tap"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+    >
+      <mat-icon>{{ tap.icon }}</mat-icon>
+      {{ tap.title }}
+    </a>
+  </div>
+
+  <hr class="hr-1" />
+  <div class="p-l-15 p-r-15" fxLayout="column" fxLayoutAlign="start stretch">
+    <a
+      class="subTitle"
+      (click)="onSidenavClose()"
+      routerLink="/shop/profile"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      >خدمتنا
+    </a>
+
+    <a
+      *ngFor="let tap of staticLinks"
+      (click)="onSidenavClose()"
+      routerLink="{{ tap.router }}"
+      class="tap"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+    >
+      <mat-icon>{{ tap.icon }}</mat-icon>
+      {{ tap.title }}
+    </a>
+  </div>
+
+  <hr class="hr-1" />
+  <div fxLayoutAlign="center center">
+    <button class="button-2" mat-button style="color: #f68b1e" (click)="logOut()">
+      تسجيل الخروج
+    </button>
+  </div>
+  
+</mat-nav-list>
+
+<!--
+
   <div
     *ngIf="loggedIn"
     class="profile-container"
@@ -15,8 +125,6 @@
       {{ userName | casedName }}
     </h4>
   </div>
-  <!--  -->
-  <!-- animation if not logged yet -->
   <div
     *ngIf="!loggedIn"
     class="notLoggedYet"
@@ -28,7 +136,6 @@
     <img fxFlex="30" src="../../../assets/images/loginBanner.gif" title="هاتلي و وديلي" />
     <span>وديلي</span>
   </div>
-  <!--  -->
   <a
     class="link"
     mat-list-item
@@ -40,9 +147,8 @@
     <mat-icon>{{ link.icon }}</mat-icon>
     <span class="nav-caption">{{ link.disc }}</span>
   </a>
-  <!--  -->
   <a *ngIf="loggedIn" class="logOut" fxFlex="100" fxLayout="row" (click)="logOut()">
     <mat-icon>logout</mat-icon>
     <span>تسجيل الخروج</span>
   </a>
-</mat-nav-list>
+ -->

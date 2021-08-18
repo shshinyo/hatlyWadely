@@ -1,93 +1,50 @@
+$color: #f68b1e;
 *:not(mat-icon) {
   font-family: "serif" !important;
 }
 mat-nav-list {
   background-color: #ffffff;
   min-height: 100%;
-}
-
-// not logged yet
-.notLoggedYet {
-  min-height: 80px;
-  text-align: center;
-  img {
-    border-radius: 50%;
-    border: 2px solid #ff6f00;
-  }
-  span {
-    margin: 0 15px;
-    color: #ff6f00;
-    font-size: 22px;
-  }
-}
-// when logged in
-.profile-container {
-  min-height: 150px;
-  .photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #ff6f00;
-    background-color: rgb(225, 225, 225);
-    text-align: center;
-    mat-icon {
-      height: 100px;
-      width: 100px;
-      font-size: 100px;
-      color: #8f8f8f;
+  overflow-y: scroll;
+  .header {
+    height: 50px;
+    a {
+      height: 40px;
+      width: 40;
+      font-size: 35px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #000000;
+    }
+    .logo {
+      outline: none;
+      height: inherit;
+      .word {
+        font-size: 25px;
+      }
+      .num {
+        font-size: 35px;
+        margin: 0 5px;
+        color: $color;
+        font-weight: bolder;
+      }
     }
   }
-  h4 {
-    text-align: center;
-  }
-  span {
-    color: #ff6f00;
-    margin: 0 5px;
+  .subTitle {
+    margin: 5px 0;
+    font-size: 0.75rem;
+    color: $color;
   }
 }
 
-.link {
-  text-decoration: none;
-  color: white;
-  border-right: 3px solid #ff6f00;
-  border-left: 3px solid #ff6f00;
-  margin: 5px auto;
-  .nav-caption {
-    color: rgb(56, 56, 56);
-  }
+.tap {
+  height: 30px;
+  margin: 5px 0;
+  font-size: 15px;
   mat-icon {
-    margin: 0 20px;
-    color: #ff6f00;
-  }
-}
-
-.link:hover,
-.link:active {
-  color: #ff6f00;
-  .nav-caption {
-    color: #ff6f00;
-  }
-}
-
-// log out button
-.logOut {
-  text-decoration: none;
-  color: white;
-  border-right: 3px solid #0a2b58e3;
-  border-left: 3px solid#0a2b58e3;
-  margin: 5px auto;
-  padding: 10px;
-  color: #0a2b58e3;
-
-  mat-icon {
-    margin: 0 20px;
-  }
-}
-
-.logOut:hover,
-.logOut:active {
-  color: #ff6f00;
-  .nav-caption {
-    color: #ff6f00;
+    height: 23px;
+    width: 23px;
+    font-size: 23px;
+    margin: 0 10px;
   }
 }

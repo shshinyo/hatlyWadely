@@ -22,8 +22,6 @@ export interface Image {
 export class MyProductsComponent implements OnInit, AfterViewInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
-  StateSubject = new BehaviorSubject(false);
-  StateSubject$ = this.StateSubject.asObservable();
   form: FormGroup;
   // address here
   clientProduct: Product[] = [];
@@ -68,10 +66,6 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     this._productService.getCategory("milk").subscribe({
       next: (cat) => {
         this.clientProduct = cat.data;
-        console.log(
-          "🚀 ~ file: my-products.component.ts ~ line 85 ~ MyProductsComponent ~ this._productService.getCategory ~ cat",
-          cat.data
-        );
       },
     });
   }
@@ -82,7 +76,6 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     this.editProduct = product ? true : false;
     this.addProduct = true;
     this.form.reset();
-    this.StateSubject.next(true);
     if (product) {
       this.productToEdit = product;
       // photos: product.imgUploaded,
@@ -127,7 +120,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       price: data.price,
       ProductCreator: "ProductCreator id",
     };
-    console.log(command);
+
     if (state == "add") {
       this._productService.addProduct(command).subscribe({
         next: () => {
@@ -166,7 +159,6 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       .confirmDialog(`هل أنت متأكد من حذف المنتج (${product.name}) ؟!`)
       .pipe(filter((confirm) => !!confirm))
       .subscribe((_) => {
-        
         this._productService.deleteProduct(product._id).subscribe({
           next: () => {
             this._modal.snackbar(`تم حذف النتج (${product.name}) بنجاح`, "success");

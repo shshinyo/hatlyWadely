@@ -71,7 +71,13 @@ $color: #ff6e00;
     background-color: #ffffff;
   }
 }
-
+.best-seller {
+  ::ng-deep {
+    .p-carousel-indicators {
+      display: none !important;
+    }
+  }
+}
 .offer-con {
   height: 280px;
   padding: 10px;
