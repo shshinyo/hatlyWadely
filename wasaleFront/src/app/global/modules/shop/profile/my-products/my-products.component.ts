@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  OnDestroy,
-  OnInit,
-} from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { BehaviorSubject } from "rxjs";
 import { filter } from "rxjs/Operators";
@@ -26,13 +20,14 @@ export interface Image {
   styleUrls: ["./my-products.component.scss"],
 })
 export class MyProductsComponent implements OnInit, AfterViewInit {
-  addProduct: boolean = true;
+  addProduct: boolean = false;
   editProduct: boolean = false;
   StateSubject = new BehaviorSubject(false);
   StateSubject$ = this.StateSubject.asObservable();
   form: FormGroup;
   // address here
-  clientProduct = [];
+  clientProduct: Product[];
+  productToEdit: Product;
   // Photo picker
   filePicker: Array<Image> = [
     {
@@ -80,27 +75,36 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.clientProduct = [{}, {}, {}, {}, {}];
+    this._productService.getCategory("milk").subscribe({
+      next: (cat) => {
+        this.clientProduct = cat.data;
+        console.log(
+          "🚀 ~ file: my-products.component.ts ~ line 85 ~ MyProductsComponent ~ this._productService.getCategory ~ cat",
+          this.clientProduct
+        );
+      },
+    });
   }
   ngAfterViewInit(): void {}
 
   // If there is Id then Edit else add new address
-  onAddEditProductForm(id?: any): void {
-    this.editProduct = id ? true : false;
+  onAddEditProductForm(product?: Product): void {
+    this.editProduct = product ? true : false;
     this.addProduct = true;
     this.form.reset();
     this.StateSubject.next(true);
-    if (id) {
+    if (product) {
+      this.productToEdit = product;
+      // photos: product.imgUploaded,
       // get product image array and assign it to filePicker
       this.form.patchValue({
-        categoryType: "category",
-        name: "تليفون محمول",
-        details:
-          "شويه هبد حلوين شويه هبد حلوين شويه هبد حلوين شويه هبد حلوين شويه هبد حلوين شويه هبد حلوين ",
-        price: 2500,
-        afterDiscount: 200,
-        color: "اسود",
-        searchWord: "موبايل",
+        name: product.name,
+        desc: product.desc,
+        category: "milk",
+        sellingNum: product.sellingNum,
+        productAmount: product.productAmount,
+        price: product.price,
+        ProductCreator: "ProductCreator id",
       });
     }
     // Add new
@@ -115,12 +119,10 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
         this.form.reset();
       });
   }
-  saveChanges(form: FormGroup, state: "edit" | "add"): void {
+  saveChanges(form: FormGroup, state: "add" | "edit"): void {
     const imgUploaded = this.filePicker
       .filter((file) => file.file !== null || undefined)
-      .map((file) => ({
-        type: file.name,
-      }));
+      .map((file) => file.name);
 
     // merging data
     const data = { imgUploaded, ...form.value };
@@ -139,13 +141,50 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     if (state == "add") {
       this._productService.addProduct(command).subscribe({
         next: () => {
+          this.clientProduct.unshift(command);
           this._modal.snackbar("تم اضافة منتج جديد", "success");
+
           this.addProduct = false;
           this.editProduct = false;
         },
         error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ طلبك .", "normal"),
       });
     }
+    if (state == "edit" && !!this.productToEdit) {
+      this._productService.editProduct(this.productToEdit._id, command).subscribe({
+        next: () => {
+          const index = this.clientProduct.findIndex(
+            (i) => i._id === this.productToEdit._id
+          );
+          this.clientProduct[index] = command;
+          this._modal.snackbar("تم تعديل المنتج بنجاح", "success");
+
+          this.addProduct = false;
+          this.editProduct = false;
+          this.productToEdit = null;
+        },
+        error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ طلبك .", "normal"),
+      });
+    }
+  }
+
+  onRemoveProduct(product: Product): void {
+    this._productService.deleteProduct(product._id).subscribe({
+      next: () => {
+        this._modal
+          .confirmDialog(`هل أنت متأكد من حذف المنتج (${product.name}) ؟!`)
+          .pipe(filter((confirm) => !!confirm))
+          .subscribe((_) => {
+            const index = this.clientProduct.findIndex((i) => i._id === product._id);
+            this.clientProduct.splice(index, 1);
+            this._modal.snackbar(`تم حذف النتج (${product.name}) بنجاح`, "success");
+
+            this.addProduct = false;
+            this.editProduct = false;
+          });
+      },
+      error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ العمليه .", "normal"),
+    });
   }
 
   // file selector

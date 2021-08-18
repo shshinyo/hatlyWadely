@@ -33,11 +33,13 @@ export class ProductService {
   }
 
   // edit product api
-  editProduct(id: string): Observable<Product> {
-    return this._http.put<Product>(`${this._url}/edit/${id}`, this.httpOptions).pipe(
-      tap((product) => console.log("Product", product)),
-      catchError(this._handleError)
-    );
+  editProduct(id: string, product: Product): Observable<Product> {
+    return this._http
+      .put<Product>(`${this._url}/edit/${id}`, product, this.httpOptions)
+      .pipe(
+        tap((product) => console.log("Product", product)),
+        catchError(this._handleError)
+      );
   }
 
   // delete product api
@@ -46,6 +48,13 @@ export class ProductService {
       tap((product) => console.log("Product", product)),
       catchError(this._handleError)
     );
+  }
+
+  // specializes to category api
+  getCategory(id: string): Observable<any> {
+    return this._http
+      .get<any>(`${Environment.api_url}api/products/category/${id}`)
+      .pipe(catchError(this._handleError));
   }
 
   private _handleError(err: any): Observable<never> {

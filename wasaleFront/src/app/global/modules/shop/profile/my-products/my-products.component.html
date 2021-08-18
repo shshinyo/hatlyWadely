@@ -18,7 +18,30 @@
 <hr *ngIf="!addProduct" class="hr" />
 
 <div
-  *ngIf="!addProduct"
+  *ngIf="!addProduct && clientProduct.length === 0"
+  class="main-cont"
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+>
+  <div class="no-order" fxLayout="row wrap" fxLayoutAlign="center center">
+    <img src="assets/images/orders.abbfb10f.svg" alt="" />
+    <br fxFlex="100" />
+    <div fxFlex="100" class="title-1" fxLayout="row" fxLayoutAlign="center center">
+      لم تقم بإضافة اي نتج جديد حتي الان !
+    </div>
+    <br fxFlex="100" />
+    <p fxFlex="100" fxLayoutAlign="center center">
+      قم بإضافة وتسويق مننجك لدي هاتلي ووديلي واستفيد بجميع خدماتنا
+    </p>
+    <br fxFlex="100" />
+    <button mat-raised-button color="primary" (click)="onAddEditProductForm()">
+      إضافة منتج
+    </button>
+  </div>
+</div>
+
+<div
+  *ngIf="!addProduct && clientProduct.length !== 0"
   class="main-cont"
   fxLayout="row wrap"
   fxLayoutAlign="start center"
@@ -33,31 +56,34 @@
     fxLayoutAlign="center center"
   >
     <!-- Bind image here -->
-    <img src="assets/images/images/2.jpg" alt="" />
+    <img src="{{ product.photos[0] }}" alt="" />
     <!-- Description -->
     <div
-      class="dis"
+      class="dis p-r-4 p-l-4"
       fxFlex="100"
       fxLayout="column"
-      fxLayoutAlign="start center"
+      fxLayoutAlign="start start"
       fxLayoutGap="5px"
     >
-      <p>وصفك الجميل يا بيلو هنا</p>
-      <p>وصفك الجميل يا بيلو هنا</p>
-      <p>وصفك الجميل يا بيلو هنا</p>
-      <p>وصفك الجميل يا بيلو هنا</p>
+      <p>{{ product.desc }}</p>
+      <!-- product details here -->
     </div>
     <div class="pay" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
       <button
         mat-button
         color="primary"
         fxLayoutAlign="center center"
-        (click)="onAddEditProductForm(5)"
+        (click)="onAddEditProductForm(product)"
       >
         <mat-icon>edit</mat-icon>
         تعديل
       </button>
-      <button mat-button color="primary" fxLayoutAlign="center center">
+      <button
+        mat-button
+        color="primary"
+        fxLayoutAlign="center center"
+        (click)="onRemoveProduct(product)"
+      >
         <mat-icon>delete</mat-icon>
         إزالة
       </button>
