@@ -12,19 +12,32 @@
     fxFlex="20"
     fxLayout="row wrap"
     fxLayoutAlign="center start"
+    *ngIf="allCategories$ |async as _allCategories"
   >
-    <div
+    <!-- <div
       class="tap"
       fxFlex="100"
       fxLayoutAlign="start center"
       *ngFor="let product of products"
       [routerLink]="['/shop', product.id]"
     >
-      <!-- Enter icon -->
       <img class="svg-icon" src="{{ product.icon }}" />
       {{ product.name }}
     </div>
   </div>
+   -->
+   <div
+      class="tap"
+      fxFlex="100"
+      fxLayoutAlign="start center"
+      *ngFor="let category of _allCategories"
+      [routerLink]="['/shop', category.id]"
+    >
+      <!-- <img class="svg-icon" src="{{ product.icon }}" /> -->
+      {{ category.name }}
+    </div>
+  </div>
+
   <!-- handel links here -->
 
   <div

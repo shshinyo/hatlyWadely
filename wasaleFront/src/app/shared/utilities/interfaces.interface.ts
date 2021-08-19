@@ -19,3 +19,18 @@ export interface Product {
   price?: number;
   ProductCreator?: string;
 }
+
+export interface Category {
+  _id: string;
+  name: string;
+  id: string;
+  __v: number;
+}
+
+export interface Image {
+  id: number;
+  file: File;
+  type: string;
+  name: string;
+  imageShow: any;
+}

@@ -1,26 +1,21 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { BehaviorSubject } from "rxjs";
 import { filter } from "rxjs/Operators";
 import { ModalService } from "src/app/core/services/modal.service";
 
-import { ProductService } from "src/app/core/services/product.service";
-import { Product } from "src/app/shared/utilities/interfaces.interface";
+import { Image } from "src/app/shared/utilities/interfaces.interface";
 
-export interface Image {
-  id: number;
-  file: File;
-  type: string;
-  name: string;
-  imageShow: any;
-}
+import { Product } from "src/app/shared/utilities/interfaces.interface";
+import { CategoryService } from "src/app/core/services/category.service";
+import { ProductService } from "src/app/core/services/product.service";
+
 @Component({
   selector: "app-my-products",
   templateUrl: "./my-products.component.html",
   styleUrls: ["./my-products.component.scss"],
 })
 export class MyProductsComponent implements OnInit, AfterViewInit {
-  addProduct: boolean = true;
+  addProduct: boolean = false;
   editProduct: boolean = false;
   form: FormGroup;
   // address here
@@ -58,13 +53,14 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   constructor(
     private _fb: FormBuilder,
     private _modal: ModalService,
-    private _productService: ProductService
+    private _productService: ProductService,
+    private _categoryService: CategoryService
   ) {
     this._form();
   }
 
   ngOnInit(): void {
-    this._productService.getCategory("milk").subscribe({
+    this._productService.getCategoryProducts("milk").subscribe({
       next: (cat) => {
         this.clientProduct = cat.data;
       },

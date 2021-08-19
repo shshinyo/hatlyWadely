@@ -14,12 +14,12 @@ export class ProductService {
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };
+
   constructor(private _http: HttpClient) {}
 
   // post product api
   addProduct(product: Product): Observable<Product> {
     return this._http.post<Product>(`${this._url}/add`, product, this.httpOptions).pipe(
-      tap((product) => console.log("Product", product)),
       catchError(this._handleError)
     );
   }
@@ -27,7 +27,6 @@ export class ProductService {
   // get product api
   getProduct(id: string): Observable<Product> {
     return this._http.get<Product>(`${this._url}/product/${id}`).pipe(
-      tap((product) => console.log("Product", product)),
       catchError(this._handleError)
     );
   }
@@ -37,7 +36,6 @@ export class ProductService {
     return this._http
       .put<Product>(`${this._url}/edit/${id}`, product, this.httpOptions)
       .pipe(
-        tap((product) => console.log("Product", product)),
         catchError(this._handleError)
       );
   }
@@ -51,7 +49,7 @@ export class ProductService {
   }
 
   // specializes to category api
-  getCategory(id: string): Observable<any> {
+  getCategoryProducts(id: string): Observable<any> {
     return this._http
       .get<any>(`${Environment.api_url}api/products/category/${id}`)
       .pipe(catchError(this._handleError));

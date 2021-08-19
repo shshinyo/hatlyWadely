@@ -8,11 +8,14 @@ import {
 } from "@angular/core";
 import { MediaChange, MediaObserver } from "@angular/flex-layout";
 import { Router, ActivatedRoute } from "@angular/router";
-import { fromEvent, Subscription } from "rxjs";
+import { fromEvent, Observable, Subscription } from "rxjs";
 import { debounceTime, map, filter } from "rxjs/Operators";
 import { ProductsService } from "src/app/core/services/products.service";
 import { SouqService } from "src/app/core/services/shop-service.service";
 import { QueryParams } from "src/app/shared/utilities/query-params";
+
+import { CategoryService } from "src/app/core/services/category.service";
+import { Category } from "src/app/shared/utilities/interfaces.interface";
 
 @Component({
   selector: "app-products",
@@ -27,6 +30,9 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   search: string | null = null;
   //  hide and show on hover (filter & carouser)
   responsiveOptions: any[];
+
+  allCategories$: Observable<Category> = this._categoryService.getAllCategories$;
+  
   carouselOffers$ = this.souqSer.Offers$;
   products: any;
   filteredProducts: any;
@@ -40,6 +46,7 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     private _mediaObserver: MediaObserver,
     private _route: ActivatedRoute,
     private _router: Router,
+    private _categoryService: CategoryService,
     private productsService: ProductsService,
     private souqSer: SouqService
   ) {}
