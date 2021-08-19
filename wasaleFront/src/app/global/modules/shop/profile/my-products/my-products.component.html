@@ -138,7 +138,8 @@
     <div
       fxFlex="100"
       fxLayout="row wrap"
-      fxLayoutAlign="center center"
+      fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center"
       style="background-color: rgba(248, 248, 248, 0.259); border-radius: 8px"
     >
       <div class="title-2" fxFlex="100" fxLayoutAlign="start center">
@@ -171,7 +172,6 @@
           <img class="image-full" [src]="p.imageShow" />
         </div>
         <input
-          *ngIf="!p.file"
           type="file"
           [id]="p.id"
           #input

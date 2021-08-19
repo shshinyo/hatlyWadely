@@ -20,7 +20,7 @@ export interface Image {
   styleUrls: ["./my-products.component.scss"],
 })
 export class MyProductsComponent implements OnInit, AfterViewInit {
-  addProduct: boolean = false;
+  addProduct: boolean = true;
   editProduct: boolean = false;
   form: FormGroup;
   // address here
@@ -28,7 +28,8 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   productToEdit: Product;
   saleCount(price: number, selling: number): number {
     const sale = ((price - selling) / price) * 100 + 0.5;
-    return Math.round(sale);
+    // return Math.round(sale);
+    return sale > 0 ? Math.round(sale) : 0;
   }
   // Photo picker
   filePicker: Array<Image> = [
@@ -189,6 +190,10 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     // file type
     fileUp.type = file.type;
 
+    if (file && file.size >= 500000) {
+      this._modal.snackbar("حجم الصورة المسموح به يجب الا يزيد عن ( 500KB )", "error");
+      return;
+    }
     if (!file || !file.type.match(/image\/*/)) {
       this._modal.snackbar("من فضلك ادخل صورة فقط", "error");
       return;

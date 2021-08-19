@@ -4,7 +4,6 @@
   fxLayoutAlign="center center"
 >
   <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxFlex.xs="95">
-
     <a
       fxLayoutAlign="center center"
       (click)="onToggle()"
@@ -40,22 +39,17 @@
     </p-overlayPanel>
 
     <span
-      class="p-input-icon-left"
-      fxLayout="row wrap"
+      fxLayout="row"
       fxFlex.xs="70"
       [ngStyle.lt-md]="{ width: '250px' }"
       [ngStyle.xs]="{ margin: '10px 0' }"
     >
-      <i
-        class="pi pi-search"
-        style="cursor: pointer"
-        [ngStyle]="searchInput.value ? { color: 'red' } : { color: 'gray' }"
-      ></i>
+
       <input
         #searchInput
         pInputText
         type="text"
-        placeholder="البحث عن المنتجات والعلامات التجارية والاقسام"
+        placeholder="البحث عن المنتجات والعلامات التجارية والاقسام."
         [value]="search"
         (keydown.enter)="onSearch(searchInput.value)"
       />

@@ -1,4 +1,4 @@
-$img-size: 150px;
+$img-size: 80px;
 
 .details-form {
   min-height: auto;
@@ -57,8 +57,9 @@ $img-size: 150px;
   margin: 10px;
   border-radius: 8px;
   font-size: 30px;
-  background-color: whitesmoke;
+  border: 2px dashed;
   color: orange;
+  background-color: whitesmoke;
   .remove-img {
     position: absolute;
     top: -13px;
