@@ -1,0 +1,21 @@
+<br />
+<div class="cart-container" fxLayout="column" fxLayoutAlign="start stretch" dir="rtl">
+  <h4 fxLayoutAlign="start center" style="font-weight: bolder">
+    عربة التسوق
+    <span *ngIf="cartProducts.length !== 0"
+      >( <span style="color: #f68b1e">Items numbers</span>)</span
+    >
+  </h4>
+
+  <br />
+  <div class="no-item" fxLayout="row wrap" fxLayoutAlign="center start">
+    <img src="assets/images/empty-cart.png" />
+    <strong fxFlex="100" fxLayoutAlign="center center">عربة التسوق فارغة</strong>
+    <p fxFlex="100" fxLayoutAlign="center center">
+      تصفح فئاتنا، واكتشف أفضل العروض لدينا
+    </p>
+    <button mat-raised-button color="primary" routerLink="/shop">تسوق الأن</button>
+  </div>
+
+  
+</div>

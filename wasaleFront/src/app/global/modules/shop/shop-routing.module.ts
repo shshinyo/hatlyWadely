@@ -21,6 +21,7 @@ import { AddressComponent } from "./profile/address/address.component";
 import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
 import { MyProductsComponent } from "./profile/my-products/my-products.component";
 import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
+import { CartComponent } from "./cart/cart.component";
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
             pathMatch: "full",
           },
         ],
+      },
+      {
+        path: "cart",
+        component: CartComponent,
       },
       {
         path: "notfound",
@@ -123,5 +128,6 @@ export class ShopRoutingModule {
     MyProductsComponent,
     LoginComponent,
     RegisterComponent,
+    CartComponent,
   ];
 }
