@@ -18,7 +18,7 @@
 <hr *ngIf="!addProduct" class="hr" />
 
 <div
-  *ngIf="!addProduct && clientProduct.length === 0"
+  *ngIf="!addProduct && clientProduct.length === 0 && !preloader"
   class="main-cont"
   fxLayout="row wrap"
   fxLayoutAlign="center center"
@@ -41,23 +41,31 @@
 </div>
 
 <div
-  *ngIf="!addProduct && clientProduct.length !== 0"
+  *ngIf="!addProduct"
   class="main-cont"
   fxLayout="row wrap"
   fxLayoutAlign="start start"
-  fxLayoutAlign.xs="center start"
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="start stretch"
   fxLayoutGap="15px"
+  fxLayoutGap.xs="0px"
 >
+  <div *ngIf="preloader" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+    <app-preloader></app-preloader>
+  </div>
+
   <div
     *ngFor="let product of clientProduct"
     class="saved-prod"
     fxFlex="31.6"
-    fxFlex.xs="97"
-    fxLayout="row wrap"
-    fxLayoutAlign="center center"
+    fxFlex.xs="98"
+    fxLayout="column"
+    fxLayoutAlign="space-between stretch"
   >
     <!-- Bind image here -->
-    <img src="assets/images/images/48.jpg" alt="" />
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+      <img src="assets/images/images/48.jpg" alt="" />
+    </div>
     <!-- Description -->
     <div
       class="dis p-8"
@@ -83,7 +91,12 @@
       </div>
       <!-- product details here -->
     </div>
-    <div class="pay" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="25px">
+    <div
+      class="pay"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="10px"
+    >
       <button
         mat-button
         color="primary"
@@ -103,10 +116,11 @@
         إزالة
       </button>
 
-      <mat-slide-toggle color="primary" [(ngModel)]="displayProduct"></mat-slide-toggle>
+      <mat-slide-toggle color="primary" [(ngModel)]="disableProduct"></mat-slide-toggle>
     </div>
   </div>
 </div>
+
 <!-- New address or edit -->
 <div *ngIf="addProduct" class="title-1" fxLayout="row" fxLayoutAlign="start center">
   <a fxLayoutAlign="center center" style="margin: 0 5px" (click)="backButton()">

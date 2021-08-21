@@ -26,6 +26,7 @@ import { Error404 } from "./components/Error404/error404.component";
 import { SubString } from "./pipes/subString.pipe";
 import { SymbolNamePipe } from "./pipes/symbol-name.pipe";
 import { CasedNamePipe } from "./pipes/cased-name.pipe";
+import { PreloaderComponent } from "./components/preloader.component";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -37,6 +38,7 @@ const SHARED_COMPONENTS = [
   ItemComponent,
   StarComponent,
   Error404,
+  PreloaderComponent
 ];
 const SHARED_PIPES =[
   SymbolNamePipe,

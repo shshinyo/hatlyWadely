@@ -8,7 +8,6 @@ import { Image } from "src/app/shared/utilities/interfaces.interface";
 import { Product } from "src/app/shared/utilities/interfaces.interface";
 import { CategoryService } from "src/app/core/services/category.service";
 import { ProductService } from "src/app/core/services/product.service";
-import { __core_private_testing_placeholder__ } from "@angular/core/testing";
 
 @Component({
   selector: "app-my-products",
@@ -18,10 +17,12 @@ import { __core_private_testing_placeholder__ } from "@angular/core/testing";
 export class MyProductsComponent implements OnInit, AfterViewInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
-  displayProduct: boolean = true;
+  preloader: boolean = true;
+  disableProduct: boolean = true;
+
   form: FormGroup;
-  formData:FormData =new FormData() ;
-  photos =[];
+  formData: FormData = new FormData();
+  photos = [];
   // address here
   clientProduct: Product[] = [];
   productToEdit: Product;
@@ -67,6 +68,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     this._productService.getCategoryProducts("milk").subscribe({
       next: (cat) => {
         this.clientProduct = cat.data;
+        this.preloader = false;
       },
     });
   }
@@ -104,8 +106,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       });
   }
   saveChanges(form: FormGroup, state: "add" | "edit"): void {
-   
-//return
+    //return
     const imgUploaded = this.filePicker
       .filter((file) => file.file !== null || undefined)
       .map((file) => file.name);
@@ -126,10 +127,10 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
     if (state == "add") {
       this._productService.addProduct(command).subscribe({
         next: () => {
-          console.log(this.formData.getAll('files'),this.filePicker);
-          this._productService.UploadPhotos(this.formData).subscribe(res=>{
-            console.log(res)
-          })
+          console.log(this.formData.getAll("files"), this.filePicker);
+          this._productService.UploadPhotos(this.formData).subscribe((res) => {
+            console.log(res);
+          });
           this.clientProduct.unshift(command);
           this._modal.snackbar("تم اضافة منتج جديد", "success");
 
@@ -182,9 +183,9 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
 
   // file selector
   onSelectFile(event, files: FileList | null, id: number): void {
-    console.log(event)
+    console.log(event);
     const file = files[0];
-    
+
     // image reader
     const reader = new FileReader();
 
@@ -211,11 +212,11 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
 
     fileUp.file = file;
     fileUp.name = file.name;
-    this.formData.delete('files')
-    for(let i =0 ;i <this.filePicker.length;i++){
-      let file = this.filePicker[i].file ;
-      if(file){
-        this.formData.append('files',file);
+    this.formData.delete("files");
+    for (let i = 0; i < this.filePicker.length; i++) {
+      let file = this.filePicker[i].file;
+      if (file) {
+        this.formData.append("files", file);
       }
     }
   }

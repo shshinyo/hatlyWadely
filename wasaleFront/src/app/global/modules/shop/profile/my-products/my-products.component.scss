@@ -1,5 +1,6 @@
 $img-size: 70px;
-$product-img-size: 140px;
+$product-img-size-lg: 140px;
+
 svg {
   height: 40px;
 }
@@ -19,15 +20,15 @@ svg {
 
 .saved-prod {
   position: relative;
-  min-height: 321px;
+  min-height: 322px;
   border-radius: 5px;
   margin: 7.5px 0;
   border: 0.4px solid rgb(228, 228, 228);
   img {
-    min-height: $product-img-size;
-    max-height: $product-img-size;
-    min-width: $product-img-size;
-    max-width: $product-img-size;
+    min-height: $product-img-size-lg;
+    max-height: $product-img-size-lg;
+    min-width: $product-img-size-lg;
+    max-width: $product-img-size-lg;
     object-fit: contain;
   }
 
@@ -123,4 +124,7 @@ svg {
     cursor: pointer;
     background-color: rgb(238, 238, 238);
   }
+}
+
+@media screen and (max-width: 600px) {
 }
