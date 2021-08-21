@@ -4,13 +4,13 @@ import { Observable, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/Operators";
 import { Product } from "src/app/shared/utilities/interfaces.interface";
 
-import { Environment } from "src/environments/environment";
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: "root",
 })
 export class ProductService {
-  private _url = `${Environment.api_url}api/products`;
+  private _url = `${environment.api_url}api/products`;
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };
@@ -29,6 +29,10 @@ export class ProductService {
     return this._http.get<Product>(`${this._url}/product/${id}`).pipe(
       catchError(this._handleError)
     );
+  }
+  UploadPhotos(body){
+    return this._http.post(`${this._url}/uploadProductImage`, body)
+    
   }
 
   // edit product api
@@ -51,7 +55,7 @@ export class ProductService {
   // specializes to category api
   getCategoryProducts(id: string): Observable<any> {
     return this._http
-      .get<any>(`${Environment.api_url}api/products/category/${id}`)
+      .get<any>(`${environment.api_url}api/products/category/${id}`)
       .pipe(catchError(this._handleError));
   }
 

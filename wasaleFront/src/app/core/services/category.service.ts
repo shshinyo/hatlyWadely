@@ -4,13 +4,13 @@ import { Observable, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/Operators";
 import { Category } from "src/app/shared/utilities/interfaces.interface";
 
-import { Environment } from "src/environments/environment";
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: "root",
 })
 export class CategoryService {
-  private _url = `${Environment.api_url}api/categories`;
+  private _url = `${environment.api_url}api/categories`;
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };

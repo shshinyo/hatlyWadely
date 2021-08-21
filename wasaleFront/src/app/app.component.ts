@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from "@angular/core";
 import { NavigationEnd, Router } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
+import { WebSocketService } from "./core/services/web-socket.service";
 
 @Component({
   selector: "app-root",
@@ -10,14 +11,16 @@ import { TranslateService } from "@ngx-translate/core";
   `,
 })
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
-  constructor(private _router: Router, private translateService: TranslateService) {
+  constructor(private _router: Router, private translateService: TranslateService ,private webSocketService :WebSocketService) {
     this.translateService.setDefaultLang("en");
     const lang = localStorage.getItem("lang") || "en";
     this.translateService.use(lang);
     document.documentElement.lang = lang;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.webSocketService.connect();
+  }
 
   ngOnDestroy(): void {}
 

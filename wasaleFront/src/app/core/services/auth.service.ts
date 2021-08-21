@@ -1,9 +1,10 @@
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Subject } from "rxjs";
 import { newUser } from "src/app/shared/utilities/authUser";
-
+import { environment } from "src/environments/environment";
 @Injectable({
   providedIn: "root",
 })
@@ -18,43 +19,24 @@ export class AuthService {
     return !!window.localStorage.getItem("user");
     // return !!this.currentUser;
   }
-  constructor(private router: Router, private toastr: ToastrService) {}
+  constructor(private router: Router,private http:HttpClient, private toastr: ToastrService) {}
 
-  login(email: string, password: string) {
-    const user = localUsers.find((u) => u.email === email && u.password === password);
+  login(body) {
+    return this.http.post(`${environment.api_url_ip}api/users/login`,body,{
+      observe:'body',
+      withCredentials:true,
+      headers:new HttpHeaders().append('Content-Type','application/json')
 
-    if (user) {
-      this.currentUser = {
-        id: user.id,
-        role: user.role,
-        name: user.name,
-        phone: user.phone,
-        location: user.location,
-        email: user.email,
-        password: user.password,
-      };
-      // store the user in localStorage
-      window.localStorage.setItem("user", JSON.stringify(user));
-      if (this.isLoggedIn) {
-        if (user.role === 1) {
-          console.log("admin");
-          this.router.navigateByUrl("/dashboard");
-        } else {
-          this.router.navigateByUrl("/welcome");
-          console.log("not admin");
-        }
-      }
-      this.toastr.success("تم تسجيل الدخول بنجاح");
-      this.errorMessageSubject.next("");
-      // console.log(this.isLoggedIn);
-      console.log(this.currentUser);
-    } else {
-      this.currentUser = null;
-      this.errorMessageSubject.next("البريد الذي ادخلته او كلمة المرور غير صحيحة.");
-      this.toastr.error("حدث خطأ اثناء التسجيل.");
-    }
+    })
   }
+  register(body) {
+    return this.http.post(`${environment.api_url_ip}api/users/newUser`,body,{
+      observe:'body',
+      withCredentials:true,
+      headers:new HttpHeaders().append('Content-Type','application/json')
 
+    })
+  }
   logOut(): void {
     this.currentUser = null;
     window.localStorage.removeItem("user");

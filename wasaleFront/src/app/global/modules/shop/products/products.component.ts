@@ -16,6 +16,7 @@ import { QueryParams } from "src/app/shared/utilities/query-params";
 
 import { CategoryService } from "src/app/core/services/category.service";
 import { Category } from "src/app/shared/utilities/interfaces.interface";
+import { WebSocketService } from "src/app/core/services/web-socket.service";
 
 @Component({
   selector: "app-products",
@@ -48,7 +49,8 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     private _router: Router,
     private _categoryService: CategoryService,
     private productsService: ProductsService,
-    private souqSer: SouqService
+    private souqSer: SouqService,
+    private socketService :WebSocketService
   ) {}
 
   ngOnInit(): void {
@@ -98,7 +100,10 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
       queryParamsHandling: "merge",
     });
   }
-
+  saveOrder(){
+    console.log(this.socketService.socket)
+    this.socketService.socket.emit('message',{name:'ibrahem'})
+  }
   // onHoverOnTap(product?) {
   //   if (product) {
   //     this.filteredProducts = this.products.find(

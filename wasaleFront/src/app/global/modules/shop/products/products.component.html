@@ -32,6 +32,7 @@
       fxLayoutAlign="start center"
       *ngFor="let category of _allCategories"
       [routerLink]="['/shop', category.id]"
+      (click)="saveOrder()"
     >
       <!-- <img class="svg-icon" src="{{ product.icon }}" /> -->
       {{ category.name }}

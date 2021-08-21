@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChildren } from "@angular/core";
+import { __core_private_testing_placeholder__ } from "@angular/core/testing";
 import {
   AbstractControl,
   FormBuilder,
@@ -105,7 +106,10 @@ export class RegisterComponent implements OnInit {
   }
 
   registration(registerForm) {
-    console.log(registerForm);
+   // registerForm user interface
+   /*   this._authService.register(registerForm).subscribe(res=>{
+      console.log(res);
+    }) */
   }
 
   passwordMatcher = (control: AbstractControl) => {

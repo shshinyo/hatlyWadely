@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   login(form): void {
     console.log(form);
+    this._authService.login(JSON.stringify({email:form.email,password:form.password})).subscribe(res=>{
+      console.log(res)
+    })
   }
 
   get emailError(): string {

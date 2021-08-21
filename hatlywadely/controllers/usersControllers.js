@@ -1,8 +1,12 @@
 const User = require('../models/userModel');
+const passport = require('passport');
+
+
 async function createuser(req,res){
     console.log(req.body)
 
     let user = req.body;  
+    user.password = User.hashPassword(req.body.password);
     let newUser = await new User(user);
    newUser.save((err,done)=>{
        if(err){
@@ -41,8 +45,22 @@ async function addProductToCart(req,res){
 
 }
 
+async function login (req, res, next) {
+    console.log(req.body)
+    passport.authenticate('local', function(err, user, info) {
+        if (err) { return res.json(err); }
+        if (!user) { return res.json(info); }
+        req.logIn(user, function(err) {
+          if (err) { return res.json(err); }
+           delete user.password ;
+          return res.status(200).json({message:'Login Success',user,status:0});
+        });
+      })(req, res, next);
+  }
+
 module.exports ={
     createuser,
     getUsers,
-    addProductToCart
+    addProductToCart,
+    login
 }
