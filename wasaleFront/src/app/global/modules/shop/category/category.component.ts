@@ -1,8 +1,11 @@
+import { ConstantPool } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
-import { zip } from "rxjs";
-import { map } from "rxjs/Operators";
+import { Subscription, zip } from "rxjs";
+import { filter, find, map, mergeMap, tap } from "rxjs/Operators";
+import { ProductService } from "src/app/core/services/product.service";
 import { ProductsService } from "src/app/core/services/products.service";
+import { Product } from "src/app/shared/utilities/interfaces.interface";
 
 @Component({
   templateUrl: "./category.component.html",
@@ -24,8 +27,18 @@ export class CategoryComponent implements OnInit {
     },
   ];
 
-  // Reactive abroach
+  // get category
+  ourCategory$ = this._route.paramMap.pipe(
+    mergeMap((param) => {
+      return this._productService
+        .getCategoryProducts(param.get("categoryId"))
+        .pipe(map((x) => x.data));
+    })
+  );
+
   categoryId$ = this._route.paramMap.pipe(map((param) => param.get("categoryId")));
+
+  // Reactive abroach
   allCategories$ = this._shopService.getAllCategories$;
   category$ = zip(this.categoryId$, this.allCategories$).pipe(
     map(([categoryId, allCategories]) =>
@@ -33,22 +46,25 @@ export class CategoryComponent implements OnInit {
     )
   );
 
-
-
   mainSection: [];
   secondSections: [];
-  constructor(private _route: ActivatedRoute,private _router:Router, private _shopService: ProductsService) {}
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router,
+    private _productService: ProductService,
+    private _shopService: ProductsService
+  ) {}
 
   ngOnInit(): void {
-    this.category$.pipe(map((cat) => cat.sections)).subscribe((data) => {
-      const mainSection = data.filter((sec) => sec.mainSections);
-      const secondSections = data.filter((secSection) => secSection.secondSection);
-      this.mainSection = mainSection;
-      this.secondSections = secondSections;
-    });
+    // this.category$.pipe(map((cat) => cat.sections)).subscribe((data) => {
+    //   const mainSection = data.filter((sec) => sec.mainSections);
+    //   const secondSections = data.filter((secSection) => secSection.secondSection);
+    //   this.mainSection = mainSection;
+    //   this.secondSections = secondSections;
+    // });
   }
 
-  productsFilter():void{
-    this._router.navigateByUrl("productFilter")
+  productsFilter(): void {
+    this._router.navigateByUrl("productFilter");
   }
 }

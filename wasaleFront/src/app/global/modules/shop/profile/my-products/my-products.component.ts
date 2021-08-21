@@ -17,6 +17,7 @@ import { ProductService } from "src/app/core/services/product.service";
 export class MyProductsComponent implements OnInit, AfterViewInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
+  displayProduct: boolean = true;
   form: FormGroup;
   // address here
   clientProduct: Product[] = [];
