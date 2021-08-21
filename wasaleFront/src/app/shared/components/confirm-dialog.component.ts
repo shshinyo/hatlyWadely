@@ -23,10 +23,10 @@ export interface IDialogContent {
     ></div>
 
     <div mat-dialog-actions>
-      <button mat-button [mat-dialog-close]="true" aria-label="Ok">موافق</button>
-      <button mat-flat-button color="warn" [mat-dialog-close]="false" aria-label="Cancel">
-        الغاء
+      <button mat-flat-button color="warn" [mat-dialog-close]="true" aria-label="Ok">
+        موافق
       </button>
+      <button mat-button [mat-dialog-close]="false" aria-label="Cancel">الغاء</button>
     </div>
   `,
 })
