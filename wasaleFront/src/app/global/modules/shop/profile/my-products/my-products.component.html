@@ -102,6 +102,8 @@
         <mat-icon>delete</mat-icon>
         إزالة
       </button>
+
+      <mat-slide-toggle color="primary" [(ngModel)]="displayProduct"></mat-slide-toggle>
     </div>
   </div>
 </div>
@@ -225,16 +227,18 @@
     <br />
     <br />
     <!--  -->
-    <button
-      fxFlex="90"
-      mat-raised-button
-      color="primary"
-      type="submit"
-      (click)="saveChanges(form, editProduct ? 'edit' : 'add')"
-      [disabled]="form.invalid"
-    >
-      {{ editProduct ? "حفظ التغيرات" : "نشر للبيع" }}
-    </button>
+    <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+      <button
+        fxFlex="90"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="saveChanges(form, editProduct ? 'edit' : 'add')"
+        [disabled]="form.invalid"
+      >
+        {{ editProduct ? "حفظ التغيرات" : "نشر للبيع" }}
+      </button>
+    </div>
   </form>
   <br />
 </div>

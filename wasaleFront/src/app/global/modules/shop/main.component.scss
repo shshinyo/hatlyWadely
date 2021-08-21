@@ -44,6 +44,20 @@ $color: #ff6e00;
   }
 }
 
+.fire {
+  position: relative;
+  top: -6px;
+  left: 124px;
+  height: 35px;
+  width: 129px;
+  transition: 0.1s;
+  background-color: yellow;
+}
+
+.fire {
+  filter: url(#wavy);
+}
+
 ::ng-deep .menu.mat-menu-panel {
   min-width: 195px;
   direction: rtl !important;

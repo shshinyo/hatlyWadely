@@ -19,16 +19,16 @@ export class ProductService {
 
   // post product api
   addProduct(product: Product): Observable<Product> {
-    return this._http.post<Product>(`${this._url}/add`, product, this.httpOptions).pipe(
-      catchError(this._handleError)
-    );
+    return this._http
+      .post<Product>(`${this._url}/add`, product, this.httpOptions)
+      .pipe(catchError(this._handleError));
   }
 
   // get product api
   getProduct(id: string): Observable<Product> {
-    return this._http.get<Product>(`${this._url}/product/${id}`).pipe(
-      catchError(this._handleError)
-    );
+    return this._http
+      .get<Product>(`${this._url}/product/${id}`)
+      .pipe(catchError(this._handleError));
   }
   UploadPhotos(body){
     return this._http.post(`${this._url}/uploadProductImage`, body)
@@ -39,9 +39,7 @@ export class ProductService {
   editProduct(id: string, product: Product): Observable<Product> {
     return this._http
       .put<Product>(`${this._url}/edit/${id}`, product, this.httpOptions)
-      .pipe(
-        catchError(this._handleError)
-      );
+      .pipe(catchError(this._handleError));
   }
 
   // delete product api
@@ -53,7 +51,7 @@ export class ProductService {
   }
 
   // specializes to category api
-  getCategoryProducts(id: string): Observable<any> {
+  getCategoryProducts(id: string): Observable<{ state: number; data: Product[] }> {
     return this._http
       .get<any>(`${environment.api_url}api/products/category/${id}`)
       .pipe(catchError(this._handleError));

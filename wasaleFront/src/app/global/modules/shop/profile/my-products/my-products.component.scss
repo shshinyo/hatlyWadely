@@ -1,5 +1,8 @@
-$img-size: 80px;
-
+$img-size: 70px;
+$product-img-size: 140px;
+svg {
+  height: 40px;
+}
 .details-form {
   min-height: auto;
   padding: 0;
@@ -16,26 +19,25 @@ $img-size: 80px;
 
 .saved-prod {
   position: relative;
-  min-height: 150px;
+  min-height: 321px;
   border-radius: 5px;
   margin: 7.5px 0;
   border: 0.4px solid rgb(228, 228, 228);
   img {
-    min-height: $img-size;
-    max-height: $img-size;
-    min-width: calc($img-size + 50px);
-    max-width: calc($img-size + 50px);
+    min-height: $product-img-size;
+    max-height: $product-img-size;
+    min-width: $product-img-size;
+    max-width: $product-img-size;
     object-fit: contain;
   }
-  .dis {
-  }
+
   .pay {
     margin: 10px 20px;
   }
   .sale-con {
     position: absolute;
     top: 15px;
-    left: 15px;
+    left: 10px;
     width: 100%;
     z-index: 55;
     .sale {

@@ -11,36 +11,12 @@
     >
       <mat-icon>menu</mat-icon>
     </a>
-    <p-overlayPanel
-      #op2
-      appendTo="body"
-      [autoZIndex]="true"
-      [showCloseIcon]="false"
-      [style]="{
-        'width': '240px',
-        'padding': '0px !important',
-        'border-radius': '5px'
-      }"
-    >
-      <ng-template pTemplate fxLayout="column" fxLayoutAlign="start stretch">
-        <div
-          class="tap"
-          fxLayout="row"
-          fxLayoutAlign="end center"
-          *ngFor="let category of categories"
-          [routerLink]="[category.id]"
-          (click)="op2.hide()"
-        >
-          <!-- Enter icon -->
-          {{ category.name }}
-          <img class="svg-icon" src="{{ category.icon }}" />
-        </div>
-      </ng-template>
-    </p-overlayPanel>
-
+    <a fxHide.gt-xs fxLayoutAlign="center center">
+      <mat-icon style="color: #f68b1e">perm_phone_msg</mat-icon>
+    </a>
     <span
       fxLayout="row"
-      fxFlex.xs="70"
+      fxFlex.xs="65"
       [ngStyle.lt-md]="{ width: '250px' }"
       [ngStyle.xs]="{ margin: '10px 0' }"
     >
@@ -53,9 +29,11 @@
         (keydown.enter)="onSearch(searchInput.value)"
       />
     </span>
+
     <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
-      <mat-icon>perm_identity</mat-icon> </a
-    ><a fxHide.gt-xs fxLayoutAlign="center center">
+      <mat-icon>perm_identity</mat-icon>
+    </a>
+    <a fxHide.gt-xs fxLayoutAlign="center center" routerLink="cart">
       <mat-icon>shopping_cart</mat-icon>
     </a>
   </div>
@@ -78,6 +56,7 @@
           تسجيل الدخول
         </button>
       </div>
+
       <hr class="hr" />
       <button
         mat-menu-item
@@ -112,6 +91,39 @@
         عربه التسوق
       </div>
     </button>
+
+    <button
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      mat-button
+      style="z-index: 1; font-size: 20px; color: #ce4603"
+    >
+      <mat-icon>perm_phone_msg</mat-icon>
+      طلب أوردر
+    </button>
+
+    <div class="fire">
+      <svg style="height: 40px; width: 140px">
+        <filter id="wavy">
+          <feTurbulence
+            x="0"
+            y="0"
+            type="turbulence"
+            baseFrequency="0.01"
+            numOctaves="2"
+            seed="2"
+          >
+            <animate
+              attributeName="baseFrequency"
+              values="0.01;0.05;0.01"
+              dur="10s"
+              repeatCount="indefinite"
+            />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="30" />
+        </filter>
+      </svg>
+    </div>
   </div>
 </div>
 <div class="body-container" fxLayout="row wrap" fxLayoutAlign="center start" dir="rtl">

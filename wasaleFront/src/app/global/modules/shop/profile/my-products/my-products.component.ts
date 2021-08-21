@@ -18,6 +18,7 @@ import { __core_private_testing_placeholder__ } from "@angular/core/testing";
 export class MyProductsComponent implements OnInit, AfterViewInit {
   addProduct: boolean = false;
   editProduct: boolean = false;
+  displayProduct: boolean = true;
   form: FormGroup;
   formData:FormData =new FormData() ;
   photos =[];
