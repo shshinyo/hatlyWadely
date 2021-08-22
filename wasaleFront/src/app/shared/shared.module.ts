@@ -38,13 +38,9 @@ const SHARED_COMPONENTS = [
   ItemComponent,
   StarComponent,
   Error404,
-  PreloaderComponent
+  PreloaderComponent,
 ];
-const SHARED_PIPES =[
-  SymbolNamePipe,
-    CasedNamePipe,
-    SubString
-]
+const SHARED_PIPES = [SymbolNamePipe, CasedNamePipe, SubString];
 
 const LOCAL_DIRECTIVES = [];
 
@@ -57,7 +53,7 @@ const THIRD_MODULES = [
   HighchartsChartModule,
   NgProgressModule.withConfig({
     spinnerPosition: "left",
-    color: "#f68b1e"
+    color: "#f68b1e",
   }),
   NgProgressHttpModule,
   TranslateModule,
@@ -79,7 +75,7 @@ const COMMON_MODULES = [
     ...LOCAL_COMPONENTS,
     ...LOCAL_DIRECTIVES,
     ...SHARED_DIRECTIVES,
-    ...SHARED_PIPES
+    ...SHARED_PIPES,
   ],
   imports: [...COMMON_MODULES, ...THIRD_MODULES],
   exports: [
@@ -87,8 +83,7 @@ const COMMON_MODULES = [
     ...COMMON_MODULES,
     ...THIRD_MODULES,
     ...SHARED_DIRECTIVES,
-    ...SHARED_PIPES
-
+    ...SHARED_PIPES,
   ],
 })
 export class SharedModule {}

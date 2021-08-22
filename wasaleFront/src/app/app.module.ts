@@ -10,7 +10,6 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { AppComponent } from "./app.component";
-import { DashboardModule } from "./dashboard/dashboard.module";
 import { GlobalModule } from "./global/global.module";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -26,7 +25,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     CoreModule,
     GlobalModule,
-    DashboardModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

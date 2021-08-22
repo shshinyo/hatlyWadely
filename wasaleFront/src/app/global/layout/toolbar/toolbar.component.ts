@@ -19,7 +19,6 @@ import {
   share,
   throttleTime,
 } from "rxjs/Operators";
-import { newUser } from "src/app/shared/utilities/authUser";
 import { AuthService } from "src/app/core/services/auth.service";
 
 enum VisibilityState {
@@ -100,7 +99,7 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   get userName(): string {
     if (this.authService.isLoggedIn) {
       const user = window.localStorage.getItem("user");
-      const name: newUser = JSON.parse(user);
+      const name = JSON.parse(user);
       return name.name;
     }
     return "";

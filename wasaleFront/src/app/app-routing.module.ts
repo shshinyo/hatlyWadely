@@ -9,12 +9,12 @@ const routes: Routes = [
     path: "",
     loadChildren: () => import("./global/global.module").then((m) => m.GlobalModule),
   },
-  {
-    path: "dashboard",
-    loadChildren: () =>
-      import("./dashboard/dashboard.module").then((m) => m.DashboardModule),
-    canActivate: [AdminGuard],
-  },
+  // {
+  //   path: "dashboard",
+  //   loadChildren: () =>
+  //     import("./dashboard/dashboard.module").then((m) => m.DashboardModule),
+  //   canActivate: [AdminGuard],
+  // },
   {
     path: "notfound",
     component: Error404,

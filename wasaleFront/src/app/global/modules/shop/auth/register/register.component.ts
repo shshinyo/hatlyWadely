@@ -1,5 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChildren } from "@angular/core";
-import { __core_private_testing_placeholder__ } from "@angular/core/testing";
 import {
   AbstractControl,
   FormBuilder,
@@ -22,7 +21,6 @@ import { GenericValidator } from "src/app/shared/utilities/genericValidator";
 })
 export class RegisterComponent implements OnInit {
   hidePass = true;
-  errorMessage$ = this._authService.errorMessage$;
   @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
 
   form: FormGroup;
