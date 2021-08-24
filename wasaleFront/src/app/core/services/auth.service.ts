@@ -1,72 +1,58 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { ToastrService } from "ngx-toastr";
-import { Subject } from "rxjs";
+import { Observable, Subject, throwError } from "rxjs";
+import { catchError, map } from "rxjs/Operators";
+import { User } from "src/app/shared/utilities/interfaces.interface";
+
 import { environment } from "src/environments/environment";
+
 @Injectable({
   providedIn: "root",
 })
 export class AuthService {
-  currentUser;
-  redirectUrl;
+  private _url = `${environment.api_url}api/users`;
+  private readonly AUTH_TOKEN = "user_token";
 
-  errorMessageSubject = new Subject<string>();
-  errorMessage$ = this.errorMessageSubject.asObservable();
+  httpOptions = {
+    headers: new HttpHeaders({ "Content-Type": "application/json" }),
+  };
+constructor(private _http:HttpClient){
+
+}
+  currentUser;
 
   get isLoggedIn(): boolean {
-    return !!window.localStorage.getItem("user");
+    return !!window.localStorage.getItem(this.AUTH_TOKEN);
   }
-  constructor(private router: Router,private http:HttpClient, private toastr: ToastrService) {}
-
-  login(body) {
-    return this.http.post(`${environment.api_url_ip}api/users/login`,body,{
-      observe:'body',
-      withCredentials:true,
-      headers:new HttpHeaders().append('Content-Type','application/json')
-
-    })
+  register(newUser: User) {
+    return this._http.post(`${this._url}/newUser`, newUser, this.httpOptions)
+      .pipe(catchError(this._handleError));
   }
-  register(body) {
-    return this.http.post(`${environment.api_url_ip}api/users/newUser`,body,{
-      observe:'body',
-      withCredentials:true,
-      headers:new HttpHeaders().append('Content-Type','application/json')
 
-    })
+  login(user: User) {
+    return this._http.post(`${this._url}/login`, user).pipe(
+      map((response: any) => {
+        if (response.result.succeeded) {
+          localStorage.setItem(this.AUTH_TOKEN, response.token);
+        }
+      }),
+      catchError(this._handleError)
+    );
   }
+
   logOut(): void {
     this.currentUser = null;
-    window.localStorage.removeItem("user");
+    window.localStorage.removeItem(this.AUTH_TOKEN);
+  }
+
+  private _handleError(err: any): Observable<never> {
+    let errorMessage: string;
+    if (err.error instanceof ErrorEvent) {
+      errorMessage = `An error occurred: ${err.error.message}`;
+    } else {
+      errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+    }
+    console.error(err);
+    return throwError(errorMessage);
   }
 }
-
-export const localUsers = [
-  {
-    id: 1,
-    name: "mohamed eldeeb",
-    phone: "01098799837",
-    location: "كوم حمادة",
-    email: "mohamed.eldeib5@gmail.com",
-    password: "hamo222",
-    role: 1,
-  },
-  {
-    id: 2,
-    name: "mohamed ",
-    phone: "01098799837",
-    location: "كوم حمادة",
-    email: "mohamed.eldeeb@gmail.com",
-    password: "hamo012",
-    role: 0,
-  },
-  {
-    id: 3,
-    name: "soso mostafa karem",
-    phone: "01098799837",
-    location: "كوم حمادة",
-    email: "moahmned.eldeiib@gmail.com",
-    password: "hamo012548",
-    role: 0,
-  },
-];

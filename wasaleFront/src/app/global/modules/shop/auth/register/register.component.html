@@ -3,7 +3,7 @@
 <div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start">
   <form
     [formGroup]="form"
-    (ngSubmit)="registration(registration(form))"
+    (ngSubmit)="registration(form)"
     novalidate
     class="details-form"
     fxFlex="72"
@@ -25,7 +25,8 @@
       <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
         <mat-label>الاسم الاول</mat-label>
         <input formControlName="firstName" matInput autofocus />
-        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix >done_all</mat-icon
+        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix
+          >done_all</mat-icon
         >
         <mat-error>{{ displayErrorMessage.firstName }}</mat-error>
       </mat-form-field>
@@ -188,7 +189,9 @@
       fxLayoutAlign="center center"
       style="margin-top: 20px"
     >
-      <button fxFlex="70" mat-raised-button color="primary">إنشاء حساب</button>
+      <button fxFlex="70" mat-raised-button color="primary" fxLayoutAlign="center center">
+        إنشاء حساب
+      </button>
     </div>
     <div
       fxFlex="100"

@@ -2,8 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { AuthService } from "src/app/core/services/auth.service";
+import { ModalService } from "src/app/core/services/modal.service";
 
 import { Const } from "src/app/shared/utilities/const";
+import { User } from "src/app/shared/utilities/interfaces.interface";
 
 @Component({
   selector: "app-login",
@@ -17,17 +19,28 @@ export class LoginComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _modal: ModalService
   ) {
     this._login();
   }
 
   ngOnInit(): void {}
-  login(form): void {
-    console.log(form);
-    this._authService.login(JSON.stringify({email:form.email,password:form.password})).subscribe(res=>{
-      console.log(res)
-    })
+
+  login(form: FormGroup): void {
+    if (!form) {
+      return;
+    }
+    const command: User = {
+      email: form.value.email,
+      password: form.value.password,
+    };
+    console.log("🚀 ~ file: login.component.ts ~ line 35 ~ LoginComponent ~ login ~ command", command)
+    this._authService.login(command).subscribe({
+      next: () => {
+        this._modal.snackbar("تم تسجيل الدخول بنجاح", "success");
+      },
+    });
   }
 
   get emailError(): string {
@@ -46,7 +59,7 @@ export class LoginComponent implements OnInit {
     this.form = this._fb.group({
       email: ["", [Validators.required, Validators.email]],
       password: ["", Validators.required],
-      rememberMe: [],
+      rememberMe: [""],
     });
   }
 }
