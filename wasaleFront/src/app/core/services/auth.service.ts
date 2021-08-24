@@ -3,13 +3,12 @@ import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { ToastrService } from "ngx-toastr";
 import { Subject } from "rxjs";
-import { newUser } from "src/app/shared/utilities/authUser";
 import { environment } from "src/environments/environment";
 @Injectable({
   providedIn: "root",
 })
 export class AuthService {
-  currentUser: newUser;
+  currentUser;
   redirectUrl;
 
   errorMessageSubject = new Subject<string>();
@@ -17,7 +16,6 @@ export class AuthService {
 
   get isLoggedIn(): boolean {
     return !!window.localStorage.getItem("user");
-    // return !!this.currentUser;
   }
   constructor(private router: Router,private http:HttpClient, private toastr: ToastrService) {}
 
@@ -43,7 +41,7 @@ export class AuthService {
   }
 }
 
-export const localUsers: newUser[] = [
+export const localUsers = [
   {
     id: 1,
     name: "mohamed eldeeb",

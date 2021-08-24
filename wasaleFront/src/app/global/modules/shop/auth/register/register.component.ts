@@ -105,9 +105,9 @@ export class RegisterComponent implements OnInit {
 
   registration(registerForm) {
    // registerForm user interface
-   /*   this._authService.register(registerForm).subscribe(res=>{
+     this._authService.register({email:'a@a.com',password:'123',userType:'general'}).subscribe(res=>{
       console.log(res);
-    }) */
+    })
   }
 
   passwordMatcher = (control: AbstractControl) => {
