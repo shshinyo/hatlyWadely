@@ -4,15 +4,16 @@ import {
   FormBuilder,
   FormControlName,
   FormGroup,
-  Validators
+  Validators,
 } from "@angular/forms";
 import { Router } from "@angular/router";
-import { fromEvent, Observable, merge } from "rxjs";
-import { debounceTime } from "rxjs/Operators";
+import { fromEvent, Observable } from "rxjs";
 import { AuthService } from "src/app/core/services/auth.service";
+import { ModalService } from "src/app/core/services/modal.service";
 import { Const } from "src/app/shared/utilities/const";
 import { MatchValidator } from "src/app/shared/utilities/customValidators";
 import { GenericValidator } from "src/app/shared/utilities/genericValidator";
+import { User } from "src/app/shared/utilities/interfaces.interface";
 
 @Component({
   selector: "app-register",
@@ -21,6 +22,7 @@ import { GenericValidator } from "src/app/shared/utilities/genericValidator";
 })
 export class RegisterComponent implements OnInit {
   hidePass = true;
+  preloader = false;
   @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
 
   form: FormGroup;
@@ -33,7 +35,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _modal: ModalService
   ) {
     this._registration();
 
@@ -48,13 +51,13 @@ export class RegisterComponent implements OnInit {
     this.validationMessages = {
       firstName: {
         required: "هذا الحقل مطلوب",
-        minLength : `يجب الا يقل الاسم عن ${Const.Name.MinLength} احرف` ,
-        maxLength : `يجب الا يزيد الاسم عن ${Const.Name.MaxLength} احرف`
+        minLength: `يجب الا يقل الاسم عن ${Const.Name.MinLength} احرف`,
+        maxLength: `يجب الا يزيد الاسم عن ${Const.Name.MaxLength} احرف`,
       },
       lastName: {
         required: "هذا الحقل مطلوب",
-        minLength : `احرف ${Const.Name.MinLength} يجب الا يقل الاسم عن` ,
-        maxLength : `احرف ${Const.Name.MaxLength} يجب الا يزيد الاسم عن`
+        minLength: `احرف ${Const.Name.MinLength} يجب الا يقل الاسم عن`,
+        maxLength: `احرف ${Const.Name.MaxLength} يجب الا يزيد الاسم عن`,
       },
       phone: {
         required: "من فضلك ادخل رقم الهاتف المحمول",
@@ -76,11 +79,11 @@ export class RegisterComponent implements OnInit {
       },
       password: {
         required: "ادخل كلمة السر",
-        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`
+        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`,
       },
       confirmPassword: {
         required: "اعادة كتابة كلمة السر ",
-        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`
+        MinLength: `ارقام او حروف ${Const.Password.MinLength} يجب الا تقل كلمه السر عن`,
       },
       type: {
         required: "يجب اختيار نوع من المعروض امامك",
@@ -96,18 +99,31 @@ export class RegisterComponent implements OnInit {
 
     // Merge the blur event observable with the valueChanges observable
     // so we only need to subscribe once.
-    merge(this.form.valueChanges, ...controlBlurs)
-      .pipe(debounceTime(300))
-      .subscribe((value) => {
-        this.displayErrorMessage = this.genericValidator.processMessages(this.form);
-      });
+    // merge(this.form.valueChanges, ...controlBlurs)
+    //   .pipe(debounceTime(300))
+    //   .subscribe((value) => {
+    //     this.displayErrorMessage = this.genericValidator.processMessages(this.form);
+    //   });
   }
 
-  registration(registerForm) {
-   // registerForm user interface
-   /*   this._authService.register(registerForm).subscribe(res=>{
-      console.log(res);
-    }) */
+  registration(form: FormGroup) {
+    if (!form) {
+      return;
+    }
+    const command: User = {
+      username: `${form.value.name.firstName} ${form.value.name.lastName}`,
+      email: form.value._email.confirmEmail,
+      address: form.value.location,
+      phone: form.value.phoneNumber,
+      userType: form.value.role,
+      password: form.value.passwordGroup.confirmPassword,
+    };
+    this._authService.register(command).subscribe({
+      next: () => {
+        this._modal.snackbar(`تم إنشاء حساب باسم ${command.username}`, "success");
+        this._router.navigateByUrl("/shop/login");
+      },
+    });
   }
 
   passwordMatcher = (control: AbstractControl) => {

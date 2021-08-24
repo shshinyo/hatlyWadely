@@ -1,42 +1,50 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, Subject, throwError } from "rxjs";
-import { catchError } from "rxjs/Operators";
+import { catchError, map } from "rxjs/Operators";
+import { User } from "src/app/shared/utilities/interfaces.interface";
 
 import { environment } from "src/environments/environment";
+
 @Injectable({
   providedIn: "root",
 })
 export class AuthService {
   private _url = `${environment.api_url}api/users`;
+  private readonly AUTH_TOKEN = "user_token";
+
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };
 
   currentUser;
-  redirectUrl;
-
-  errorMessageSubject = new Subject<string>();
 
   get isLoggedIn(): boolean {
-    return !!window.localStorage.getItem("user");
+    return !!window.localStorage.getItem(this.AUTH_TOKEN);
   }
+
   constructor(private _http: HttpClient) {}
 
-  login(user) {
-    return this._http
-      .post(`${this._url}/login`, user, this.httpOptions)
-      .pipe(catchError(this._handleError));
-  }
-  register(newUser) {
+  register(newUser: User) {
     return this._http
       .post(`${this._url}/newUser`, newUser, this.httpOptions)
       .pipe(catchError(this._handleError));
   }
 
+  login(user: User) {
+    return this._http.post(`${this._url}/login`, user).pipe(
+      map((response: any) => {
+        if (response.result.succeeded) {
+          localStorage.setItem(this.AUTH_TOKEN, response.token);
+        }
+      }),
+      catchError(this._handleError)
+    );
+  }
+
   logOut(): void {
     this.currentUser = null;
-    window.localStorage.removeItem("user");
+    window.localStorage.removeItem(this.AUTH_TOKEN);
   }
 
   private _handleError(err: any): Observable<never> {

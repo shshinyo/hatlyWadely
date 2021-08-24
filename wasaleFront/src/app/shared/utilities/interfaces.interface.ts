@@ -1,10 +1,16 @@
 export interface User {
-  id?: number;
   name?: string;
+  username?: string;
+  email?: string;
+  address?: string;
   phone?: string;
-  location?: string;
   userType?: string;
-  version?: number;
+  password?: string;
+  token?: string;
+  profileImg?: string;
+  propertyDesc?: string;
+  confirmed?: any;
+  cart?: [];
 }
 
 export interface Product {
@@ -21,10 +27,10 @@ export interface Product {
 }
 
 export interface Category {
-  _id: string;
-  name: string;
-  id: string;
-  __v: number;
+  _id?: string;
+  name?: string;
+  id?: string;
+  __v?: number;
 }
 
 export interface Image {

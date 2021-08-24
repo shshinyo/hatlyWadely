@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import { AuthService } from "src/app/core/services/auth.service";
 import { ProductsService } from "src/app/core/services/products.service";
 
 import { QueryParams } from "src/app/shared/utilities/query-params";
@@ -18,7 +19,8 @@ export class MainComponent implements OnInit {
     private _router: Router,
     private _route: ActivatedRoute,
     private productsService: ProductsService,
-    private _sideToggleService: SideToggleService
+    private _sideToggleService: SideToggleService,
+    private _authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,10 @@ export class MainComponent implements OnInit {
       },
       queryParamsHandling: "merge",
     });
+  }
+
+  logOut(): void {
+    this._authService.logOut();
   }
 
   onToggle(): void {
