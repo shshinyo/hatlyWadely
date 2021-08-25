@@ -6,8 +6,8 @@ import { ModalService } from "src/app/core/services/modal.service";
 import { Image } from "src/app/shared/utilities/interfaces.interface";
 
 import { Product } from "src/app/shared/utilities/interfaces.interface";
-import { CategoryService } from "src/app/core/services/category.service";
-import { ProductService } from "src/app/core/services/product.service";
+import { CategoryService } from "src/app/core/api/category.service";
+import { ProductService } from "src/app/core/api/product.service";
 
 @Component({
   selector: "app-my-products",

@@ -8,12 +8,12 @@ import {
 } from "@angular/forms";
 import { Router } from "@angular/router";
 import { fromEvent, Observable } from "rxjs";
-import { AuthService } from "src/app/core/services/auth.service";
 import { ModalService } from "src/app/core/services/modal.service";
 import { Const } from "src/app/shared/utilities/const";
 import { MatchValidator } from "src/app/shared/utilities/customValidators";
 import { GenericValidator } from "src/app/shared/utilities/genericValidator";
 import { User } from "src/app/shared/utilities/interfaces.interface";
+import { IdentityManager } from "../identity-manager.service";
 
 @Component({
   selector: "app-register",
@@ -35,8 +35,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router,
-    private _authService: AuthService,
-    private _modal: ModalService
+    private _modal: ModalService,
+    private readonly _identityManager: IdentityManager
   ) {
     this._registration();
 
@@ -115,10 +115,10 @@ export class RegisterComponent implements OnInit {
       email: form.value._email.confirmEmail,
       address: form.value.location,
       phone: form.value.phoneNumber,
-      userType: form.value.role,
+      userType: form.value.userType,
       password: form.value.passwordGroup.confirmPassword,
     };
-    this._authService.register(command).subscribe({
+    this._identityManager.register(command).subscribe({
       next: () => {
         this._modal.snackbar(`تم إنشاء حساب باسم ${command.username}`, "success");
         this._router.navigateByUrl("/shop/login");
@@ -188,7 +188,7 @@ export class RegisterComponent implements OnInit {
         },
         { validators: MatchValidator("password", "confirmPassword") }
       ),
-      role: ["", [Validators.required]],
+      userType: ["", [Validators.required]],
     });
   }
 }

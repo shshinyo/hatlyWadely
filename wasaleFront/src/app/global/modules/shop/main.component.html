@@ -30,9 +30,9 @@
       />
     </span>
 
-    <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
+    <!-- <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
       <mat-icon>perm_identity</mat-icon>
-    </a>
+    </a> -->
     <a fxHide.gt-xs fxLayoutAlign="center center" routerLink="cart">
       <mat-icon>shopping_cart</mat-icon>
     </a>
@@ -47,17 +47,23 @@
       [matMenuTriggerFor]="bMenu"
     >
       <mat-icon>perm_identity</mat-icon>
-      تسجيل الدخول
+      {{ isAuthenticated ? user.username : "تسجيل الدخول" }}
       <mat-icon>expand_more</mat-icon>
     </button>
     <mat-menu class="menu" #bMenu="matMenu">
-      <div class="m-t-b-8" fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+      <div
+        *ngIf="!isAuthenticated"
+        class="m-t-b-8"
+        fxFlex
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+      >
         <button fxFlex="80" mat-raised-button color="primary" routerLink="/shop/login">
           تسجيل الدخول
         </button>
       </div>
 
-      <hr class="hr" />
+      <hr *ngIf="!isAuthenticated" class="hr" />
       <button
         mat-menu-item
         fxLayout="row"
@@ -77,8 +83,9 @@
         المنتجات المحفوظة
       </button>
 
-      <hr class="hr" />
+      <hr *ngIf="isAuthenticated" class="hr" />
       <button
+        *ngIf="isAuthenticated"
         mat-menu-item
         fxLayout="row"
         fxLayoutAlign="start center"

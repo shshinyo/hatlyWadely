@@ -16,6 +16,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { CarouselModule } from "primeng/carousel";
 import { GalleriaModule } from "primeng/galleria";
 import { OverlayPanelModule } from "primeng/overlaypanel";
+import {SkeletonModule} from 'primeng/skeleton';
+
 
 @NgModule({
   exports: [
@@ -35,7 +37,8 @@ import { OverlayPanelModule } from "primeng/overlaypanel";
     HttpClientModule,
     CarouselModule,
     GalleriaModule,
-    OverlayPanelModule
+    OverlayPanelModule,
+    SkeletonModule
   ],
 })
 export class PrimeNgModule {}

@@ -1,6 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
-import { AuthService } from "src/app/core/services/auth.service";
+import { tap } from "rxjs/Operators";
+import { ProductsService } from "src/app/core/services/products.service";
+import { Category } from "src/app/shared/utilities/shop.interfaces";
+import { IdentityManager } from "../../modules/shop/auth/identity-manager.service";
+import { User } from "../../modules/shop/auth/models/user";
 export interface Tap {
   title: string;
   router: string;
@@ -14,19 +18,10 @@ export interface Tap {
 })
 export class SideNavComponent implements OnInit {
   @Output() SidenavClose = new EventEmitter();
-  // user is logged in
-  get loggedIn(): boolean {
-    return this.authService.isLoggedIn;
-  }
-  // get user name for avatar
-  get userName(): string {
-    if (this.authService.isLoggedIn) {
-      const user = window.localStorage.getItem("user");
-      const name = JSON.parse(user);
-      return name.name;
-    }
-    return "";
-  }
+  categories: Category[];
+
+  user: User;
+  isAuthenticated: boolean = false;
 
   profileTaps: Array<Tap> = [
     {
@@ -127,17 +122,35 @@ export class SideNavComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private readonly _identityManager: IdentityManager,
+    private _productsService: ProductsService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._productsService.getAllCategories$.subscribe((res) => {
+      this.categories = res.categories;
+    });
+
+    this._identityManager.user$
+      .pipe(tap((user) => (this.isAuthenticated = !!user)))
+      .subscribe({
+        next: (user) => (this.user = user),
+      });
+  }
 
   onSidenavClose() {
     this.SidenavClose.emit();
   }
 
-  logOut(): void {
-    this.authService.logOut();
-    this.router.navigateByUrl("/shop");
+  logInOut(): void {
+    if (this.isAuthenticated) {
+      this._identityManager.signOut();
+      this.router.navigateByUrl("/shop");
+    } else {
+      this.router.navigateByUrl("/shop/login");
+    }
     this.SidenavClose.emit();
   }
 }

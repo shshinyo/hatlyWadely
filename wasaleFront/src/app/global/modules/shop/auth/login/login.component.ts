@@ -1,11 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { AuthService } from "src/app/core/services/auth.service";
 import { ModalService } from "src/app/core/services/modal.service";
 
-import { Const } from "src/app/shared/utilities/const";
-import { User } from "src/app/shared/utilities/interfaces.interface";
+import { IdentityManager } from "../identity-manager.service";
+import { User } from "../models/user";
 
 @Component({
   selector: "app-login",
@@ -19,7 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router,
-    private _authService: AuthService,
+    private readonly _identityManager: IdentityManager,
     private _modal: ModalService
   ) {
     this._login();
@@ -27,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  login(form: FormGroup): void {
+  signIn(form: FormGroup): void {
     if (!form) {
       return;
     }
@@ -35,10 +34,11 @@ export class LoginComponent implements OnInit {
       email: form.value.email,
       password: form.value.password,
     };
-    console.log("🚀 ~ file: login.component.ts ~ line 35 ~ LoginComponent ~ login ~ command", command)
-    this._authService.login(command).subscribe({
-      next: () => {
-        this._modal.snackbar("تم تسجيل الدخول بنجاح", "success");
+
+    this._identityManager.signIn(command).subscribe({
+      next: (user: User) => {
+        // handel router navigation here based on user TYPE
+        this._modal.snackbar("تم تسجيل الدخول بنجاح");
       },
     });
   }

@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription, zip } from "rxjs";
 import { filter, find, map, mergeMap, tap } from "rxjs/Operators";
-import { ProductService } from "src/app/core/services/product.service";
+import { ProductService } from "src/app/core/api/product.service";
 import { ProductsService } from "src/app/core/services/products.service";
 import { Product } from "src/app/shared/utilities/interfaces.interface";
 

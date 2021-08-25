@@ -17,9 +17,9 @@ import {
   map,
   pairwise,
   share,
+  tap,
   throttleTime,
 } from "rxjs/Operators";
-import { AuthService } from "src/app/core/services/auth.service";
 
 enum VisibilityState {
   Visible = "visible",
@@ -90,25 +90,8 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  // user is logged in
-  get loggedIn(): boolean {
-    return this.authService.isLoggedIn;
-  }
 
-  // get user name
-  get userName(): string {
-    if (this.authService.isLoggedIn) {
-      const user = window.localStorage.getItem("user");
-      const name = JSON.parse(user);
-      return name.name;
-    }
-    return "";
-  }
-
-  // account_circle
-  constructor(private router: Router, private authService: AuthService) {
-    console.log(this.loggedIn);
-  }
+  constructor(private router: Router) {}
   ngOnInit(): void {}
 
   @HostBinding("@toggle")
@@ -133,13 +116,14 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
     scrollUp$.subscribe(() => (this.isVisible = true));
     scrollDown.subscribe(() => (this.isVisible = false));
   }
+
   onToggleSidenav(): void {
     this.sidenavToggle.emit();
     this.sideOpen = !this.sideOpen;
   }
 
   logOut(): void {
-    this.authService.logOut();
-    this.router.navigateByUrl("/welcome");
+    // this._authService.logOut();
+    this.router.navigateByUrl("/shop");
   }
 }

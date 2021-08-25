@@ -102,54 +102,9 @@
   </div>
 
   <hr class="hr-1" />
-  <div fxLayoutAlign="center center">
-    <button class="button-2" mat-button style="color: #f68b1e" (click)="logOut()">
-      تسجيل الخروج
+  <div fxLayoutAlign="center center" class="m-b-8">
+    <button class="button-2" mat-button style="color: #f68b1e" (click)="logInOut()">
+      {{ isAuthenticated ? "تسجيل الخروج" : "تسجيل الدخول" }}
     </button>
   </div>
 </mat-nav-list>
-
-<!--
-
-  <div
-    *ngIf="loggedIn"
-    class="profile-container"
-    fxFlex="100"
-    fxLayout="row wrap"
-    fxLayoutAlign="center center"
-  >
-    <div class="photo" fxLayout="row wrap" fxLayoutAlign="center center">
-      <mat-icon inline="true">account_circle</mat-icon>
-    </div>
-    <h4 fxFlex="100">
-      <span>{{ "welcome" | translate }}</span>
-      {{ userName | casedName }}
-    </h4>
-  </div>
-  <div
-    *ngIf="!loggedIn"
-    class="notLoggedYet"
-    fxFlex="100"
-    fxLayout="row wrap"
-    fxLayoutAlign="center center"
-  >
-    <span>هاتلي</span>
-    <img fxFlex="30" src="../../../assets/images/loginBanner.gif" title="هاتلي و وديلي" />
-    <span>وديلي</span>
-  </div>
-  <a
-    class="link"
-    mat-list-item
-    fxFlex="100"
-    *ngFor="let link of links"
-    routerLink="{{ link.location }}"
-    (click)="onSidenavClose()"
-  >
-    <mat-icon>{{ link.icon }}</mat-icon>
-    <span class="nav-caption">{{ link.disc }}</span>
-  </a>
-  <a *ngIf="loggedIn" class="logOut" fxFlex="100" fxLayout="row" (click)="logOut()">
-    <mat-icon>logout</mat-icon>
-    <span>تسجيل الخروج</span>
-  </a>
- -->

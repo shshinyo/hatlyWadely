@@ -43,8 +43,6 @@ export class CategoryService {
       .pipe(catchError(this._handleError));
   }
 
-
-
   private _handleError(err: any): Observable<never> {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {

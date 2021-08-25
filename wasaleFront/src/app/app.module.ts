@@ -1,6 +1,4 @@
 import { ToastrModule } from "ngx-toastr";
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClient } from "@angular/common/http";
@@ -19,11 +17,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    SharedModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
     CoreModule,
+    AppRoutingModule,
+    SharedModule,
     GlobalModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
@@ -34,7 +30,6 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

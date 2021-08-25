@@ -1,10 +1,12 @@
+export type UserType = "Admin" | "General" | "Client" | "Both" | "Pilot";
+
 export interface User {
   name?: string;
   username?: string;
   email?: string;
   address?: string;
   phone?: string;
-  userType?: string;
+  userType?: UserType;
   password?: string;
   token?: string;
   profileImg?: string;

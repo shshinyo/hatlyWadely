@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import { Router } from "@angular/router";
-import { AuthService } from "src/app/core/services/auth.service";
 @Component({
   selector: "app-welcome-page",
   templateUrl: "./welcome-page.component.html",
@@ -25,11 +24,7 @@ export class WelcomePageComponent implements OnInit {
     { txt: "أدخل بيانات المرسل والمستقبل", num: "4" },
   ];
 
-  // is logged in
-  get isLoggedIn() {
-    return this.authService.isLoggedIn;
-  }
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     window.addEventListener("scroll", this.scroll.bind(this), true);

@@ -56,17 +56,14 @@
     fxLayoutAlign="center center"
     fxFlex="15"
     fxFlex.md="30"
-    fxFlex.lt-md="20"
-    fxFlex.sm="20"
-    fxFlex.lt-sm="35"
+
     fxShow.xl
     fxShow.lt-xl
     fxHide.sm
     fxHide.lt-sm
   >
-    <button class="avatar" *ngIf="loggedIn" mat-flat-button [matMenuTriggerFor]="menu">
+    <button class="avatar"  mat-flat-button [matMenuTriggerFor]="menu">
       <mat-icon>expand_more</mat-icon>
-      {{ userName | casedName }}
       <p-avatar
         styleClass="p-mr-2"
         [style]="{
@@ -76,10 +73,9 @@
         }"
         size="large"
         shape="circle"
-        >{{ userName | symbolName }}
+      >
       </p-avatar>
     </button>
-    <!--  -->
     <mat-menu #menu="matMenu">
       <button mat-menu-item fxFlex fxLayout="row " fxLayoutAlign="center center">
         <span fxFlex="80">تعديل الملف</span>
@@ -97,8 +93,7 @@
       </button>
     </mat-menu>
   </div>
-  <!--  -->
-  <!-- Title  -->
+
   <div
     class="title"
     fxFlex
