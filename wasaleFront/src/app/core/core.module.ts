@@ -1,11 +1,25 @@
-import { NgModule, Optional, SkipSelf } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { ModuleWithProviders, NgModule, Optional, SkipSelf } from "@angular/core";
 
 import { EnsureModuleLoadedOnceGuard } from "./loaded-once.guard";
+import { AuthTokenService } from "../global/modules/shop/auth/auth-token.service";
+import { LocalStorageService } from "./services/local-storage.service";
+import { ModalService } from "./services/modal.service";
+import { IdentityManager } from "../global/modules/shop/auth/identity-manager.service";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
+  exports: [HttpClientModule],
+  providers: [
+    // ...HttpInterceptorsProviders,
+    LocalStorageService,
+    ModalService,
+    // LoggerService,
+    AuthTokenService,
+    IdentityManager,
+  ],
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {
   // Ensure that CoreModule is only loaded into AppModule

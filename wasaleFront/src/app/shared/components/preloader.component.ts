@@ -3,101 +3,71 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-preloader",
   template: `
-    <div class="sk-chase">
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
-      <div class="sk-chase-dot"></div>
+    <div class="loading">
+      <svg width="16px" height="12px">
+        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+      </svg>
     </div>
   `,
   styles: [
     `
       /*preloader for components*/
-      .sk-chase {
-        width: 40px;
-        height: 40px;
-        position: relative;
-        animation: sk-chase 2.5s infinite linear both;
-      }
 
-      .sk-chase-dot {
-        width: 100%;
-        height: 100%;
+      body {
+        background: #27272b;
+      }
+      .loading {
         position: absolute;
-        left: 0;
-        top: 0;
-        animation: sk-chase-dot 2s infinite ease-in-out both;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
       }
-
-      .sk-chase-dot:before {
-        content: "";
-        display: block;
-        width: 30%;
-        height: 30%;
-        background-color: #f68b1e;
-        border-radius: 100%;
-        animation: sk-chase-dot-before 2s infinite ease-in-out both;
+      .loading svg polyline {
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
-
-      .sk-chase-dot:nth-child(1) {
-        animation-delay: -1.1s;
+      .loading svg polyline#back {
+        stroke: rgba(255, 165, 0, 0.3);
       }
-      .sk-chase-dot:nth-child(2) {
-        animation-delay: -1s;
+      .loading svg polyline#front {
+        stroke: #ffa500;
+        stroke-dasharray: 12, 36;
+        stroke-dashoffset: 48;
+        animation: dash 1s linear infinite;
       }
-      .sk-chase-dot:nth-child(3) {
-        animation-delay: -0.9s;
-      }
-      .sk-chase-dot:nth-child(4) {
-        animation-delay: -0.8s;
-      }
-      .sk-chase-dot:nth-child(5) {
-        animation-delay: -0.7s;
-      }
-      .sk-chase-dot:nth-child(6) {
-        animation-delay: -0.6s;
-      }
-      .sk-chase-dot:nth-child(1):before {
-        animation-delay: -1.1s;
-      }
-      .sk-chase-dot:nth-child(2):before {
-        animation-delay: -1s;
-      }
-      .sk-chase-dot:nth-child(3):before {
-        animation-delay: -0.9s;
-      }
-      .sk-chase-dot:nth-child(4):before {
-        animation-delay: -0.8s;
-      }
-      .sk-chase-dot:nth-child(5):before {
-        animation-delay: -0.7s;
-      }
-      .sk-chase-dot:nth-child(6):before {
-        animation-delay: -0.6s;
-      }
-
-      @keyframes sk-chase {
-        100% {
-          transform: rotate(360deg);
+      @-moz-keyframes dash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
         }
       }
-
-      @keyframes sk-chase-dot {
-        80%,
-        100% {
-          transform: rotate(360deg);
+      @-webkit-keyframes dash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
         }
       }
-
-      @keyframes sk-chase-dot-before {
-        50% {
-          transform: scale(0.4);
+      @-o-keyframes dash {
+        62.5% {
+          opacity: 0;
         }
-        100%,
-        0% {
-          transform: scale(1);
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes dash {
+        62.5% {
+          opacity: 0;
+        }
+        to {
+          stroke-dashoffset: 0;
         }
       }
     `,

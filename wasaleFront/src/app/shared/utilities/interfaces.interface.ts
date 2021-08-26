@@ -1,10 +1,18 @@
+export type UserType = "Admin" | "General" | "Client" | "Both" | "Pilot";
+
 export interface User {
-  id?: number;
   name?: string;
+  username?: string;
+  email?: string;
+  address?: string;
   phone?: string;
-  location?: string;
-  userType?: string;
-  version?: number;
+  userType?: UserType;
+  password?: string;
+  token?: string;
+  profileImg?: string;
+  propertyDesc?: string;
+  confirmed?: any;
+  cart?: [];
 }
 
 export interface Product {

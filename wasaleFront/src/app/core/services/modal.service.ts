@@ -24,7 +24,7 @@ export class ModalService {
     private readonly _dialog: MatDialog
   ) {}
 
-  snackbar(message: string, variant?: SnackBarVariant, duration = 10000): void {
+  snackbar(message: string, variant?: SnackBarVariant, duration = 5000): void {
     this._snackBar.open(message, "إغلاق", {
       direction: "rtl",
       duration,

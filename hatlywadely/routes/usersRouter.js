@@ -1,10 +1,10 @@
 const express = require('express');
 const userController = require('../controllers/usersControllers');
-var passport = require('passport');
+const authUtil = require('../core/auth');
 
 const router = express.Router();
 router.post('/newUser',userController.createuser);
-router.get('/getUsers',userController.getUsers);
+router.get('/getUsers',authUtil.extend,userController.getUsers);
 router.post('/addToCart/:productId/:id',userController.addProductToCart);
 router.post('/login',userController.login);
 

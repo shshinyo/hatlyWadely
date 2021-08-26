@@ -2,10 +2,6 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-
-import { LoginComponent } from "./auth/login/login.component";
-import { RegisterComponent } from "./auth/register/register.component";
-
 import { MainComponent } from "./main.component";
 import { CategoryComponent } from "./category/category.component";
 import { ProductsComponent } from "./products/products.component";
@@ -22,6 +18,12 @@ import { MyProductsComponent } from "./profile/my-products/my-products.component
 import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
 import { CartComponent } from "./cart/cart.component";
 import { DashBoardComponent } from "./dash-board/dash-board.component";
+// Authors
+import { LoginComponent } from "./auth/login/login.component";
+import { RegisterComponent } from "./auth/register/register.component";
+// Guards
+import { LoginGuard } from "./auth/guards/login.guard";
+import { ProfileGuard } from "./auth/guards/profile.guard";
 
 const routes: Routes = [
   {
@@ -36,6 +38,7 @@ const routes: Routes = [
       {
         path: "profile",
         component: ProfileComponent,
+        canActivate: [ProfileGuard],
         children: [
           {
             path: "my-products",
@@ -85,10 +88,12 @@ const routes: Routes = [
       {
         path: "login",
         component: LoginComponent,
+        canActivate: [LoginGuard],
       },
       {
         path: "register",
         component: RegisterComponent,
+        canActivate: [LoginGuard],
       },
       {
         path: "search/:productFilter",

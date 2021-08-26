@@ -242,6 +242,24 @@ a:active {
   }
 }
 
+// .skelton {
+//   opacity: 1;
+//   border-radius: 3px;
+//   animation: skelton-loading 1s linear infinite alternate;
+// }
+// .skelton:last-child {
+//   width: 70%;
+// }
+
+// @keyframes skelton-loading {
+//   0% {
+//     background-color: hsla(199, 20%, 70%, 0.218);
+//   }
+//   100% {
+//     background-color: hsl(200, 20%, 95%, 0.218);
+//   }
+// }
+
 @media screen and (max-width: 600px) {
   .button1 {
     height: 35px !important;

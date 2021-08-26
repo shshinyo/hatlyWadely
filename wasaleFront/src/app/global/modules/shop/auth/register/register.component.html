@@ -3,7 +3,7 @@
 <div class="form-container" fxLayout="row wrap" fxLayoutAlign="center start">
   <form
     [formGroup]="form"
-    (ngSubmit)="registration(registration(form))"
+    (ngSubmit)="registration(form)"
     novalidate
     class="details-form"
     fxFlex="72"
@@ -25,7 +25,8 @@
       <mat-form-field fxFlex="48" fxFlex.xs="100" appearance="fill">
         <mat-label>الاسم الاول</mat-label>
         <input formControlName="firstName" matInput autofocus />
-        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix >done_all</mat-icon
+        <mat-icon class="right" *ngIf="form.get('name').get('firstName').valid" matSuffix
+          >done_all</mat-icon
         >
         <mat-error>{{ displayErrorMessage.firstName }}</mat-error>
       </mat-form-field>
@@ -166,17 +167,17 @@
       fxLayout="row wrap"
       fxLayoutAlign="start center"
       fxLayoutAlign.xs="center center"
-      formControlName="role"
+      formControlName="userType"
       style="min-height: 40px"
     >
       <h5 fxFlex="100">من انت ؟</h5>
-      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="1" color="primary"
-        >بائع</mat-radio-button
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="client" color="primary"
+        >تاجر</mat-radio-button
       >
-      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="2" color="primary"
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="general" color="primary"
         >مشتري</mat-radio-button
       >
-      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="3" color="primary"
+      <mat-radio-button fxFlex="20" fxFlex.xs="30" value="both" color="primary"
         >كلاهما</mat-radio-button
       >
       <!-- <mat-error fxFlex="100" >كلمة السر غير متطابقة !</mat-error> -->
@@ -188,7 +189,9 @@
       fxLayoutAlign="center center"
       style="margin-top: 20px"
     >
-      <button fxFlex="70" mat-raised-button color="primary">إنشاء حساب</button>
+      <button fxFlex="70" mat-raised-button color="primary" fxLayoutAlign="center center">
+        إنشاء حساب
+      </button>
     </div>
     <div
       fxFlex="100"

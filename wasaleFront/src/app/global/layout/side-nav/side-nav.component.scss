@@ -6,9 +6,11 @@ mat-nav-list {
   background-color: #ffffff;
   min-height: 100%;
   overflow-y: scroll;
-  
+
   .header {
     height: 50px;
+    cursor: pointer;
+
     a {
       height: 40px;
       width: 40;

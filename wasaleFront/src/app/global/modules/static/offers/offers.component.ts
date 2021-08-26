@@ -20,7 +20,6 @@ import { ToastrService } from "ngx-toastr";
 import { distinct, filter, map, tap } from "rxjs/Operators";
 import { User } from "src/app/shared/utilities/interfaces.interface";
 import { ModalService } from "src/app/core/services/modal.service";
-import { UsersService } from "src/app/core/services/users.service";
 @Component({
   selector: "app-offers",
   templateUrl: "./offers.component.html",
@@ -44,15 +43,8 @@ export class OffersComponent implements OnInit {
   users: User[];
 
   // well use it directly in HTML as async Pipe
-  allUsers$ = this.userService.getUsers$;
   // scroll to an element
   scrollToElement($element): void {
-    this.userService.getUsers$
-      .pipe(map((users) => this.uniqueUsers(users)))
-      .subscribe((users) => {
-        this.users = users;
-        console.log(users);
-      });
     setTimeout(() => {
       $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }, 200);
@@ -68,7 +60,6 @@ export class OffersComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _router: Router,
-    private userService: UsersService,
     private toastr: ToastrService,
     private _modal: ModalService
   ) {
@@ -79,31 +70,16 @@ export class OffersComponent implements OnInit {
   ngOnInit(): void {}
 
   cancel(): void {
-    this._modal.confirmDialog("هل أنت متأكد من إلغاء العملية ؟!").pipe(filter((confirm) => !!confirm)).subscribe(() => {
-      this._modal.snackbar("تم إلغاء العملية بنجاح", "success")
-      this._router.navigateByUrl("/welcome")
-    });
-
+    this._modal
+      .confirmDialog("هل أنت متأكد من إلغاء العملية ؟!")
+      .pipe(filter((confirm) => !!confirm))
+      .subscribe(() => {
+        this._modal.snackbar("تم إلغاء العملية بنجاح", "success");
+        this._router.navigateByUrl("/welcome");
+      });
   }
 
-  postNew(client: User): void {
-    this.userService.createUser(client).subscribe((res: any) => {
-      if (res.state === true) {
-        this.toastr.success(
-          "سيتم تحويلك الان علي الصفحة الرئيسية",
-          " تم التسجيل بنجاح شكرا لثقتك فى هاتلى ووديلى "
-        );
-        this.register = false;
-        this.registered = true;
-        this.isDirty = false;
-        setTimeout(() => {
-          this._router.navigate(["/welcome"]);
-        }, 2000);
-      } else if (res.state === false) {
-        this.toastr.error(" حدث خطأ أثناء التسجيل ");
-      }
-    });
-  }
+  postNew(client: User): void {}
 
   private uniqueUsers(users) {
     const uniUser: User = {};

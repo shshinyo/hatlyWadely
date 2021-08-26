@@ -20,13 +20,14 @@ import { ConfirmDialogComponent } from "./components/confirm-dialog.component";
 import { SocialMediaFloatingComponent } from "./components/social-media-floating.component";
 import { FooterComponent } from "../global/layout/footer/footer.component";
 import { ItemComponent } from "./components/item/item.component";
-import { StarComponent } from "./star/star.component";
+import { StarComponent } from "./components/star/star.component";
 import { Error404 } from "./components/Error404/error404.component";
 
 import { SubString } from "./pipes/subString.pipe";
 import { SymbolNamePipe } from "./pipes/symbol-name.pipe";
 import { CasedNamePipe } from "./pipes/cased-name.pipe";
 import { PreloaderComponent } from "./components/preloader.component";
+import { SpliceStringPipe } from "./pipes/splice-string.pipe";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -40,7 +41,8 @@ const SHARED_COMPONENTS = [
   Error404,
   PreloaderComponent,
 ];
-const SHARED_PIPES = [SymbolNamePipe, CasedNamePipe, SubString];
+
+const SHARED_PIPES = [SymbolNamePipe, CasedNamePipe, SubString, SpliceStringPipe];
 
 const LOCAL_DIRECTIVES = [];
 

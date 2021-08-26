@@ -56,49 +56,12 @@
     fxLayoutAlign="center center"
     fxFlex="15"
     fxFlex.md="30"
-    fxFlex.lt-md="20"
-    fxFlex.sm="20"
-    fxFlex.lt-sm="35"
     fxShow.xl
     fxShow.lt-xl
     fxHide.sm
     fxHide.lt-sm
-  >
-    <button class="avatar" *ngIf="loggedIn" mat-flat-button [matMenuTriggerFor]="menu">
-      <mat-icon>expand_more</mat-icon>
-      {{ userName | casedName }}
-      <p-avatar
-        styleClass="p-mr-2"
-        [style]="{
-          'background-color': '#ff6e00',
-          'color': '#ffffff',
-          'margin': '0px 10px'
-        }"
-        size="large"
-        shape="circle"
-        >{{ userName | symbolName }}
-      </p-avatar>
-    </button>
-    <!--  -->
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item fxFlex fxLayout="row " fxLayoutAlign="center center">
-        <span fxFlex="80">تعديل الملف</span>
-        <mat-icon fxFlex="10">settings</mat-icon>
-      </button>
-      <button
-        mat-menu-item
-        fxFlex
-        fxLayout="row "
-        fxLayoutAlign="center center"
-        (click)="logOut()"
-      >
-        <span fxFlex="80">تسجيل الخروج</span>
-        <mat-icon fxFlex="10">logout</mat-icon>
-      </button>
-    </mat-menu>
-  </div>
-  <!--  -->
-  <!-- Title  -->
+  ></div>
+
   <div
     class="title"
     fxFlex

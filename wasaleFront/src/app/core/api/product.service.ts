@@ -30,9 +30,8 @@ export class ProductService {
       .get<Product>(`${this._url}/product/${id}`)
       .pipe(catchError(this._handleError));
   }
-  UploadPhotos(body){
-    return this._http.post(`${this._url}/uploadProductImage`, body)
-    
+  UploadPhotos(body) {
+    return this._http.post(`${this._url}/uploadProductImage`, body);
   }
 
   // edit product api
