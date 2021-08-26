@@ -51,6 +51,11 @@ export class ProfileComponent implements OnInit {
       router: "/shop/profile/change-pass",
       icon: "security",
     },
+    {
+      title: "لوحه التحكم",
+      router: "/shop/profile/dash",
+      icon: "settings",
+    },
   ];
 
   constructor(private _router: Router) {}

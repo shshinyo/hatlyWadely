@@ -32,7 +32,7 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   //  hide and show on hover (filter & carouser)
   responsiveOptions: any[];
 
-  allCategories$: Observable<Category> = this._categoryService.getAllCategories$;
+  allCategories$: Observable<Category[]> = this._categoryService.getAllCategories$;
   
   carouselOffers$ = this.souqSer.Offers$;
   products: any;

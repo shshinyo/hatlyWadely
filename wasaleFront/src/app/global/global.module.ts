@@ -12,7 +12,6 @@ import { StaticsModule } from "./modules/static/statics.module";
   imports: [
     CommonModule,
     GlobalRoutingModule,
-
     SharedModule,
     StaticsModule,
     DragDropModule,

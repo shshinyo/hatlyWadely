@@ -19,8 +19,9 @@ export class CategoryService {
 
   // getting all categories ( declarative abroach )
   getAllCategories$ = this._http
-    .get<Category>(this._url)
+    .get<Category[]>(this._url)
     .pipe(catchError(this._handleError));
+
 
   // posting new category
   addCategory(category: Category): Observable<Category> {

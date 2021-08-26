@@ -1,0 +1,47 @@
+<div class="title-1" fxLayout="row" fxLayoutAlign="start center">لوحة التحكم</div>
+<hr class="hr" />
+
+<div>
+    <form
+    [formGroup]="form"
+    novalidate
+    class="details-form"
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    fxLayout.xs="column"
+    fxLayoutAlign.xs="start center"
+    fxLayoutGap="4%"
+    dir="rtl"
+  >
+  <mat-form-field fxFlex.gt-xs="30" class="m-r-5">
+    <mat-label>اسم العميل</mat-label>
+    <input formControlName="name" type="text" matInput />
+    <mat-error>{{ requiredError }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex.gt-xs="30">
+    <mat-label>السعر</mat-label>
+    <input formControlName="v" type="number" matInput />
+    <mat-error>{{ requiredError }}</mat-error>
+  </mat-form-field>
+
+  <button type="submit" [disabled]="form.invalid"
+  mat-button color="primary" (click)="onSaveOrder(form)" class="editRemoveBtn">اضافة</button>
+</form>
+<hr class="hr" />
+
+<div class="m-t-5 m-r-5" >
+  <div fxLayout="row" fxLayoutGap="1%" >
+    <h3 fxFlex="20">client Name</h3>
+    <h3 fxFlex="14">client _v</h3>
+    <h3 fxFlex="27" fxLayoutAlign="center">client Id</h3>
+  </div>
+<div *ngFor="let category of allCategories" fxLayout="row wrap" fxLayoutAlign="start center"  fxLayoutGap="1%" >
+  <p fxFlex="20" fxLayoutAlign="center">{{category.name}}</p>
+  <p  fxLayoutAlign="center" fxFlex="14">{{category.__v}}</p>
+  <p  fxLayoutAlign="center" fxFlex="23">{{category._id}}</p>
+  <p fxFlex="10" fxLayoutAlign="center"> <button mat-button color="primary" (click)="onRemoveClient(category)" class="editRemoveBtn">ازالة</button></p>
+ <p fxFlex="7" fxLayoutAlign="center"><button mat-button color="primary" (click)="onEdit(category )" class="editRemoveBtn">تعديل</button></p>
+<hr>
+</div>
+  

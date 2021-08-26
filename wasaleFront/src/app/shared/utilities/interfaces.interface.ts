@@ -21,10 +21,10 @@ export interface Product {
 }
 
 export interface Category {
-  _id: string;
-  name: string;
-  id: string;
-  __v: number;
+  _id?: string;
+  name?: string;
+  id?: string;
+  __v?: number;
 }
 
 export interface Image {

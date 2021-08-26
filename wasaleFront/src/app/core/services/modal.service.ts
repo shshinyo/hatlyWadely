@@ -3,6 +3,9 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable } from "rxjs";
 import { MatDialog } from "@angular/material/dialog";
 import { ConfirmDialogComponent } from "../../shared/components/confirm-dialog.component";
+import { Category } from "src/app/shared/utilities/interfaces.interface";
+import { DashModalComponent } from "src/app/global/modules/shop/dash-board/dash-modal.component";
+import { FormGroup } from "@angular/forms";
 
 export type SnackBarVariant = "normal" | "success" | "error";
 
@@ -39,4 +42,6 @@ export class ModalService {
 
     return ref.afterClosed();
   }
+
+  
 }

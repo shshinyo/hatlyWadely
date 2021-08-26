@@ -2,7 +2,6 @@ import { ProductDetailComponent } from "./product-detail/product-detail.componen
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { DeactivateGuard } from "src/app/core/guards/deactivate.guard";
 
 import { LoginComponent } from "./auth/login/login.component";
 import { RegisterComponent } from "./auth/register/register.component";
@@ -22,6 +21,7 @@ import { ResetPassComponent } from "./profile/reset-pass/reset-pass.component";
 import { MyProductsComponent } from "./profile/my-products/my-products.component";
 import { ShopInfoComponent } from "./products/shop-info/shop-info.component";
 import { CartComponent } from "./cart/cart.component";
+import { DashBoardComponent } from "./dash-board/dash-board.component";
 
 const routes: Routes = [
   {
@@ -40,6 +40,11 @@ const routes: Routes = [
           {
             path: "my-products",
             component: MyProductsComponent,
+            // canDeactivate: [DeactivateGuard],
+          },
+          {
+            path: "dash",
+            component: DashBoardComponent,
             // canDeactivate: [DeactivateGuard],
           },
           {
@@ -129,5 +134,6 @@ export class ShopRoutingModule {
     LoginComponent,
     RegisterComponent,
     CartComponent,
+    DashBoardComponent
   ];
 }

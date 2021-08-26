@@ -72,6 +72,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       },
     });
   }
+  
   ngAfterViewInit(): void {}
 
   // If there is Id then Edit else add new address
@@ -168,7 +169,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       .subscribe((_) => {
         this._productService.deleteProduct(product._id).subscribe({
           next: () => {
-            this._modal.snackbar(`تم حذف النتج (${product.name}) بنجاح`, "success");
+            this._modal.snackbar(`تم حذف المنتج (${product.name}) بنجاح`, "success");
           },
           error: (err) => this._modal.snackbar("حدث خطأ اثناء تنفيذ العمليه .", "normal"),
         });
