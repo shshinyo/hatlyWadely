@@ -65,15 +65,13 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this._productService.getCategoryProducts("milk").subscribe({
-        next: (cat) => {
-          this.clientProduct = cat.data;
-        },
+    this._productService.getCategoryProducts("milk").subscribe({
+      next: (cat) => {
+        this.clientProduct = cat.data;
+      },
 
-        complete: () => (this.preloader = false),
-      });
-    }, 200000);
+      complete: () => (this.preloader = false),
+    });
   }
   ngAfterViewInit(): void {}
 
