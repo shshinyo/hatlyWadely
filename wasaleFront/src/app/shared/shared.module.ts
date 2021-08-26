@@ -27,6 +27,7 @@ import { SubString } from "./pipes/subString.pipe";
 import { SymbolNamePipe } from "./pipes/symbol-name.pipe";
 import { CasedNamePipe } from "./pipes/cased-name.pipe";
 import { PreloaderComponent } from "./components/preloader.component";
+import { SpliceStringPipe } from "./pipes/splice-string.pipe";
 
 const LOCAL_COMPONENTS = [];
 const SHARED_COMPONENTS = [
@@ -40,7 +41,8 @@ const SHARED_COMPONENTS = [
   Error404,
   PreloaderComponent,
 ];
-const SHARED_PIPES = [SymbolNamePipe, CasedNamePipe, SubString];
+
+const SHARED_PIPES = [SymbolNamePipe, CasedNamePipe, SubString, SpliceStringPipe];
 
 const LOCAL_DIRECTIVES = [];
 

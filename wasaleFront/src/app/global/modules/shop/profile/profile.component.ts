@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { fade } from "src/app/shared/animations/fade";
-import { Paths } from "src/app/shared/utilities/const";
+
+import { IdentityManager } from "../auth/identity-manager.service";
 
 export interface Tap {
   title: string;
@@ -53,13 +53,17 @@ export class ProfileComponent implements OnInit {
     },
   ];
 
-  constructor(private _router: Router) {}
+  constructor(
+    private _router: Router,
+    private readonly _identityManager: IdentityManager
+  ) {}
 
   ngOnInit(): void {
     this.lang = document.documentElement.lang;
   }
   // Implement logout here
   logOut(): void {
-    this._router.navigateByUrl(Paths.shop);
+    this._identityManager.signOut();
+    this._router.navigateByUrl("/shop");
   }
 }

@@ -25,7 +25,7 @@ export class User {
   isBoth?: boolean;
   isPilot?: boolean;
 
-  constructor(payload: ITokenPayload) {
+  constructor(payload: any) {
     this.id = payload.sub;
     this.email = payload.email;
     this.phoneNumber = payload.phone_number;
@@ -34,11 +34,11 @@ export class User {
       ? [payload.userType as UserType]
       : (payload.userType as UserType[]);
 
-    this.haveRole = !!this.userType && this.userType.length > 0;
-    this.isAdmin = this.haveRole && this.userType.includes("Admin");
-    this.isGeneral = this.haveRole && this.userType.includes("General");
-    this.isClient = this.haveRole && this.userType.includes("Client");
-    this.isBoth = this.haveRole && this.userType.includes("Both");
-    this.isPilot = this.haveRole && this.userType.includes("Pilot");
+    this.haveRole = !!this.userType;
+    this.isAdmin = this.haveRole && this.userType.includes("admin");
+    this.isGeneral = this.haveRole && this.userType.includes("general");
+    this.isClient = this.haveRole && this.userType.includes("client");
+    this.isBoth = this.haveRole && this.userType.includes("both");
+    this.isPilot = this.haveRole && this.userType.includes("pilot");
   }
 }

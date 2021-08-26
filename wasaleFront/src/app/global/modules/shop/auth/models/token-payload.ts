@@ -1,4 +1,4 @@
-export type UserType = "Admin" | "General" | "Client" | "Both" | "Pilot";
+export type UserType = "admin" | "general" | "client" | "both" | "pilot";
 
 export interface ITokenPayload {
   sub?: string;

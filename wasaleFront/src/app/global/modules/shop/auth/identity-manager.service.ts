@@ -31,7 +31,7 @@ export class IdentityManager {
 
   /** Returns current authentication status */
   get isAuthenticated(): boolean {
-    return !!this._tokenSrv.token?.isValid;
+    return !!this._tokenSrv.token;
   }
 
   /** Refresh current user token if it valid. */

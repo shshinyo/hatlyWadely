@@ -57,7 +57,9 @@ $color: #ff6e00;
 .fire {
   filter: url(#wavy);
 }
-
+::ng-deep .mat-menu-content {
+  padding: 0px !important;
+}
 ::ng-deep .menu.mat-menu-panel {
   min-width: 195px;
   direction: rtl !important;

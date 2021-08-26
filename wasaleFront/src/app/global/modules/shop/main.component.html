@@ -46,8 +46,12 @@
       fxLayoutAlign="center center"
       [matMenuTriggerFor]="bMenu"
     >
-      <mat-icon>perm_identity</mat-icon>
-      {{ isAuthenticated ? user.username : "تسجيل الدخول" }}
+      <mat-icon>{{ isAuthenticated ? "how_to_reg" : "perm_identity" }}</mat-icon>
+      {{
+        isAuthenticated
+          ? "مرحبًا، " + (user.username | spliceString: 1 | casedName)
+          : "تسجيل الدخول"
+      }}
       <mat-icon>expand_more</mat-icon>
     </button>
     <mat-menu class="menu" #bMenu="matMenu">
@@ -77,6 +81,15 @@
         mat-menu-item
         fxLayout="row"
         fxLayoutAlign="start center"
+        routerLink="/shop/profile/orders"
+      >
+        <mat-icon>inventory_2</mat-icon>
+        الطلبات
+      </button>
+      <button
+        mat-menu-item
+        fxLayout="row"
+        fxLayoutAlign="start center"
         routerLink="/shop/profile/saved-orders"
       >
         <mat-icon>favorite_border</mat-icon>
@@ -84,16 +97,17 @@
       </button>
 
       <hr *ngIf="isAuthenticated" class="hr" />
-      <button
+      <div
         *ngIf="isAuthenticated"
-        mat-menu-item
-        fxLayout="row"
-        fxLayoutAlign="start center"
-        (click)="logOut()"
+        class="m-t-b-8"
+        fxFlex
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
       >
-        <mat-icon>logout</mat-icon>
-        تسجيل الخروج
-      </button>
+        <button class="button-2" mat-button style="color: #f68b1e" (click)="logOut()">
+          تسجيل الخروج
+        </button>
+      </div>
     </mat-menu>
     <!--  -->
     <button

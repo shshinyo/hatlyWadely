@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
 
     this._identityManager.signIn(command).subscribe({
       next: (user: User) => {
-        // handel router navigation here based on user TYPE
         this._modal.snackbar("تم تسجيل الدخول بنجاح");
+        window.history.back();
       },
     });
   }
