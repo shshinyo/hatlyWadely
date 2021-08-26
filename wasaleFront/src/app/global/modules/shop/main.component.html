@@ -30,9 +30,9 @@
       />
     </span>
 
-    <!-- <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
-      <mat-icon>perm_identity</mat-icon>
-    </a> -->
+    <a fxHide.gt-xs fxLayoutAlign="center center" [matMenuTriggerFor]="bMenu">
+      <mat-icon>{{ isAuthenticated ? "how_to_reg" : "perm_identity" }}</mat-icon>
+    </a>
     <a fxHide.gt-xs fxLayoutAlign="center center" routerLink="cart">
       <mat-icon>shopping_cart</mat-icon>
     </a>
