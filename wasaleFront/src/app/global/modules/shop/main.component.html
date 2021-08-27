@@ -26,26 +26,27 @@
       </div>
 
       <span
-        fxShow.gt-xs
-        fxHide.xs
-        fxLayout="row"
-        fxFlex.xs="65"
-        [ngStyle.lt-md]="{ width: '250px' }"
-        [ngStyle.xs]="{ margin: '10px 0' }"
-      >
-        <input
-          #searchInput
-          pInputText
-          type="text"
-          placeholder="البحث عن المنتجات والعلامات التجارية والاقسام."
-          [value]="search"
-          (keydown.enter)="onSearch(searchInput.value)"
-        />
-      </span>
+      fxShow.gt-xs
+      fxHide.xs
+      fxLayout="row"
+      fxFlex.xs="65"
+      [ngStyle.lt-md]="{ width: '250px' }"
+      [ngStyle.xs]="{ margin: '10px 0' }"
+    >
+      <input
+        #searchInput
+        pInputText
+        type="text"
+        placeholder="البحث عن المنتجات والعلامات التجارية والاقسام."
+        [value]="search"
+        (keydown.enter)="onSearch(searchInput.value)"
+      />
+    </span>
     </div>
     <!-- <a fxHide.gt-xs fxLayoutAlign="center center">
       <mat-icon style="color: #f68b1e">perm_phone_msg</mat-icon>
     </a> -->
+
 
     <div fxHide.gt-xs fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
       <a fxLayoutAlign="center center">

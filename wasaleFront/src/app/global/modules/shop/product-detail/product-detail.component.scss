@@ -1,69 +1,98 @@
-
-.childDiv {
-  background-color: white;
-  text-align: center;
-  margin-left: 50px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-
-}
-#heartIcon {
-  color: orange;
-  margin: 12px;
-  font-size: 21px;
+*:not(mat-icon, .avatar) {
+  font-family: "serif" !important;
 }
 
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-  border-radius: 4px 4px 0 0;
-  padding: .75em .75em 0 .75em;
-  height: 60px;
-  text-align: center;
-}
-.blur {
-  filter: blur(8px);
-}
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
-  height: 14px;
-}
-.p {
-  text-align: right;
-}
-.secondCont {
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 20px;
-
+.main-cont,
+.side {
+  min-height: 65vh;
+  margin-bottom: 50px;
+  .p-photo,
+  .p-details {
+  }
 }
 
-.price {
-  font-size: 18px;
-  margin-top: -35px;
+.add-to-cart-xs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  min-height: 54px;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
 }
 
-.thirdCont{
-  background-color: white;
-  border-radius: 10px;
-  margin-bottom: 20px;
+@media screen and (max-width: 600px) {
+  .main-cont,
+  .side {
+    min-height: 40vh;
+  }
 }
+// .childDiv {
+//   background-color: white;
+//   text-align: center;
+//   margin-left: 50px;
+//   height: auto;
+//   border-radius: 10px;
+//   margin-bottom: 20px;
 
+// }
+// #heartIcon {
+//   color: orange;
+//   margin: 12px;
+//   font-size: 21px;
+// }
 
-.data {
-  background-color: #f5f4f4;
-}
-.subOffer {
-  height: 100%;
-  border-radius: 5px;
-  transition: 0.1s ease-in;
-  margin-bottom: 10px;
-}
-.subOffer:hover,
-.subOffer:checked {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 4px 4px rgb(236, 235, 235);
-  -moz-box-shadow: 0px 0px 4px 4px rgba(212, 212, 212, 1);
-  box-shadow: 0px 0px 4px 4px rgba(212, 212, 212, 1);
-}
-.myOfferPic {
-  height: 160px;
-}
+// ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+//   border-radius: 4px 4px 0 0;
+//   padding: .75em .75em 0 .75em;
+//   height: 60px;
+//   text-align: center;
+// }
+// .blur {
+//   filter: blur(8px);
+// }
+// ::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+//   height: 14px;
+// }
+// .p {
+//   text-align: right;
+// }
+// .secondCont {
+//   background-color: white;
+//   border-radius: 10px;
+//   margin-bottom: 20px;
+
+// }
+
+// .price {
+//   font-size: 18px;
+//   margin-top: -35px;
+// }
+
+// .thirdCont{
+//   background-color: white;
+//   border-radius: 10px;
+//   margin-bottom: 20px;
+// }
+
+// .data {
+//   background-color: #f5f4f4;
+// }
+// .subOffer {
+//   height: 100%;
+//   border-radius: 5px;
+//   transition: 0.1s ease-in;
+//   margin-bottom: 10px;
+// }
+// .subOffer:hover,
+// .subOffer:checked {
+//   cursor: pointer;
+//   -webkit-box-shadow: 0px 0px 4px 4px rgb(236, 235, 235);
+//   -moz-box-shadow: 0px 0px 4px 4px rgba(212, 212, 212, 1);
+//   box-shadow: 0px 0px 4px 4px rgba(212, 212, 212, 1);
+// }
+// .myOfferPic {
+//   height: 160px;
+// }

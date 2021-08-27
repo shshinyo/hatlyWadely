@@ -1,4 +1,56 @@
-<div fxLayout="row wrap"class="cont"fxLayoutAlign="center" fxLayoutGap="10px">
+<br />
+<div
+  class="layout"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayout.lt-md="column"
+  fxLayoutAlign.lt-md="start stretch"
+  fxLayoutGap="15px"
+  dir="rtl"
+>
+  <!-- main container -->
+  <mat-card
+    fxFlex.gt-sm="73"
+    class="main-cont mat-elevation-z1"
+    fxLayout="row wrap"
+    fxLayoutAlign="center start"
+    fxLayoutGap="8px"
+  >
+    <div fxFlex="35" class="p-photo" fxLayout="column" fxLayoutAlign="start stretch">
+      <!-- product photos -->
+    </div>
+    <div fxFlex="64" class="p-details" fxLayout="column" fxLayoutAlign="start stretch">
+      <!-- product details -->
+    </div>
+  </mat-card>
+  <!-- side details -->
+  <mat-card
+    fxFlex.gt-sm="22"
+    class="side mat-elevation-z1"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+  >
+  </mat-card>
+  <mat-card
+    fxShow.lt-md
+    fxHide.gt-sm
+    class="add-to-cart-xs mat-elevation-z1"
+    fxLayoutAlign="center center"
+    fxLayoutGap="15px"
+  >
+  <!-- handel call api -->
+    <a mat-raised-button fxLayoutAlign="center center" href="tel:+201030038605">
+      <mat-icon color="primary">call</mat-icon>
+    </a>
+
+    <button fxFlex="70" mat-raised-button color="primary" fxLayoutAlign="center center">
+      <mat-icon>shopping_cart</mat-icon>
+      إضافة لعربةالتسوق
+    </button>
+  </mat-card>
+</div>
+
+<!-- <div fxLayout="row wrap"class="cont"fxLayoutAlign="center" fxLayoutGap="10px">
   <div
     fxFlex="23"
     class="childDiv mat-elevation-z8 mt-3"
@@ -99,4 +151,4 @@
       <p fxLayoutAlign="start" style="font-size: 22px">{{ product?.detail }}</p>
     </div>
   </div>
-</div>
+</div> -->
