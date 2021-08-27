@@ -1,10 +1,10 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { CategoryService } from "src/app/core/services/category.service";
+import { CategoryService } from "src/app/core/api/category.service";
 import { ModalService } from "src/app/core/services/modal.service";
 import { Category } from "src/app/shared/utilities/interfaces.interface";
-
+  
 @Component({
   selector: "app-dash-modal",
   template: `
@@ -86,7 +86,8 @@ export class DashModalComponent implements OnInit {
 
   onEditOrder() {
     // that means make overwrite second on first
-    this.dialogRef.close({...this.data, ...this.form.value})
+    let newForm = {...this.data, ...this.form.value}
+    this.dialogRef.close(newForm)
     this._modal.snackbar(`تم تعديل الاسم الي ${this.form.value.name} `, "success");
   }
 }

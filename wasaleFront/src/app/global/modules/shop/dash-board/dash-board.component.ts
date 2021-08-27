@@ -2,15 +2,15 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { filter } from "rxjs/Operators";
+import { CategoryService } from "src/app/core/api/category.service";
 
-import { CategoryService } from "src/app/core/services/category.service";
 import { ModalService } from "src/app/core/services/modal.service";
 
 import { Category } from "src/app/shared/utilities/interfaces.interface";
 import { DashModalComponent } from "./dash-modal.component";
 
 @Component({
-  selector: "app-dash-board",
+  selector: "app-dash-board", 
   templateUrl: "./dash-board.component.html",
   styleUrls: ["./dash-board.component.scss"],
 })
@@ -50,7 +50,6 @@ export class DashBoardComponent implements OnInit {
       __v: form.value["v"],
     };
 
-    this.edit = command;
 
     this._categoryService.addCategory(command).subscribe({
       next: () => {
@@ -81,11 +80,11 @@ export class DashBoardComponent implements OnInit {
       })
       .afterClosed()
       .pipe(filter((data) => !!data))
-      .subscribe((x: Category) => {
-        this._categoryService.eidtCategory(x._id, x).subscribe({
+      .subscribe((newCategory: Category) => {
+        this._categoryService.eidtCategory(newCategory._id, newCategory).subscribe({
           next: () => {
-            let index = this.allCategories.findIndex((elem) => elem._id == x._id);
-            this.allCategories[index] = x;
+            let index = this.allCategories.findIndex((elem) => elem._id == newCategory._id);
+            this.allCategories[index] = newCategory;
           },
         });
       });
