@@ -32,12 +32,11 @@ export class AuthTokenService {
   /** Returns the current token from localStorage */
   get token(): any | null {
     const val: authored_user = this._storage.get(AUTHORED_USER);
-    // const val = storage.user.accessToken;
     return !!val ? val : null;
   }
 
   /** Sets token to storage */
-  set(user: any): void {
+  set(user: authored_user): void {
     this._storage.set(AUTHORED_USER, user);
     this._publishStoredToken();
   }

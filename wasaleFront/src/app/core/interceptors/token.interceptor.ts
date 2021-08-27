@@ -30,7 +30,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
     const headers: any = {
       "Accept-Language": "ar-EG",
-      "Authorization": `Bearer ${this._tokenSrv.token?.value || ""}`,
+      "Authorization": `Bearer ${this._tokenSrv.token?.user.accessToken || ""}`,
     };
 
     req = req.clone({ setHeaders: headers });
@@ -42,7 +42,7 @@ export class TokenInterceptor implements HttpInterceptor {
     switch (err.status) {
       case StatusCodes.Unauthorized:
         this._tokenSrv.clear();
-        setTimeout(() => this._router.navigateByUrl("/login"));
+        setTimeout(() => this._router.navigateByUrl("/shop/login"));
         break;
 
       case StatusCodes.InternalError:
@@ -51,7 +51,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
       case StatusCodes.BadRequest:
         setTimeout(() =>
-          this._router.navigateByUrl("/").then(() => {
+          this._router.navigateByUrl("/shop").then(() => {
             this._modal.snackbar(
               "الطلب خاطئ ربما هناك نسخة جديدة والموقع يحتاج لتحديث قم باعادة تحميل الصفحة واعد المحاولة مرة اخري."
             );
