@@ -73,7 +73,7 @@ export class MyProductsComponent implements OnInit, AfterViewInit {
       complete: () => (this.preloader = false),
     });
   }
-  
+
   ngAfterViewInit(): void {}
 
   // If there is Id then Edit else add new address

@@ -25,6 +25,8 @@ import { RegisterComponent } from "./auth/register/register.component";
 import { LoginGuard } from "./auth/guards/login.guard";
 import { ProfileGuard } from "./auth/guards/profile.guard";
 
+import { DashModalComponent } from "./dash-board/dash-modal.component";
+
 const routes: Routes = [
   {
     path: "",
@@ -139,6 +141,7 @@ export class ShopRoutingModule {
     LoginComponent,
     RegisterComponent,
     CartComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    DashModalComponent,
   ];
 }

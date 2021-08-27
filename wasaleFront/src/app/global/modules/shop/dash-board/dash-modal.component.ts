@@ -3,8 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { CategoryService } from "src/app/core/api/category.service";
 import { ModalService } from "src/app/core/services/modal.service";
-import { Category } from "src/app/shared/utilities/interfaces.interface";
-  
+
 @Component({
   selector: "app-dash-modal",
   template: `
@@ -77,7 +76,7 @@ export class DashModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  
+
   }
 
   get requiredError(): string {

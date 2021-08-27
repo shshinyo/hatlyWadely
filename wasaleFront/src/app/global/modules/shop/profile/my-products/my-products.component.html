@@ -51,7 +51,7 @@
   fxLayoutGap.xs="0px"
 >
   <div *ngIf="preloader" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
-    <app-preloader ></app-preloader>
+    <app-preloader></app-preloader>
   </div>
 
   <div
@@ -91,30 +91,26 @@
       </div>
       <!-- product details here -->
     </div>
-    <div
-      class="pay"
-      fxLayout="row"
-      fxLayoutAlign="space-between center"
-      fxLayoutGap="10px"
-    >
-      <button
-        mat-button
-        color="primary"
-        fxLayoutAlign="center center"
-        (click)="onAddEditProductForm(product)"
-      >
-        <mat-icon>edit</mat-icon>
-        تعديل
-      </button>
-      <button
-        mat-button
-        color="primary"
-        fxLayoutAlign="center center"
-        (click)="onRemoveProduct(product)"
-      >
-        <mat-icon>delete</mat-icon>
-        إزالة
-      </button>
+    <hr class="hr" />
+    <div class="pay" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+        <a
+          class="s-btn"
+          fxLayoutAlign="center center"
+          (click)="onAddEditProductForm(product)"
+          matTooltip="تعديل"
+        >
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a
+          class="s-btn del-s-btn"
+          fxLayoutAlign="center center"
+          (click)="onRemoveProduct(product)"
+          matTooltip="حذف"
+        >
+          <mat-icon>delete</mat-icon>
+        </a>
+      </div>
 
       <mat-slide-toggle color="primary" [(ngModel)]="disableProduct"></mat-slide-toggle>
     </div>

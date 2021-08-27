@@ -215,7 +215,7 @@ a:active {
   margin-top: 2px;
   margin-bottom: 0;
 }
-.edit-btn {
+.s-btn {
   height: 33px;
   width: 33px;
   padding: 10px;
@@ -225,10 +225,20 @@ a:active {
   text-decoration: none;
   color: $color;
 }
-.edit-btn:hover {
+.s-btn:hover {
   color: $color;
   background-color: #ff6f0021;
 }
+
+.del-s-btn {
+  color: #f44336;
+}
+
+.del-s-btn:hover {
+  color: #f44336;
+  background-color: #f4433639;
+}
+
 .main-cont {
   padding: 10px;
   .card {
