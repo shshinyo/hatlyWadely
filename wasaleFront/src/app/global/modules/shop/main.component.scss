@@ -42,6 +42,20 @@ $color: #ff6e00;
       color: $color;
     }
   }
+
+  .logo {
+    outline: none;
+    height: inherit;
+    .word {
+      font-size: 16px;
+    }
+    .num {
+      font-size: 26px;
+      margin: 0 5px;
+      color: $color;
+      font-weight: bolder;
+    }
+  }
 }
 
 .fire {
@@ -74,5 +88,9 @@ $color: #ff6e00;
 @media screen and (max-width: 600px) {
   ::ng-deep .menu.mat-menu-panel {
     min-width: 170px;
+  }
+
+  .sub-header {
+    min-height: 54px;
   }
 }
