@@ -10,7 +10,7 @@ import { Category } from "src/app/shared/utilities/shop.interfaces";
 import { SideToggleService } from "../../layout/side-toggle.service";
 import { IdentityManager } from "./auth/identity-manager.service";
 import { User } from "./auth/models/user";
-import { OrderModalComponent } from "./profile/saved/order-modal.component";
+import { OrderModalComponent } from "./order-modal.component";
 
 @Component({
   templateUrl: "./main.component.html",
