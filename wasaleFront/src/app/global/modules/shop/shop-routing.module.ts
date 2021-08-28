@@ -26,6 +26,7 @@ import { LoginGuard } from "./auth/guards/login.guard";
 import { ProfileGuard } from "./auth/guards/profile.guard";
 
 import { DashModalComponent } from "./dash-board/dash-modal.component";
+import { OrderModalComponent } from "./profile/saved/order-modal.component";
 
 const routes: Routes = [
   {
@@ -143,5 +144,6 @@ export class ShopRoutingModule {
     CartComponent,
     DashBoardComponent,
     DashModalComponent,
+    OrderModalComponent
   ];
 }

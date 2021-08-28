@@ -55,7 +55,6 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.productsService.getAllCategories$.subscribe((res) => {
-      console.log(res);
       this.products = res.categories;
       this.filteredProducts = res.categories;
       this.cards = res.cards;
@@ -64,7 +63,6 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     this.mediaSub = this._mediaObserver.media$.subscribe((change: MediaChange) => {
-      console.log(change.mqAlias);
     });
 
     this.responsiveOptions = [

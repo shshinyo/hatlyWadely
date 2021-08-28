@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Observable } from "rxjs";
+import { MatDialog } from "@angular/material/dialog";
+import { Router } from "@angular/router";
 import { tap } from "rxjs/Operators";
 import { ProductsService } from "src/app/core/services/products.service";
 
@@ -10,6 +10,7 @@ import { Category } from "src/app/shared/utilities/shop.interfaces";
 import { SideToggleService } from "../../layout/side-toggle.service";
 import { IdentityManager } from "./auth/identity-manager.service";
 import { User } from "./auth/models/user";
+import { OrderModalComponent } from "./profile/saved/order-modal.component";
 
 @Component({
   templateUrl: "./main.component.html",
@@ -26,7 +27,9 @@ export class MainComponent implements OnInit {
     private _router: Router,
     private _productsService: ProductsService,
     private _sideToggleService: SideToggleService,
-    private readonly _identityManager: IdentityManager
+    private readonly _identityManager: IdentityManager , 
+    private _dialog: MatDialog
+
   ) {}
 
   ngOnInit(): void {
@@ -57,5 +60,12 @@ export class MainComponent implements OnInit {
 
   onToggle(): void {
     this._sideToggleService.onToggle(true);
+  }
+
+  openOrder() {
+    this._dialog.open(OrderModalComponent , {
+      width : "500px",
+      direction  : "rtl"
+    })
   }
 }
